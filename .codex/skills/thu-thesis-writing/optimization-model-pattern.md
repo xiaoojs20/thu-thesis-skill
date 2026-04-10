@@ -677,6 +677,134 @@ If the notation is dense, continue with `式中：` and explain variables and in
 
 Finally, at the end of the full subsection, add one sentence saying that by jointly enforcing the objective and all constraints, the full optimization/planning model is obtained, and mention what type of solver can be used.
 
+## Example Pattern From The Source Thesis
+
+The source thesis provides a strong example of this format. The topic itself should not be copied, but the writing structure is worth imitating.
+
+You can understand the example as the following generic pattern:
+
+### Example At The Full-Subsection Level
+
+The source thesis first writes one full planning-model subsection:
+
+```text
+x.x 考虑……的……优化规划模型
+```
+
+Its job is to announce:
+
+- earlier component models are now assembled
+- the optimization boundary is now complete
+- the reader is moving from submodel derivation to full planning-model construction
+
+Immediately after that, the source thesis gives a coupling/framework figure, which helps the reader see the system boundary before reading formulas.
+
+### Example At The Objective-Function Level
+
+Then the source thesis writes a dedicated `目标函数` subsection.
+
+The pattern is:
+
+1. first one total objective equation
+2. then `（1）`, `（2）` Chinese-parenthetical items
+3. under each item, formula plus explanation
+
+A generic imitation of that source-thesis writing style looks like this:
+
+```text
+x.x.1 目标函数
+如式（x.1）所示，目标函数最小化……和……。
+
+（1）投资成本
+如式（x.2）-（x.4）所示，……
+式（x.2）表示……，式（x.3）表示……，式（x.4）表示……。
+式中：……。
+其中，下标……表示……，上标……表示……。
+
+（2）运行成本
+如式（x.5）-（x.6）所示，……
+式（x.5）表示……，式（x.6）表示……。
+式中：……。
+其中，下标……表示……，上标……表示……。
+```
+
+What is worth imitating here is not the topic, but the degree of completion:
+
+- each objective block has its own Chinese-parenthetical item
+- each item contains formulas
+- each formula is followed by physical-meaning explanation
+- variables and indices are not left implicit
+
+### Example At The Constraint-Category Level
+
+After the objective subsection, the source thesis does not flatten all constraints into one list.
+
+Instead, it writes several major constraint subsections such as:
+
+```text
+x.x.2 ……运行约束
+x.x.3 ……运行约束
+```
+
+This is important because these titles classify constraints by large system category.
+
+### Example Inside One Constraint Category
+
+Inside a major constraint subsection, the source thesis further splits the content with Chinese-parenthetical items:
+
+```text
+（1）……
+（2）……
+（3）……
+（4）……
+（5）……
+```
+
+A generic imitation of the source-thesis format looks like this:
+
+```text
+x.x.3 核心系统运行约束
+
+（1）火电机组/常规机组运行约束
+……
+式（x.7）-（x.12）描述了……的运行特性。
+
+（2）可再生能源运行约束
+……
+式（x.13）设置了……上下限。
+
+（3）网络/线路运行约束
+……
+式（x.14）建立了……约束。
+
+（4）系统平衡约束
+……
+式（x.15）为……平衡约束，其中……作为……参与平衡。
+
+（5）储能运行约束
+……
+式（x.16）-（x.19）构建了……模型。
+```
+
+What should be copied from this example is:
+
+- major subsections classify by large system
+- Chinese-parenthetical items classify by physical module
+- each module contains formulas and a follow-up explanation sentence
+
+### Example At The Closing Level
+
+At the end of the source-thesis subsection, there is a final closing sentence that declares the model complete.
+
+A generic imitation is:
+
+```text
+通过联立式（x.1）-（x.n），构建了……优化规划模型。
+该模型为……模型，可通过……求解器进行求解。
+```
+
+This closing move is worth keeping because it gives the subsection a clear ending and hands off naturally to the later case-study section.
+
 ## Hard Rules
 
 1. If the thesis is writing a planning-model subsection, keep the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> meaning explanation`.
