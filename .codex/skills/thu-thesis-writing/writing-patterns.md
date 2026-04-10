@@ -2,6 +2,8 @@
 
 ## Core Paragraph Logic
 
+This file controls rhetoric and paragraph motion, not thesis subject matter. All nouns should be rewritten around the user's topic.
+
 Default paragraph progression:
 
 1. state the engineering background or phenomenon
@@ -48,7 +50,7 @@ Do not over-randomize wording if the text loses thesis discipline.
 ### Background Setup
 
 ```text
-随着……，系统面临……挑战。
+随着……，研究对象/系统/场景面临……挑战。
 一方面，……；另一方面，……。
 因此，如何……成为……领域的重要问题。
 ```
@@ -146,3 +148,4 @@ Avoid:
 - journalistic tone
 - exaggerated novelty claims without evidence
 - vague praise words like `效果显著` without saying on what metric
+- borrowing domain nouns from the source thesis when the user is writing about another topic

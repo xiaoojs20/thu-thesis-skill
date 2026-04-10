@@ -7,6 +7,12 @@ description: "Use when writing, outlining, revising, reviewing, or expanding a C
 
 Use this skill when the user wants thesis text that should follow the structure and tone extracted from a high-quality Tsinghua-style engineering PhD thesis.
 
+This skill is intentionally format-first and topic-agnostic:
+
+- learn chapter organization, paragraph logic, equation narration, figure/table discipline, and experiment scaffolding
+- do not inherit the source thesis topic, domain assumptions, system names, datasets, variables, or conclusions
+- do not force power systems, energy systems, planning, storage, risk, or any other sample-theme vocabulary onto a different thesis
+
 ## What This Skill Enforces
 
 1. Problem-driven thesis structure rather than article stitching.
@@ -17,6 +23,7 @@ Use this skill when the user wants thesis text that should follow the structure 
 6. Reusable experiment-section patterns.
 7. Strong introduction and conclusion scaffolding.
 8. Chapter-review checks for structural completeness and local logic.
+9. Theme isolation: extract writing form, not subject matter.
 
 ## When To Use
 
@@ -76,6 +83,19 @@ Do not use it for:
    - weak transitions between sections
 9. Run the checklist before finalizing.
 
+## Theme-Isolation Rule
+
+The source materials behind this skill come from one specific thesis sample, but that sample is only evidence for writing form.
+
+When using this skill:
+
+1. Reuse structure, not the sample thesis topic.
+2. Reuse rhetoric, not the sample thesis terminology.
+3. Reuse chapter logic, not the sample thesis chapter subjects.
+4. Reuse experiment organization, not the sample thesis test systems.
+5. If the user's thesis topic differs, rewrite every placeholder around the user's actual research object rather than around the sample thesis object.
+6. If the user's topic is unknown, keep placeholders generic and do not invent a domain.
+
 ## Reference Map
 
 - `thesis-structure.md`
@@ -116,6 +136,7 @@ Do not use it for:
 7. Do not end experiment sections with raw observations only; state what the comparison proves.
 8. Do not write the abstract as `第1章...第2章...`.
 9. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+10. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
 
 ## Output Standard
 

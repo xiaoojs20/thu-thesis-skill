@@ -9,6 +9,8 @@ This repository contains thesis-writing analysis materials and a reusable Codex 
 
 The repository is for thesis-writing support, not general software development. When the task is about thesis text, chapter organization, equation explanation, figure/table narration, or experiment-section writing, agents should treat this repository as a thesis-writing workspace.
 
+The repository contains patterns extracted from one sample thesis, but agents must treat that sample only as a source of writing form. Do not transfer the sample thesis topic, terminology, case systems, or technical claims into a user's thesis unless the user is explicitly working on that same topic.
+
 ## Required Skill
 
 For thesis writing tasks, agents must use the `thu-thesis-writing` skill:
@@ -41,6 +43,7 @@ Minimum guidance:
 - use `writing-patterns.md` for paragraph logic and thesis tone
 - use `equation-rules.md` for equations, figures, tables, and citations
 - use the matching file in `chapter-templates/` as the starting scaffold
+- keep all topic nouns aligned to the user's own research subject; if the subject is unknown, stay generic rather than borrowing from the sample thesis
 
 ### Reviewing Thesis Sections
 
@@ -53,6 +56,7 @@ Check for:
 - explicit equation explanation with `式中：` where needed
 - figure/table captions that stay descriptive rather than conclusion-heavy
 - conclusion and chapter-summary sections that restate method and verified result
+- no accidental borrowing of the sample thesis topic, systems, assumptions, or conclusions
 
 Use `.codex/skills/thu-thesis-writing/checklist.md` for the final pass.
 

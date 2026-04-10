@@ -2,6 +2,8 @@
 
 ## Overall Thesis Shape
 
+This file describes reusable structure only. Chapter names such as `规划`, `风险`, `运行`, `建模`, `实验`, `案例分析` are examples of structural roles, not mandatory subject matter.
+
 Use a single-problem research line:
 
 1. front matter
@@ -18,6 +20,14 @@ Use a single-problem research line:
 12. references and back matter
 
 This is not a stitched-paper structure. Each chapter should solve one step of the same main problem.
+
+Do not copy the sample thesis's exact chapter subjects. Replace each chapter role with the user's actual topic, for example:
+
+- `基础理论`
+- `方法设计`
+- `系统实现`
+- `实验验证`
+- `扩展分析`
 
 ## Chapter Backbone
 
@@ -120,3 +130,5 @@ Recommended balance derived from the source thesis:
 第5章 风险评估或扩展分析
 第6章 结论
 ```
+
+When adapting this skeleton, preserve the progression and section logic, but rename chapter titles entirely around the target thesis topic.
