@@ -64,6 +64,7 @@ Do not use it for:
    - prose and rhetoric -> `writing-patterns.md`
    - equations, figures, tables -> `equation-rules.md`
    - experiment section -> `experiment-pattern.md`
+   - LaTeX build and cleanup commands -> `latex-build-commands.md`
    - final self-check -> `checklist.md`
    - ready-made scaffold -> `chapter-templates/*.md`
 3. If drafting, build the outline before drafting paragraphs.
@@ -109,6 +110,9 @@ When using this skill:
 
 - `experiment-pattern.md`
   Use when writing case studies, result analysis, sensitivity analysis, or scheme comparison.
+
+- `latex-build-commands.md`
+  Use when the user asks how to compile, clean, rebuild, or troubleshoot a ThuThesis LaTeX project.
 
 - `checklist.md`
   Use as the last pass before returning draft text, or as the main rubric when reviewing an existing thesis chapter.
