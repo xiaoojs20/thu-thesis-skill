@@ -41,6 +41,8 @@ Use this skill for:
 - Conclusion writing
 - Converting rough notes into thesis prose
 
+If the target thesis contains an optimization/planning model subsection, treat `optimization-model-pattern.md` as a default writing pattern rather than an optional reference.
+
 Do not use it for:
 
 - Journal papers with very different target styles
@@ -64,6 +66,7 @@ Do not use it for:
    - prose and rhetoric -> `writing-patterns.md`
    - equations, figures, tables -> `equation-rules.md`
    - experiment section -> `experiment-pattern.md`
+   - optimization-planning subsection -> `optimization-model-pattern.md`
    - LaTeX build and cleanup commands -> `latex-build-commands.md`
    - final self-check -> `checklist.md`
    - ready-made scaffold -> `chapter-templates/*.md`
@@ -75,22 +78,23 @@ Do not use it for:
    - `本章小结`
 5. Treat `主要内容` as the chapter body, which may expand into multiple sections such as definitions, models, constraints, frameworks, or algorithms, but it must stay between `概述` and `算例分析`.
 6. Draft in a problem-to-method-to-result sequence.
-7. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items.
-8. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
-9. For figures/tables, make the caption noun-based and keep conclusions in the main text.
-10. Prefer inserting figures as PDF files in the LaTeX project; if a figure is not in PDF format, explicitly remind the user.
-11. End each technical chapter with a chapter summary that restates:
+7. If the thesis contains a subsection such as `考虑……协同的……优化规划模型`, `……优化配置模型`, or another optimization/planning model assembly section, read `optimization-model-pattern.md` and default to that format.
+8. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items.
+9. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
+10. For figures/tables, make the caption noun-based and keep conclusions in the main text.
+11. Prefer inserting figures as PDF files in the LaTeX project; if a figure is not in PDF format, explicitly remind the user.
+12. End each technical chapter with a chapter summary that restates:
    - the challenge
    - the method chain
    - what the case study verified
-12. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
+13. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
    - missing chapter introduction
    - missing chapter summary
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-13. Run the checklist before finalizing.
+14. Run the checklist before finalizing.
 
 ## Theme-Isolation Rule
 
@@ -118,6 +122,9 @@ When using this skill:
 
 - `experiment-pattern.md`
   Use when writing case studies, result analysis, sensitivity analysis, or scheme comparison.
+
+- `optimization-model-pattern.md`
+  Use when writing a subsection such as `考虑……协同的……优化规划模型`, especially for objective-function plus grouped-constraint assembly.
 
 - `latex-build-commands.md`
   Use when the user asks how to compile, clean, rebuild, or troubleshoot a ThuThesis LaTeX project.
@@ -156,6 +163,10 @@ When using this skill:
 15. Do not write the abstract as `第1章...第2章...`.
 16. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
 17. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+18. For optimization-planning subsections, prefer the assembly pattern `opening paragraph -> coupling figure -> objective function -> reused subsystem constraints -> core-system constraints -> closing paragraph`.
+19. For optimization-planning objectives, decompose from total objective to cost blocks instead of writing one oversized formula first.
+20. For optimization-planning constraints, regroup by physical subsystem or module rather than by derivation order.
+21. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
 
 ## Output Standard
 

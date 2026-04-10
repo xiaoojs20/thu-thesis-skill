@@ -57,6 +57,19 @@ When used for review, explicitly mark each check as:
 - Are key variables explained after the equation instead of being left implicit?
 - Is the modeling meaning stated after the formula?
 
+## Optimization-Planning Subsection
+
+- If the section is a planning-model subsection, does it start with a short inheritance paragraph rather than repeating chapter background?
+- Is there a coupling/framework figure when multiple systems, energy forms, or planning objects are involved?
+- Is the objective written in layers:
+  - total objective
+  - cost or benefit decomposition
+  - prose explanation of each block
+- Are previously derived subsystem constraints imported by equation-range reference where appropriate instead of being fully rewritten?
+- Are new constraints grouped by physical module or subsystem rather than by arbitrary formula order?
+- Does each constraint group have a follow-up sentence explaining what that group accomplishes?
+- Does the subsection end by stating that the full optimization model is obtained by jointly enforcing the objective and all constraints?
+
 ## Figures and Tables
 
 - Are figure captions noun-based rather than conclusion-based?

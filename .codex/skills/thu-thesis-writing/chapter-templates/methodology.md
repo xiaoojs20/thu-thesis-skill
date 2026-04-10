@@ -81,6 +81,15 @@ This section is the last part of the chapter's `主要内容` block. Use it to a
 - balance constraints
 - framework integration
 
+If this section is an optimization-planning subsection such as `考虑……协同的……优化规划模型`, open `optimization-model-pattern.md` and follow that finer-grained pattern:
+
+1. opening paragraph that inherits earlier submodels
+2. one coupling/framework figure when the planning boundary is complex
+3. `目标函数`
+4. reused subsystem constraints
+5. core-system constraints grouped by physical module
+6. closing paragraph that states the complete model and solver type
+
 ### x.5 算例分析
 
 Open `experiment.md` and follow that template.
