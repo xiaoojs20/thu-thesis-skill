@@ -28,9 +28,9 @@ If the user's thesis contains optimization/planning model writing, this pattern 
 Write this kind of subsection in the following way:
 
 first write one full planning-model subsection such as `4.4` or `x.x` to say that the previous models are now assembled into a complete optimization/planning model;
-then split it into `4.4.1 目标函数`, `4.4.2 ……约束`, `4.4.3 ……约束`;
-inside `4.4.1 目标函数`, use Chinese parenthetical items `（1）`, `（2）`, `（3）` to introduce each objective block in detail;
-inside `4.4.2` or `4.4.3`, again use Chinese parenthetical items `（1）`, `（2）`, `（3）` to introduce each physical constraint block in detail.
+then split it into one `目标函数` subsection and several `……约束` subsections;
+inside the `目标函数` subsection, use Chinese parenthetical items `（1）`, `（2）`, `（3）` to introduce each objective block in detail;
+inside each `……约束` subsection, again use Chinese parenthetical items `（1）`, `（2）`, `（3）` to introduce each physical constraint block in detail.
 
 The important thing is:
 
@@ -194,8 +194,8 @@ This is not optional decoration. It is the standard way to make the objective le
 In practice, the writing should read like:
 
 ```text
-4.4.1 目标函数
-如式（4.19）所示，目标函数最小化……和……。
+x.x.1 目标函数
+如式（x.1）所示，目标函数最小化……和……。
 
 （1）投资成本
 ……
@@ -344,8 +344,8 @@ The reader should understand from the title alone what large subsystem is being 
 The visual effect should look like this:
 
 ```text
-4.4.2 其他能源供应系统运行约束
-4.4.3 电力系统运行约束
+x.x.2 其他能源供应系统运行约束
+x.x.3 电力系统运行约束
 ```
 
 This layer is about large categories.
@@ -374,7 +374,7 @@ This is how a real planning model becomes readable.
 This means the constraint writing has two nested levels:
 
 1. large-system level:
-   `4.4.2`, `4.4.3`
+   `x.x.2`, `x.x.3`
 2. physical-module level:
    `（1）`, `（2）`, `（3）`
 
@@ -659,15 +659,15 @@ x.x.3 核心系统运行约束
 
 If you were to explain the format in plain Chinese, it should read roughly like this:
 
-first, write a subsection like `4.4 考虑……的……优化规划模型`, and use one short paragraph to say that based on the previous model, a complete optimization/planning model is now established.
+first, write a subsection like `x.x 考虑……的……优化规划模型`, and use one short paragraph to say that based on the previous model, a complete optimization/planning model is now established.
 Then, if needed, place a framework figure to show the coupling relationship.
 
-After that, write `4.4.1 目标函数`.
-Inside `4.4.1`, do not write only one total formula and stop.
+After that, write `x.x.1 目标函数`.
+Inside `x.x.1`, do not write only one total formula and stop.
 You should first give the total objective, and then use `（1）投资成本`, `（2）运行成本`, `（3）其他成本` to explain each objective term separately.
 For each item, you should explain the formula itself, what physical meaning it has, what each important variable means, and what important subscripts/superscripts mean.
 
-Then continue with `4.4.2` and `4.4.3` style constraint subsections.
+Then continue with `x.x.2` and `x.x.3` style constraint subsections.
 Each of these should represent one large class of constraints, such as another energy system, the core power system, or a risk module.
 Inside each large class, use `（1）`, `（2）`, `（3）` to continue splitting by physical module.
 For example, one item may be thermal-unit constraints, another may be renewable-energy constraints, another may be network constraints, and another may be storage constraints.
