@@ -4,6 +4,14 @@ Use this for a thesis-level conclusion or a major chapter conclusion.
 
 ## Thesis-Level Conclusion Structure
 
+Strong constraint:
+
+- do not set section headings
+- do not set subsection headings
+- do not write `6.1`, `6.2`, `6.3`
+- keep the whole chapter under the chapter title `第x章 结论`
+- organize the body as continuous paragraphs plus numbered contribution items only
+
 ```text
 第x章 结论
 1. opening summary paragraph
@@ -77,6 +85,7 @@ Template:
 
 ## Final Check
 
+- the thesis-level conclusion has no section headings or subsection headings
 - conclusion is not a copy-paste of section summaries
 - each contribution is thesis-level, not minor detail-level
 - wording is precise and restrained

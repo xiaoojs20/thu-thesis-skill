@@ -70,6 +70,19 @@ Interpretation:
 
 `主要内容` does not have to appear as a literal section title, but it must occupy the middle block between `概述` and `算例分析`.
 
+### Chapter 6: Conclusion
+
+For the thesis-level conclusion chapter, enforce this pattern:
+
+1. chapter title only: `第6章 结论`
+2. opening summary paragraph
+3. numbered main contributions
+4. closing paragraph
+
+This is also a strong constraint.
+
+Do not create `6.1`, `6.2`, `6.3` or any subsection headings inside the conclusion chapter.
+
 ## Section Organization
 
 When a section introduces a model, use this order:
@@ -148,3 +161,9 @@ For technical chapters, the non-negotiable sequence is:
 2. `主要内容`
 3. `算例分析`
 4. `本章小结`
+
+For the thesis-level conclusion chapter, the non-negotiable rule is:
+
+1. no section headings
+2. no subsection headings
+3. direct chapter-level prose with numbered contribution items

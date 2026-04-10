@@ -75,20 +75,21 @@ Do not use it for:
    - `本章小结`
 5. Treat `主要内容` as the chapter body, which may expand into multiple sections such as definitions, models, constraints, frameworks, or algorithms, but it must stay between `概述` and `算例分析`.
 6. Draft in a problem-to-method-to-result sequence.
-7. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
-8. For figures/tables, make the caption noun-based and keep conclusions in the main text.
-9. End each technical chapter with a chapter summary that restates:
+7. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items.
+8. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
+9. For figures/tables, make the caption noun-based and keep conclusions in the main text.
+10. End each technical chapter with a chapter summary that restates:
    - the challenge
    - the method chain
    - what the case study verified
-10. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
+11. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
    - missing chapter introduction
    - missing chapter summary
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-11. Run the checklist before finalizing.
+12. Run the checklist before finalizing.
 
 ## Theme-Isolation Rule
 
@@ -147,9 +148,11 @@ When using this skill:
 8. Do not put full conclusions into figure captions or table titles.
 9. Do not drop equations without explaining what each block does.
 10. Do not end experiment sections with raw observations only; state what the comparison proves.
-11. Do not write the abstract as `第1章...第2章...`.
-12. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
-13. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+11. The thesis-level `结论` chapter must not set section or subsection headings.
+12. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
+13. Do not write the abstract as `第1章...第2章...`.
+14. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+15. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
 
 ## Output Standard
 

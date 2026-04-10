@@ -89,6 +89,7 @@ When used for review, explicitly mark each check as:
 ## Conclusion
 
 - Does it reopen the thesis-level problem?
+- Does the thesis-level conclusion avoid all section and subsection headings?
 - Are the main contributions numbered cleanly?
 - Does each contribution follow `challenge -> method -> result -> value`?
 - Does the ending state the overall implication of the thesis?

@@ -106,6 +106,12 @@ Use three layers:
 3. closing paragraph:
    - overall finding and broader value
 
+Hard rules:
+
+1. Do not create section headings or subsection headings in the thesis-level conclusion chapter.
+2. Do not write `6.1`, `6.2`, `6.3` style structure.
+3. Keep the conclusion as chapter-level prose plus numbered contribution items only.
+
 Suggested numbered paragraph template:
 
 ```text
