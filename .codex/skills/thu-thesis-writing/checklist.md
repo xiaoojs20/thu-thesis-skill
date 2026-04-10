@@ -61,12 +61,17 @@ When used for review, explicitly mark each check as:
 
 - If the section is a planning-model subsection, does it start with a short inheritance paragraph rather than repeating chapter background?
 - Is there a coupling/framework figure when multiple systems, energy forms, or planning objects are involved?
-- Is the objective written in layers:
-  - total objective
-  - cost or benefit decomposition
-  - prose explanation of each block
+- Does the subsection contain `x.x.1 目标函数`?
+- Under `目标函数`, are `（1）（2）（3）` used to split different objective blocks such as investment cost and operating cost?
+- Does each objective block include:
+  - formula
+  - physical meaning
+  - key variable explanation
+  - index explanation when notation is dense
+- Does the subsection contain `x.x.2`, `x.x.3` style major constraint categories?
+- Inside each major constraint category, are `（1）（2）（3）` used to split different physical modules?
 - Are previously derived subsystem constraints imported by equation-range reference where appropriate instead of being fully rewritten?
-- Are new constraints grouped by physical module or subsystem rather than by arbitrary formula order?
+- Are new constraints grouped first by big system category, then by physical module, rather than by arbitrary formula order?
 - Does each constraint group have a follow-up sentence explaining what that group accomplishes?
 - Does the subsection end by stating that the full optimization model is obtained by jointly enforcing the objective and all constraints?
 

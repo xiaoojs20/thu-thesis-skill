@@ -1,440 +1,714 @@
 # Optimization-Planning Model Section Pattern
 
-Use this when writing a technical subsection like `x.x 考虑……协同的……优化规划模型` inside the chapter's `主要内容` block.
+Use this when the thesis contains a subsection such as:
 
-This pattern is extracted from a strong thesis subsection whose internal motion is highly reusable:
+- `x.x 考虑……协同的……优化规划模型`
+- `x.x 考虑……的……优化配置模型`
+- `x.x ……协同优化模型`
+- `x.x ……扩展规划模型`
 
-1. one short opening paragraph to declare that the full coupled planning model is now assembled
-2. one architecture or coupling figure to show what systems, resources, and links are inside the model
-3. `目标函数`
-4. `其他系统/前序模块运行约束`
-5. `核心系统运行约束`
-6. one short closing paragraph that states the final model is obtained by jointly enforcing the objective and all constraints, then names the solver type
+This file is not about general model-writing advice. It is about the specific thesis subsection pattern represented by sections like `4.4` in a planning/model chapter.
 
-This is a high-reuse thesis pattern because it does not try to explain every mechanism from zero. Instead, it performs model assembly:
+The key point is:
 
-- inherit component models from the previous subsection
-- elevate them into a planning objective
-- group constraints by subsystem
-- finish by stating the complete optimization model
+when the thesis reaches the full optimization/planning model, the writing should become strongly hierarchical and highly formula-structured.
 
-## What This Subsection Is Supposed To Do
+The usual writing layer is:
 
-The job of this subsection is not to repeat all earlier modeling details.
+1. `x.x` full planning-model subsection
+2. `x.x.1` objective function
+3. `x.x.2`, `x.x.3`, ... major constraint categories
+4. inside each major category, use Chinese parenthetical items `（1）`, `（2）`, `（3）` to split the model by physical module
+5. inside each `（1）` / `（2）` / `（3）`, write equation group + formula meaning + variable meaning if needed
 
-Its job is to answer four questions in order:
+If the user's thesis contains optimization/planning model writing, this pattern should be treated as the default.
 
-1. what full planning problem is being solved now
-2. what the optimization objective minimizes or maximizes
-3. how the already-defined subsystems are coupled into one constraint set
-4. what complete mathematical program is finally formed
+## Plain-Language Summary
 
-If these four questions are clear, the subsection usually feels complete.
+Write this kind of subsection in the following way:
 
-## Recommended Skeleton
+first write one full planning-model subsection such as `4.4` or `x.x` to say that the previous models are now assembled into a complete optimization/planning model;
+then split it into `4.4.1 目标函数`, `4.4.2 ……约束`, `4.4.3 ……约束`;
+inside `4.4.1 目标函数`, use Chinese parenthetical items `（1）`, `（2）`, `（3）` to introduce each objective block in detail;
+inside `4.4.2` or `4.4.3`, again use Chinese parenthetical items `（1）`, `（2）`, `（3）` to introduce each physical constraint block in detail.
+
+The important thing is:
+
+the writing should not stop at the formula itself.
+
+For every objective block and every constraint block, the text should continue to explain:
+
+- what the formula represents
+- what engineering meaning it has
+- what each important variable means
+- what the important subscripts and superscripts mean
+
+That is the real format being imitated here.
+
+## What This Kind Of Subsection Must Achieve
+
+This kind of subsection is not a casual model description.
+
+It must do five things clearly:
+
+1. declare that the previous submodels are now assembled into one optimization/planning problem
+2. state the overall objective
+3. decompose the objective into several interpretable sub-objectives or cost blocks
+4. regroup all constraints into several major categories
+5. further split each major category into Chinese-parenthetical physical submodules
+
+In other words:
+
+`大节标题 -> 小节标题 -> 中文括号分点 -> 公式组 -> 公式解释`
+
+This is the real writing rhythm.
+
+## The Strong Default Skeleton
 
 ```text
 x.x 考虑……协同的……优化规划模型
   opening paragraph
   coupling/framework figure
+
   x.x.1 目标函数
-  x.x.2 [其他能源系统/前序模块/耦合链路]运行约束
-  x.x.3 [电力系统/核心系统]运行约束
+    （1）……
+    （2）……
+    （3）……（可选）
+
+  x.x.2 ……运行约束
+    （1）……
+    （2）……
+    （3）……
+
+  x.x.3 ……运行约束
+    （1）……
+    （2）……
+    （3）……
+    （4）……
+    （5）……
+
   closing paragraph
 ```
 
-Typical title language:
+Do not collapse this into one flat block.
 
-- `考虑多类型储能协同的……优化规划模型`
-- `考虑风险约束的……优化配置模型`
-- `考虑多能耦合的……协同规划模型`
-- `考虑源-网-荷-储协调的……扩展规划模型`
+Do not write:
 
-## Section-Level Writing Motion
+- one giant objective formula with no Chinese-parenthetical decomposition
+- one long list of constraints with no major-category split
+- one long list of constraints with no `（1）（2）（3）` internal split
 
-### 1. Opening Paragraph
+## Layer 1: How To Write `x.x` The Full Planning-Model Subsection
 
-Keep this short, usually 1 to 3 sentences.
+At the `x.x` layer, write only a short opening paragraph plus an optional framework figure.
 
-It should do only two things:
+This paragraph should do two jobs:
 
-1. explicitly inherit the model foundation from the previous section
-2. declare that a full coupled optimization planning model is now constructed
+1. inherit previous modeling work
+2. announce that a complete optimization/planning model is now built
 
 Template:
 
 ```text
 基于上述构建的……模型，本文进一步建立了考虑……协同的……优化规划模型。
-该模型综合考虑……、……与……之间的耦合关系，用于实现……的协同优化配置。
+该模型综合考虑……、……和……之间的耦合关系，以实现……的协同优化配置。
 ```
 
-Do not start with a long background recap here. The subsection is already deep inside the technical chapter.
+If the planning boundary is complex, insert one figure immediately after this paragraph.
 
-### 2. Coupling Figure
+The figure should clarify:
 
-Insert one framework or coupling figure immediately after the opening paragraph when the model involves multiple systems, energy forms, or planning objects.
+- which subsystems are included
+- what the resource inputs are
+- what the main conversion devices are
+- what the storage units are
+- what the network or transport links are
+- what loads or demands are served
 
-The figure should show:
+The function of this figure is not decoration. It prepares the reader to accept the later formulas.
 
-- resource inputs
-- main conversion devices
-- network links
-- storage units
-- demand types
+## Layer 2: How To Write `x.x.1 目标函数`
 
-Caption style:
+This is where the writing must become very structured.
 
-- `……耦合模型`
-- `……协同规划框架`
-- `……系统能量耦合关系`
+The correct pattern is:
 
-In-text sentence:
+1. first give one top-level total objective equation
+2. then use Chinese parenthetical items `（1）`, `（2）`, `（3）` to expand each major objective block
+3. inside each block, explain:
+   - the formula
+   - the physical meaning
+   - the meaning of key variables
+   - the meaning of important superscripts/subscripts when needed
 
-```text
-图 x 展示了……系统的耦合关系。
-其中，……作为……，……通过……实现与……的关联。
-```
+This is one of the most important fixed patterns in optimization/planning model writing.
 
-The figure's function is to let the reader accept the model boundary before reading equations.
+### 2.0 The Correct Feeling Of `目标函数`
 
-## Subsection 1: Objective Function
+`目标函数` in this kind of thesis should feel like a complete mini-section, not a single formula.
 
-This part usually follows a three-step rhythm:
+That means:
 
-1. total objective
-2. objective decomposition
-3. explanation of each cost or benefit block
+1. first one total objective equation
+2. then `（1）`, `（2）`, `（3）` to split the objective
+3. under each item, write enough prose so the reader understands the formula without guessing
 
-### Step A: Give the Top-Level Objective First
+If `目标函数` only has one formula and no decomposition, it usually looks underwritten.
 
-Start with one sentence and one compact top-level formula.
+### 2.1 Top-Level Total Objective
+
+Before the Chinese-parenthetical items, write one aggregated objective equation.
 
 Template:
 
 ```text
-如式（x.1）所示，目标函数以……为目标，综合考虑……与……。
-min / max …
+如式（x.1）所示，目标函数最小化……和……。
+min …
 ```
 
-Common objective wording:
+Typical top-level expressions:
 
-- `目标函数最小化年化投资成本和年运行成本`
-- `目标函数以系统总成本最小为目标`
-- `目标函数综合考虑建设成本、运行成本与弃能惩罚成本`
+- `min 年化投资成本 + 年运行成本`
+- `min 系统总成本`
+- `min 建设成本 + 运行成本 + 弃能惩罚成本`
 
-This first formula should stay abstract and aggregated. Do not pour all detailed sums into the first equation.
+This top formula should stay aggregated.
 
-### Step B: Split the Objective Into Large Blocks
+Do not directly dump every detailed term into the first line.
 
-After the total objective, split it into 2 to 4 large terms.
+The reason is simple:
+
+the top equation tells the reader the optimization direction;
+the later `（1）（2）（3）` items tell the reader how that direction is mathematically implemented.
+
+### 2.2 Use Chinese Parenthetical Items Under `目标函数`
+
+After the top-level objective, split it with:
+
+- `（1）投资成本`
+- `（2）运行成本`
+- `（3）弃能/风险/碳排放/惩罚成本` if needed
+
+This is not optional decoration. It is the standard way to make the objective legible.
+
+In practice, the writing should read like:
+
+```text
+4.4.1 目标函数
+如式（4.19）所示，目标函数最小化……和……。
+
+（1）投资成本
+……
+
+（2）运行成本
+……
+```
+
+This visual structure itself is part of the thesis style.
+
+### 2.3 What Each `（1）` / `（2）` / `（3）` Must Contain
+
+Each item should contain four pieces in order:
+
+1. one lead-in sentence
+2. one or several formulas
+3. one paragraph explaining what this block physically represents
+4. if variable density is high, a `式中：` sentence clarifying symbols, superscripts, and subscripts
+
+The local rhythm should be:
+
+```text
+（1）投资成本
+如式（x.2）所示，……
+……
+式（x.2）-（x.4）分别表示……、……和……。
+式中：……。
+其中，下标……表示……，上标……表示……。
+```
+
+This should be understood as a required degree of completeness.
+
+In other words, for each item under `目标函数`, you should normally write:
+
+1. the item name
+2. the formula
+3. what the formula means physically
+4. what the important variables mean
+5. what the important indices mean
+
+If these five pieces are missing, the item is usually not complete enough.
+
+### 2.4 What Must Be Explained In Objective Items
+
+#### `（1）投资成本`
+
+Normally explain:
+
+- annualization relationship if used
+- initial investment composition
+- what assets are included
+- which variables are existing capacity and which are expansion capacity
 
 Typical decomposition:
 
-- investment cost
-- operation cost
-- maintenance cost
-- penalty cost
-- emission cost
+- generation investment
+- line/network investment
+- storage power investment
+- storage energy investment
+- conversion-equipment investment
+
+You should not stop at the formula.
+
+You should say explicitly:
+
+- which cost corresponds to which physical equipment
+- how capacity variables map to the cost terms
+- what the subscripts denote
+
+#### `（2）运行成本`
+
+Normally explain:
+
+- what operational actions create the cost
+- how different subsystems contribute to operating cost
+- whether the cost is weighted by typical-day coefficients, scenario coefficients, or time-scale weights
+
+Typical decomposition:
+
+- thermal generation cost
+- startup/shutdown cost
+- transport cost
+- storage operation cost
+- fuel supply cost
+- load shedding penalty
+
+Again, the formula is not enough.
+
+You must say what physical process each cost term represents.
+
+#### `（3）Other Objective Terms`
+
+Use this when the thesis includes:
+
+- curtailment penalty
+- carbon-emission cost
 - risk cost
+- reliability penalty
+- renewable-integration penalty
 
-This is where the source subsection is especially teachable:
+The writing logic is the same:
 
-it first writes `总目标 = 投资成本 + 运行成本`, then expands each block separately. That creates a clean reading ladder from coarse to fine.
+`lead-in sentence -> formula -> physical meaning -> variable meaning`
 
-Template:
+### 2.5 On Variable Explanation In Objective Writing
 
-```text
-其中，……包括……和……。
-式（x.2）-（x.4）分别给出了……、……与……的计算方法。
-```
+Your point is exactly right:
 
-### Step C: Explain the Cost Blocks In Prose
+the objective-function writing in this kind of thesis is usually very explicit about variables, especially when the notation is dense.
 
-After each decomposition formula, add 1 to 3 sentences to explain what that block contains.
+So in the skill, enforce this rule:
 
-Good explanation content:
+after each objective block, explain not only the formula meaning, but also the key variables and, when necessary, the meaning of important upper and lower indices.
 
-- what assets are included
-- which variables are existing capacity and which are expansion capacity
-- whether a cost is annualized or initial
-- what physical activity generates the operating cost
-
-Template:
+Useful template:
 
 ```text
-式（x.2）给出了……，主要包括……。
-其中，……通过……与……的乘积进行表征。
-式（x.3）描述了……，反映了……阶段的……成本。
+式中：……表示……；……表示……；……为……。
+其中，下标 r、m、d、t 分别表示区域、月份、日期和时段；上标 Inv、Ope 分别表示投资成本和运行成本。
 ```
 
-The key move is:
+Do not assume the reader will infer index meaning automatically.
 
-do not define every symbol in `式中：` only; also explain the engineering meaning of each cost block in normal prose.
+This is especially important when the objective contains multi-index variables such as region, month, day, time period, unit type, storage type, scenario, or line index.
 
-### Detailed Objective Pattern To Mimic
+When several indices appear together, explain them directly in the prose after the formula instead of leaving them implicit.
 
-If you are writing an optimization-planning subsection, imitate this order:
+## Layer 3: How To Write `x.x.2`, `x.x.3` As Major Constraint Categories
 
-1. top-level total objective
-2. annualization relationship if investment is annualized
-3. investment block decomposition
-4. operation block decomposition
-5. prose explanation of what each block includes
+After `目标函数`, the next level should usually be several major constraint categories.
 
-This order is better than mixing all terms in one giant formula because the reader can follow the planning logic.
+This level should be written as titled subsubsections such as:
 
-## Subsection 2: Other-System Or Previously Built Constraint Block
+- `x.x.2 其他能源供应系统运行约束`
+- `x.x.3 电力系统运行约束`
+- `x.x.4 风险约束`
 
-This block is for constraints that were already modeled earlier, such as:
+This layer is for big categories only.
 
-- hydrogen system
-- heat system
-- gas system
-- risk model
-- seasonal storage model
-- transportation model
-- uncertainty scenario model
+Each `x.x.2` / `x.x.3` should represent one complete class of constraints.
 
-When these constraints were fully derived in the previous subsection, do not rewrite them in full unless needed. The strong pattern is:
+Do not use this layer for tiny local details.
 
-1. give one heading for the subsystem
-2. explicitly state that its constraints are given by earlier equations
-3. use an equation-range reference to compress repetition
+The reader should understand from the title alone what large subsystem is being constrained.
 
-Template:
+The visual effect should look like this:
 
 ```text
-……系统运行约束如式（x.a）-（x.b）所示。
-（x.a）-（x.b） （x.c）
+4.4.2 其他能源供应系统运行约束
+4.4.3 电力系统运行约束
 ```
 
-This move matters because it tells the reader:
+This layer is about large categories.
 
-- these equations still belong to the final optimization problem
-- but their derivation has already been completed above
+It should not yet drop to the level of specific devices.
 
-This is classic thesis writing for assembled models. It keeps the subsection concise and avoids restating the same derivation.
+## Layer 4: How To Write Constraints Inside Each Major Category
 
-## Subsection 3: Core-System Constraint Block
+Inside each constraint category, use Chinese parenthetical items:
 
-This is usually the largest block. Its internal rhythm should be:
+- `（1）火电机组快速机组组合约束`
+- `（2）可再生能源运行约束`
+- `（3）输电线路运行约束`
+- `（4）电力网络约束`
+- `（5）电化学储能运行约束`
 
-1. divide by physical module, not by random equation order
-2. each module gets a numbered lead-in
-3. each numbered item contains an equation group
-4. each equation group is followed by a concise explanation sentence
+This is the standard pattern.
 
-### Preferred Grouping Order
+The principle is:
 
-For power-system planning, a very stable order is:
+major titles classify by system;
+Chinese-parenthetical items classify by physical module inside that system.
 
-1. dispatchable generation constraints
-2. renewable generation constraints
-3. transmission constraints
-4. network balance constraints
-5. short-duration storage constraints
+This is how a real planning model becomes readable.
 
-For another domain, keep the same logic:
+This means the constraint writing has two nested levels:
 
-1. controllable supply
-2. uncertain supply
-3. transport/network
-4. nodal or system balance
-5. buffer/storage
+1. large-system level:
+   `4.4.2`, `4.4.3`
+2. physical-module level:
+   `（1）`, `（2）`, `（3）`
 
-### How Each Numbered Constraint Item Should Read
+The first level answers `which system is being constrained`;
+the second level answers `which module inside that system is being constrained`.
+
+## The Standard Writing Unit For Each Constraint Item
+
+Each `（1）` / `（2）` / `（3）` should normally follow this local structure:
+
+1. item title
+2. equation or equation group
+3. one paragraph explaining what the equations do
+4. if needed, one `式中：` sentence for variables and indices
 
 Template:
 
 ```text
 （1）……
-式（x.5）-（x.8）构建了……约束。
-式（x.5）描述……，式（x.6）设置……，式（x.7）刻画……，式（x.8）保证……。
+……
+式（x.10）-（x.14）构建了……约束。式（x.10）描述……，式（x.11）设置……，式（x.12）刻画……，式（x.13）保证……，式（x.14）给出……。
+式中：……。
 ```
 
-Or, when the formulas are self-evident and already standard:
+If the formula group is standard and does not require line-by-line explanation, the compressed version can be:
 
 ```text
-式（x.5）-（x.8）描述了……的运行特性。
+式（x.10）-（x.14）描述了……的运行特性。
 ```
 
-This is another important lesson from the source subsection:
+But even in the compressed version, the equation group must be followed by a sentence of meaning.
 
-after every constraint group, it adds one sentence saying what the group does. It does not leave the formulas hanging.
+Do not leave the formulas hanging.
 
-### What The Constraint Groups Usually Need To Cover
+This is the most common failure in weak drafts:
 
-#### A. Controllable Generation
+they place several formulas under `（1）火电机组约束` and then immediately move on.
 
-Typical contents:
+The stronger thesis style always adds one explanatory sentence after the formula group.
 
-- unit aggregation
-- output limits
-- ramping limits
-- startup and shutdown logic
-- minimum up/down time
+## How To Write Different Types Of Constraint Items
 
-Writing move:
+### `（1）` Controllable Unit Constraints
 
-first give the equation group, then summarize with a sentence like `描述……的运行特性`.
+Typical examples:
 
-#### B. Renewable Generation
+- thermal-unit commitment constraints
+- conventional generator output constraints
+- startup and shutdown constraints
+- ramping constraints
+- minimum up/down time constraints
 
-Typical contents:
+What to explain:
 
-- output upper bound tied to resource availability
-- optional curtailment variables
+- what physical device is controlled
+- whether the equations reflect output limits, dynamic limits, or on/off logic
+- what the binary or state variables mean
 
-Writing move:
+Typical sentence:
 
-one formula may be enough, but still follow it with a sentence saying it sets the renewable output range.
+```text
+式（x.10）-（x.15）基于……约束集，描述了……的运行特性。
+```
 
-#### C. Transmission Or Transport Network
+If necessary, continue with one more sentence clarifying state variables, startup variables, or capacity variables.
 
-Typical contents:
+### `（2）` Renewable-Energy Constraints
 
-- line flow limits
-- transport capacity limits
-- existing plus expansion capacity
+Typical examples:
 
-Writing move:
+- wind output limits
+- PV output limits
+- curtailment bounds
 
-after the formula, explain the modeling assumption briefly, such as the adopted flow model or the meaning of existing versus candidate capacity.
+What to explain:
 
-#### D. Nodal/System Balance
+- the resource-dependent upper bound
+- whether the installed capacity and resource availability appear separately
+- whether curtailment is allowed
 
-This is usually the conceptual core of the whole assembled model.
+Typical sentence:
 
-Typical contents:
+```text
+式（x.16）设置了……机组的出力上下限。
+```
 
-- nodal balance
-- conversion device consumption or output
-- load shedding bounds
-- policy constraints such as renewable penetration
+If curtailment variables are involved, explain whether the available output, dispatched output, and curtailed output are distinguished.
 
-Writing move:
+### `（3）` Network Or Transport Constraints
 
-state clearly that the conversion devices enter the balance equation as loads or injections. This is exactly the kind of sentence that prevents a multi-energy model from becoming unreadable.
+Typical examples:
 
-#### E. Short-Duration Or Auxiliary Storage
+- transmission-line limits
+- pipeline or channel transport limits
+- interregional transport limits
 
-Typical contents:
+What to explain:
 
-- inter-temporal SOC transition
-- charge/discharge bounds
-- energy bounds
-- cycle-closing constraint
+- what network model is used
+- whether existing capacity and expansion capacity are both included
+- how candidate-line investment is represented
 
-Writing move:
+Typical sentence:
 
-explain the physical meaning of each line in order: state transition, power limits, energy limits, cycle balance.
+```text
+式（x.17）建立了……的容量上下限约束，其中……和……分别表示已建容量与待建容量。
+```
 
-## Closing Paragraph
+If the network has an assumed flow model, state it briefly after the equation.
 
-End the subsection by explicitly stating that the complete optimization model is obtained by jointly enforcing the objective and all constraints.
+### `（4）` System-Balance Constraints
+
+Typical examples:
+
+- nodal power balance
+- energy balance
+- supply-demand balance
+- renewable-penetration constraints
+- load-shedding bounds
+
+This is often the conceptual core of the whole model.
+
+What to explain:
+
+- what enters the left-hand side
+- what enters the right-hand side
+- which conversion devices are modeled as loads or injections
+- what policy indicator or planning requirement is enforced
+
+Typical sentence:
+
+```text
+式（x.18）为……平衡约束，其中……作为……参与平衡。式（x.19）设置了……上下限。式（x.20）给出了……约束。
+```
+
+This kind of sentence is very important in multi-energy models because it tells the reader how cross-system coupling enters the balance relation.
+
+### `（5）` Storage Constraints
+
+Typical examples:
+
+- SOC state transition
+- charge/discharge power bounds
+- energy-capacity bounds
+- cycle-closing constraints
+- long-duration storage coupling constraints
+
+What to explain:
+
+- the inter-temporal transition relationship
+- the power-capacity and energy-capacity meanings
+- whether the storage is day-level or month-level
+- whether cycle balance or annual balance is imposed
+
+Typical sentence:
+
+```text
+式（x.21）-（x.24）构建了……储能模型。式（x.21）表示……，式（x.22）和式（x.23）分别表示……，式（x.24）表示……。
+```
+
+If the thesis contains both short-duration storage and seasonal storage, explicitly distinguish which block belongs to which time scale.
+
+## The Most Important Rule: Distinguish Two Different Uses Of `（1）（2）（3）`
+
+This pattern uses Chinese-parenthetical items in two different ways:
+
+### Use A: under `x.x.1 目标函数`
+
+Here `（1）（2）（3）` means:
+
+- different objective blocks
+- different cost-function parts
+- different terms inside the objective
+
+Example:
+
+- `（1）投资成本`
+- `（2）运行成本`
+- `（3）风险成本`
+
+### Use B: under `x.x.2`, `x.x.3` constraints
+
+Here `（1）（2）（3）` means:
+
+- different physical modules inside one major constraint class
+- different device/network/balance blocks
+
+Example:
+
+- `（1）火电机组快速机组组合约束`
+- `（2）可再生能源运行约束`
+- `（3）输电线路运行约束`
+
+Do not mix these two uses.
+
+This distinction should be explicit in the skill.
+
+This is one of the most important format rules:
+
+- under `目标函数`, `（1）（2）（3）` means objective decomposition
+- under `……运行约束`, `（1）（2）（3）` means constraint-module decomposition
+
+The same symbol form is used twice, but its structural job is different.
+
+## The Closing Paragraph
+
+At the end of the whole `x.x` subsection, add one short closing paragraph.
+
+This paragraph should state:
+
+1. which equations together form the final planning model
+2. what type of optimization model it is
+3. what solver or solution method can be used
 
 Template:
 
 ```text
-通过联立式（x.1）-（x.n），构建了考虑……协同的……优化规划模型。
-该模型属于……规划模型，可通过……求解器进行高效求解。
+通过联立式（x.1）-（x.n），构建了考虑……的……优化规划模型。
+该模型为……规划模型，可通过……求解器实现高效求解。
 ```
 
-This closing sentence is not optional in this pattern.
+This sentence is structurally important.
 
-It tells the reader three things:
+Without it, the subsection often feels unfinished.
 
-1. the model assembly is finished
-2. the mathematical-programming type is clear
-3. the next section can move to case studies or algorithms without structural discontinuity
+It gives the reader a clear sense that:
 
-## Paragraph-Level Roles To Mimic
+the objective has been written,
+the constraints have been fully assembled,
+and the mathematical model is now closed.
 
-When summarizing a source subsection like this, look for these paragraph jobs:
-
-1. inheritance paragraph:
-   says the new model is based on earlier submodels
-2. boundary paragraph/figure:
-   clarifies what systems are inside the planning boundary
-3. objective paragraph:
-   gives the top-level optimization target
-4. cost-decomposition paragraph:
-   expands the objective into interpretable blocks
-5. subsystem handoff paragraph:
-   imports previously built constraints by reference
-6. module constraint paragraphs:
-   organize core constraints by physical module
-7. solver paragraph:
-   closes the full model and names the program type
-
-If your draft contains all seven paragraph jobs, it will usually feel like a mature thesis subsection rather than raw notes.
-
-## Sentence Templates
-
-### Opening
+## A More Concrete Reusable Skeleton
 
 ```text
+x.x 考虑……协同的……优化规划模型
 基于上述构建的……模型，本文进一步建立了考虑……协同的……优化规划模型。
-```
+图 x 展示了……系统的耦合关系。
 
-### Objective Lead-In
-
-```text
+x.x.1 目标函数
 如式（x.1）所示，目标函数最小化……和……。
+
+（1）投资成本
+如式（x.2）-（x.4）所示，……
+式（x.2）表示……，式（x.3）表示……，式（x.4）表示……。
+式中：……。
+其中，下标……表示……，上标……表示……。
+
+（2）运行成本
+如式（x.5）-（x.6）所示，……
+式（x.5）表示……，式（x.6）表示……。
+式中：……。
+
+x.x.2 其他系统运行约束
+……系统运行约束构建如式（x.7）-（x.12）所示。
+
+x.x.3 核心系统运行约束
+（1）……
+……
+式（x.13）-（x.18）描述了……的运行特性。
+
+（2）……
+……
+式（x.19）设置了……上下限。
+
+（3）……
+……
+式（x.20）建立了……约束。
+
+（4）……
+……
+式（x.21）为……平衡约束，其中……作为……参与平衡。
+
+（5）……
+……
+式（x.22）-（x.25）构建了……模型。
+
+通过联立式（x.1）-（x.25），构建了……优化规划模型。
+该模型为……模型，可通过……求解。
 ```
 
-### Objective Decomposition
+## A More Detailed Natural-Language Writing Guide
 
-```text
-其中，……包括……与……。
-式（x.2）和式（x.3）分别给出了……与……的计算方法。
-```
+If you were to explain the format in plain Chinese, it should read roughly like this:
 
-### Constraint Handoff
+first, write a subsection like `4.4 考虑……的……优化规划模型`, and use one short paragraph to say that based on the previous model, a complete optimization/planning model is now established.
+Then, if needed, place a framework figure to show the coupling relationship.
 
-```text
-……系统运行约束如式（x.a）-（x.b）所示。
-```
+After that, write `4.4.1 目标函数`.
+Inside `4.4.1`, do not write only one total formula and stop.
+You should first give the total objective, and then use `（1）投资成本`, `（2）运行成本`, `（3）其他成本` to explain each objective term separately.
+For each item, you should explain the formula itself, what physical meaning it has, what each important variable means, and what important subscripts/superscripts mean.
 
-### Constraint Group Explanation
+Then continue with `4.4.2` and `4.4.3` style constraint subsections.
+Each of these should represent one large class of constraints, such as another energy system, the core power system, or a risk module.
+Inside each large class, use `（1）`, `（2）`, `（3）` to continue splitting by physical module.
+For example, one item may be thermal-unit constraints, another may be renewable-energy constraints, another may be network constraints, and another may be storage constraints.
 
-```text
-式（x.5）-（x.8）描述了……的运行特性。
-```
+For each such item, write the formula group first, and then immediately explain what those formulas mean.
+If the notation is dense, continue with `式中：` and explain variables and indices.
 
-### Network/Balance Explanation
+Finally, at the end of the full subsection, add one sentence saying that by jointly enforcing the objective and all constraints, the full optimization/planning model is obtained, and mention what type of solver can be used.
 
-```text
-式（x.9）为……平衡约束，其中……作为……参与平衡。
-```
+## Hard Rules
 
-### Closing
-
-```text
-通过联立式（x.1）-（x.n），构建了……优化规划模型。
-该模型为……模型，可通过……求解器求解。
-```
+1. If the thesis is writing a planning-model subsection, keep the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> meaning explanation`.
+2. Under `目标函数`, use Chinese-parenthetical items to split major objective blocks.
+3. Under each major constraint subsection, use Chinese-parenthetical items to split physical modules.
+4. Each objective block must explain formula meaning and key variable meaning.
+5. Each constraint item must be followed by at least one sentence explaining what the equation group does.
+6. When notation is dense, explain the meaning of important indices, not just the main variable names.
+7. Major constraint subsections must classify by big system category, not by tiny local details.
+8. Do not merge objective writing and constraint writing into one continuous flat section.
+9. End the subsection with a sentence declaring the final model and its solution type.
 
 ## Common Mistakes
 
-Avoid these when writing an optimization-planning subsection:
+Avoid these:
 
-1. repeating the full derivation of every subsystem instead of importing earlier equations by reference
-2. starting directly with dense formulas without one opening sentence stating what full planning problem is being built
-3. placing all cost items into one oversized objective formula with no layered decomposition
-4. listing constraints in the order they were derived rather than regrouping them by subsystem or physical module
-5. giving formulas without one-sentence explanations after each equation group
-6. forgetting the final sentence that declares the complete model and solver type
-7. explaining only symbols but not the engineering role of each cost block or constraint block
+1. writing `x.x.1 目标函数` without `（1）投资成本` / `（2）运行成本` style decomposition
+2. writing a full objective with no Chinese-parenthetical expansion
+3. writing `x.x.2` or `x.x.3` as a flat list of formulas without `（1）（2）（3）`
+4. failing to explain what variables or indices mean after a dense formula
+5. mixing subsystem-level headings and Chinese-parenthetical module headings
+6. putting all constraints into one subsection instead of separating them into `x.x.2`, `x.x.3`, ...
+7. ending the subsection without a final sentence that closes the model
 
 ## Fast Self-Check
 
 Before finalizing, verify:
 
-- the subsection starts with `基于上述……模型`
-- there is one coupling/framework figure if the system boundary is complex
-- the objective is written from total to decomposition, not all at once
-- reused subsystem constraints are imported by equation-range reference where appropriate
-- core constraints are grouped by module and numbered
-- every equation group has at least one interpretation sentence
-- the subsection ends with `通过联立式……构建了……优化规划模型`
+- does the subsection have `x.x.1 目标函数`?
+- under `目标函数`, are there `（1）（2）（3）` items for different objective blocks?
+- does each objective item include formula + physical meaning + variable explanation?
+- does the subsection have `x.x.2`, `x.x.3` style major constraint categories?
+- inside each major constraint category, are there `（1）（2）（3）` items for physical modules?
+- does each constraint item have formula meaning after the equations?
+- does the subsection end with `通过联立式……构建了……优化规划模型`?

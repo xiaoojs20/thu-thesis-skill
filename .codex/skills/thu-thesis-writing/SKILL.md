@@ -163,10 +163,12 @@ When using this skill:
 15. Do not write the abstract as `第1章...第2章...`.
 16. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
 17. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
-18. For optimization-planning subsections, prefer the assembly pattern `opening paragraph -> coupling figure -> objective function -> reused subsystem constraints -> core-system constraints -> closing paragraph`.
-19. For optimization-planning objectives, decompose from total objective to cost blocks instead of writing one oversized formula first.
-20. For optimization-planning constraints, regroup by physical subsystem or module rather than by derivation order.
-21. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
+18. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
+19. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
+20. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
+21. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
+22. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
+23. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
 
 ## Output Standard
 
