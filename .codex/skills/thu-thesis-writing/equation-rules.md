@@ -57,6 +57,17 @@ Use figures for:
 - balance curve
 - sensitivity analysis
 
+### File Format Rule
+
+Prefer inserting figures as PDF files.
+
+Rationale:
+
+- PDF is the default expected figure format for this thesis workflow
+- vector PDF usually preserves line art, topology diagrams, and plotted curves better in LaTeX
+
+If the available figure is not PDF, explicitly remind the user that the current skill expects PDF-form figure insertion.
+
 ### Caption Style
 
 Keep captions noun-based, not conclusion-based.
@@ -80,6 +91,14 @@ Use this pattern:
 由图可知，……。
 相较于方案 A，方案 B ……。
 ```
+
+### Review Rule For Figures
+
+When reviewing figure usage:
+
+1. check whether the inserted figure is PDF
+2. if it is not PDF, explicitly flag it to the user
+3. do not silently treat non-PDF insertion as fully compliant
 
 ## Table Rules
 

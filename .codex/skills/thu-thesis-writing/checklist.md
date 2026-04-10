@@ -60,6 +60,8 @@ When used for review, explicitly mark each check as:
 ## Figures and Tables
 
 - Are figure captions noun-based rather than conclusion-based?
+- Are inserted figures in PDF format?
+- If a figure is not PDF, is that explicitly called out to the user?
 - Are tables used for parameters and structured comparisons?
 - Are figure/table conclusions explained in the main text instead of the caption?
 - Does the text explicitly say `由图可知` or `由表可知` when interpreting results?

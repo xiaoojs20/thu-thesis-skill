@@ -78,18 +78,19 @@ Do not use it for:
 7. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items.
 8. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
 9. For figures/tables, make the caption noun-based and keep conclusions in the main text.
-10. End each technical chapter with a chapter summary that restates:
+10. Prefer inserting figures as PDF files in the LaTeX project; if a figure is not in PDF format, explicitly remind the user.
+11. End each technical chapter with a chapter summary that restates:
    - the challenge
    - the method chain
    - what the case study verified
-11. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
+12. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
    - missing chapter introduction
    - missing chapter summary
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-12. Run the checklist before finalizing.
+13. Run the checklist before finalizing.
 
 ## Theme-Isolation Rule
 
@@ -148,11 +149,13 @@ When using this skill:
 8. Do not put full conclusions into figure captions or table titles.
 9. Do not drop equations without explaining what each block does.
 10. Do not end experiment sections with raw observations only; state what the comparison proves.
-11. The thesis-level `结论` chapter must not set section or subsection headings.
-12. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
-13. Do not write the abstract as `第1章...第2章...`.
-14. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
-15. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+11. Figures should be inserted in PDF format by default.
+12. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
+13. The thesis-level `结论` chapter must not set section or subsection headings.
+14. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
+15. Do not write the abstract as `第1章...第2章...`.
+16. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+17. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
 
 ## Output Standard
 
