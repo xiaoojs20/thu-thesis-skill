@@ -16,7 +16,7 @@ This skill is intentionally format-first and topic-agnostic:
 ## What This Skill Enforces
 
 1. Problem-driven thesis structure rather than article stitching.
-2. Stable chapter organization: overview -> model/method -> experiment/case study -> chapter summary.
+2. Strong technical-chapter backbone: `概述 -> 主要内容 -> 算例分析 -> 本章小结`.
 3. Formal Chinese engineering-academic prose.
 4. Explicit equation explanation style with `式中：`.
 5. Clear figure/table division of labor.
@@ -68,21 +68,27 @@ Do not use it for:
    - final self-check -> `checklist.md`
    - ready-made scaffold -> `chapter-templates/*.md`
 3. If drafting, build the outline before drafting paragraphs.
-4. Draft in a problem-to-method-to-result sequence.
-5. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
-6. For figures/tables, make the caption noun-based and keep conclusions in the main text.
-7. End each technical chapter with a chapter summary that restates:
+4. For technical chapters, enforce the four-part backbone in this order:
+   - `概述`
+   - `主要内容`
+   - `算例分析`
+   - `本章小结`
+5. Treat `主要内容` as the chapter body, which may expand into multiple sections such as definitions, models, constraints, frameworks, or algorithms, but it must stay between `概述` and `算例分析`.
+6. Draft in a problem-to-method-to-result sequence.
+7. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
+8. For figures/tables, make the caption noun-based and keep conclusions in the main text.
+9. End each technical chapter with a chapter summary that restates:
    - the challenge
    - the method chain
    - what the case study verified
-8. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
+10. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
    - missing chapter introduction
    - missing chapter summary
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-9. Run the checklist before finalizing.
+11. Run the checklist before finalizing.
 
 ## Theme-Isolation Rule
 
@@ -135,12 +141,15 @@ When using this skill:
 2. Do not write thesis text as a list of disconnected papers.
 3. Prefer theme-based literature review, not author-by-author listing.
 4. Use transition phrases deliberately: `针对`, `首先`, `其次`, `基于此`, `最后`.
-5. Do not put full conclusions into figure captions or table titles.
-6. Do not drop equations without explaining what each block does.
-7. Do not end experiment sections with raw observations only; state what the comparison proves.
-8. Do not write the abstract as `第1章...第2章...`.
-9. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
-10. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+5. Every technical chapter must contain `概述 + 主要内容 + 算例分析 + 本章小结` in that order.
+6. `主要内容` can be split into multiple consecutive sections, but those sections collectively serve one block: the chapter's main method/model content.
+7. If one of the four blocks is missing, do not treat the chapter as structurally complete.
+8. Do not put full conclusions into figure captions or table titles.
+9. Do not drop equations without explaining what each block does.
+10. Do not end experiment sections with raw observations only; state what the comparison proves.
+11. Do not write the abstract as `第1章...第2章...`.
+12. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+13. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
 
 ## Output Standard
 

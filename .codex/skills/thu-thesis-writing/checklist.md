@@ -19,10 +19,16 @@ When used for review, explicitly mark each check as:
 - Is there a chapter-level introduction or overview section near the beginning?
 - Is there a chapter-level summary or `本章小结` near the end?
 - If it is a technical chapter, does it contain:
-  - overview
-  - core model or method
-  - experiment/case study
-  - chapter summary
+  - `概述`
+  - `主要内容`
+  - `算例分析`
+  - `本章小结`
+- For a technical chapter, do these four blocks appear in the required order:
+  - `概述`
+  - `主要内容`
+  - `算例分析`
+  - `本章小结`
+- If any one of the four blocks is missing, is the structure marked `fail` rather than `partial`?
 
 ## Section Transitions
 

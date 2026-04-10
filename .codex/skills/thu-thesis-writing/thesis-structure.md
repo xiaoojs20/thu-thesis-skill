@@ -52,14 +52,23 @@ Inside `1.3`, keep:
 
 ### Technical Chapters
 
-For Chapters 2 to 5, prefer this pattern:
+For Chapters 2 to 5, enforce this pattern:
 
 1. `x.1 概述`
-2. `x.2` definition / symbol table / problem analysis
-3. `x.3` core method or model
-4. `x.4` expanded framework / constraints / optimization model
+2. `x.2-x.4 主要内容`
 5. `x.5 算例分析`
 6. `x.6 本章小结`
+
+This is a strong constraint rather than a loose suggestion.
+
+Interpretation:
+
+- `概述`: chapter target, problem, and content map
+- `主要内容`: one or more consecutive sections carrying definitions, models, methods, frameworks, constraints, algorithms, or derivations
+- `算例分析`: validation through cases, experiments, simulations, or comparative studies
+- `本章小结`: chapter-level recap of problem, method chain, and validated result
+
+`主要内容` does not have to appear as a literal section title, but it must occupy the middle block between `概述` and `算例分析`.
 
 ## Section Organization
 
@@ -132,3 +141,10 @@ Recommended balance derived from the source thesis:
 ```
 
 When adapting this skeleton, preserve the progression and section logic, but rename chapter titles entirely around the target thesis topic.
+
+For technical chapters, the non-negotiable sequence is:
+
+1. `概述`
+2. `主要内容`
+3. `算例分析`
+4. `本章小结`

@@ -4,12 +4,21 @@ Use this for a model, method, simulation, or optimization-planning chapter.
 
 ## Recommended Structure
 
+This chapter type has a strong required backbone:
+
+1. `概述`
+2. `主要内容`
+3. `算例分析`
+4. `本章小结`
+
+In practice, `主要内容` is usually expanded into multiple consecutive sections such as `x.2-x.4`.
+
 ```text
 第x章 [方法/模型标题]
 x.1 概述
-x.2 定义、符号或问题分析
-x.3 核心模型或方法
-x.4 扩展框架、约束或优化模型
+x.2 定义、符号或问题分析（主要内容）
+x.3 核心模型或方法（主要内容）
+x.4 扩展框架、约束或优化模型（主要内容）
 x.5 算例分析
 x.6 本章小结
 ```
@@ -34,7 +43,7 @@ Template:
 
 ### x.2 定义、符号或问题分析
 
-Use this section to stabilize the notation space before equations become dense.
+This section belongs to the chapter's `主要内容` block. Use it to stabilize the notation space before equations become dense.
 
 Include:
 
@@ -43,6 +52,8 @@ Include:
 - problem decomposition if needed
 
 ### x.3 核心模型或方法
+
+This section also belongs to the chapter's `主要内容` block.
 
 For each subsection:
 
@@ -63,7 +74,7 @@ Template:
 
 ### x.4 扩展框架、约束或优化模型
 
-Use this section to assemble the model into a full framework:
+This section is the last part of the chapter's `主要内容` block. Use it to assemble the model into a full framework:
 
 - objective function
 - operational constraints
@@ -87,6 +98,7 @@ Template:
 
 ## Final Check
 
+- the chapter explicitly follows `概述 -> 主要内容 -> 算例分析 -> 本章小结`
 - each model block solves one explicit subproblem
 - equations are introduced before appearing
 - notation is controlled
