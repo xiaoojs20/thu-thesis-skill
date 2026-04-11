@@ -1,8 +1,8 @@
-# Experiment and Case-Study Pattern
+# 算例与实验章节模式
 
-## Default Experiment Logic
+## 默认实验逻辑
 
-Use this sequence:
+建议按以下顺序：
 
 1. state the validation goal
 2. describe the case system or dataset
@@ -12,11 +12,11 @@ Use this sequence:
 6. interpret the mechanism behind the result
 7. state what the comparison proves
 
-## Common Structures
+## 常见结构
 
-### Pattern A: Method Validation
+### 模式 A：方法验证
 
-Use for a new model or decomposition method:
+适用于新模型或新分解方法：
 
 1. experiment goal
 2. data source and computing environment
@@ -24,9 +24,9 @@ Use for a new model or decomposition method:
 4. overall reconstruction or final comparison
 5. conclusion
 
-### Pattern B: Scheme Comparison
+### 模式 B：方案对比
 
-Use for optimization or simulation frameworks:
+适用于优化或仿真框架：
 
 1. scheme setting
 2. test system description
@@ -35,9 +35,9 @@ Use for optimization or simulation frameworks:
 5. interpretation
 6. conclusion
 
-### Pattern C: Risk or Robustness Analysis
+### 模式 C：风险或鲁棒性分析
 
-Use for uncertainty, CVaR, or robust planning:
+适用于不确定性、CVaR 或鲁棒规划问题：
 
 1. scheme setting
 2. scenario or uncertainty configuration
@@ -46,7 +46,7 @@ Use for uncertainty, CVaR, or robust planning:
 5. larger system verification
 6. conclusion
 
-## Reusable Section Skeleton
+## 可复用章节骨架
 
 ```text
 x.5 算例分析
@@ -60,7 +60,7 @@ x.5.4 灵敏度分析（可选）
 x.5.5 大规模系统验证（可选）
 ```
 
-## Result Paragraph Template
+## 结果分析段模板
 
 ```text
 表 x 对比了方案 A 和方案 B 的结果。
@@ -69,7 +69,7 @@ x.5.5 大规模系统验证（可选）
 通过上述对比分析，证明了……。
 ```
 
-## Figure Interpretation Template
+## 图结果解读模板
 
 ```text
 图 x 展示了……。
@@ -78,9 +78,9 @@ x.5.5 大规模系统验证（可选）
 这说明……。
 ```
 
-## Figure/Table Ordering Pattern
+## 图表组织顺序
 
-Preferred order inside a case-study subsection:
+算例小节内部优先按以下顺序组织：
 
 1. scheme table
 2. topology figure
@@ -88,9 +88,9 @@ Preferred order inside a case-study subsection:
 4. result table
 5. dynamic result figures
 
-## What Counts As a Strong Experiment Section
+## 什么算是强实验章节
 
-The section should answer:
+一个强实验章节应回答：
 
 1. what is being validated
 2. against what baseline

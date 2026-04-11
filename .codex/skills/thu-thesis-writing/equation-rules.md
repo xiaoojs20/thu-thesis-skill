@@ -1,8 +1,8 @@
-# Equation, Figure, and Table Rules
+# 公式、图与表规则
 
-## Equation Explanation Style
+## 公式解释顺序
 
-Use this fixed sequence:
+公式解释优先按以下固定顺序：
 
 1. explain why the equation is needed
 2. show the equation or equation group
@@ -10,7 +10,7 @@ Use this fixed sequence:
 4. add `式中：` to define symbols
 5. state what the equation block accomplishes in the thesis
 
-## Equation Group Template
+## 公式组模板
 
 ```text
 ……如式（x.1）-（x.4）所示。
@@ -19,7 +19,7 @@ Use this fixed sequence:
 基于式（x.1）-（x.4）构建的……，实现了……。
 ```
 
-## `式中：` Rules
+## `式中：` 规则
 
 1. Start with `式中：`.
 2. Follow variable appearance order.
@@ -32,9 +32,9 @@ Template:
 式中：X 表示……；Y 表示……；Z 为……，其上限为……。
 ```
 
-## What To Explain After Equations
+## 公式后还需要解释什么
 
-Do not stop at symbol definitions. Also state the modeling function:
+不要只停留在符号定义，还要说明该公式块的建模作用：
 
 - describes uncertainty
 - preserves temporal correlation
@@ -43,11 +43,11 @@ Do not stop at symbol definitions. Also state the modeling function:
 - reduces computational complexity
 - supports later scenario analysis
 
-## Figure Rules
+## 图的规则
 
-### Function Split
+### 图的职责
 
-Use figures for:
+图更适合承载：
 
 - background cognition
 - research framework
@@ -57,22 +57,22 @@ Use figures for:
 - balance curve
 - sensitivity analysis
 
-### File Format Rule
+### 文件格式规则
 
-Prefer inserting figures as PDF files.
+插图优先使用 PDF。
 
-Rationale:
+原因：
 
 - PDF is the default expected figure format for this thesis workflow
 - vector PDF usually preserves line art, topology diagrams, and plotted curves better in LaTeX
 
-If the available figure is not PDF, explicitly remind the user that the current skill expects PDF-form figure insertion.
+如果现有图不是 PDF，要明确提醒用户本 skill 默认按 PDF 图插入。
 
-### Caption Style
+### 图题写法
 
 Keep captions noun-based, not conclusion-based.
 
-Good patterns:
+较好的题注模式：
 
 - `某系统拓扑结构`
 - `某方法框架`

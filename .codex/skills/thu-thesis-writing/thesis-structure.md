@@ -1,10 +1,10 @@
-# Thesis Structure
+# 论文结构
 
-## Overall Thesis Shape
+## 全文结构
 
-This file describes reusable structure only. Chapter names such as `规划`, `风险`, `运行`, `建模`, `实验`, `案例分析` are examples of structural roles, not mandatory subject matter.
+本文件只描述可复用的结构规律。诸如 `规划`、`风险`、`运行`、`建模`、`实验`、`案例分析` 等章节名称只是结构角色示例，不是必须使用的主题词。
 
-Use a single-problem research line:
+全文应保持单一主问题研究线：
 
 1. front matter
 2. Chinese abstract
@@ -19,15 +19,15 @@ Use a single-problem research line:
 11. Chapter 6 conclusion
 12. references and back matter
 
-This is not a stitched-paper structure. Each chapter should solve one step of the same main problem.
+这不是“多篇论文拼接式”结构。每一章都应解决同一主问题链条中的一个环节。
 
-Before fixing the final chapter number, determine the thesis level:
+在确定最后一章编号前，先判断论文层次：
 
 - master's thesis: the thesis often ends in Chapter 5, so the conclusion is often Chapter 5
 - doctoral thesis: the thesis often ends in Chapter 6, so the conclusion is often Chapter 6
 - if the thesis level is unknown, keep the conclusion chapter number as a placeholder and do not hard-code it
 
-Do not copy the sample thesis's exact chapter subjects. Replace each chapter role with the user's actual topic, for example:
+不要照抄样本论文的章节主题，应改写为用户自己的研究对象，例如：
 
 - `基础理论`
 - `方法设计`
@@ -35,9 +35,9 @@ Do not copy the sample thesis's exact chapter subjects. Replace each chapter rol
 - `实验验证`
 - `扩展分析`
 
-## Chapter Backbone
+## 章节骨架
 
-### Chapter 1: Introduction
+### 第 1 章：引言
 
 Use:
 
@@ -45,29 +45,29 @@ Use:
 2. `1.2 国内外研究现状`
 3. `1.3 研究思路与主要工作`
 
-Inside `1.1`, keep:
+`1.1` 内部保持：
 
 1. research background
 2. key problem
 3. research significance
 
-Inside `1.3`, keep:
+`1.3` 内部保持：
 
 1. research route
 2. chapter-by-chapter main work
 
-### Technical Chapters
+### 技术章节
 
-For the technical chapters before the thesis-level conclusion, enforce this pattern:
+对结论章之前的技术章节，强制保持以下模式：
 
 1. `x.1 概述`
 2. `x.2-x.4 主要内容`
 5. `x.5 算例分析`
 6. `x.6 本章小结`
 
-This is a strong constraint rather than a loose suggestion.
+这是强约束，不是松散建议。
 
-Interpretation:
+含义如下：
 
 - `概述`: chapter target, problem, and content map
 - `主要内容`: one or more consecutive sections carrying definitions, models, methods, frameworks, constraints, algorithms, or derivations
@@ -76,16 +76,16 @@ Interpretation:
 
 `主要内容` does not have to appear as a literal section title, but it must occupy the middle block between `概述` and `算例分析`.
 
-### Thesis-Level Conclusion
+### 论文层面的结论章
 
-For the thesis-level conclusion chapter, enforce this pattern:
+对论文层面的结论章，强制保持以下模式：
 
 1. chapter title only: `第x章 结论`
 2. opening summary paragraph
 3. numbered main contributions
 4. closing paragraph
 
-This is also a strong constraint.
+这同样是强约束。
 
 If the thesis is a master's thesis, `x` is often `5`.
 
@@ -93,9 +93,9 @@ If the thesis is a doctoral thesis, `x` is often `6`.
 
 Do not create `x.1`, `x.2`, `x.3` or any subsection headings inside the conclusion chapter.
 
-## Section Organization
+## 节内组织顺序
 
-When a section introduces a model, use this order:
+当某一节引入模型时，优先按以下顺序：
 
 1. problem or objective definition
 2. variable or notation clarification
@@ -103,7 +103,7 @@ When a section introduces a model, use this order:
 4. constraints or submodules
 5. modeling implication
 
-When a section introduces experiments, use this order:
+当某一节引入实验/算例时，优先按以下顺序：
 
 1. case setting
 2. scheme definition
@@ -112,7 +112,7 @@ When a section introduces experiments, use this order:
 5. interpretation
 6. conclusion
 
-## Common Subsection Types
+## 常见小节类型
 
 Typical subsection patterns:
 
@@ -120,15 +120,15 @@ Typical subsection patterns:
 2. `模型 / 目标函数 / 约束`
 3. `边界条件说明 / 结果对比分析 / 灵敏度分析`
 
-## Chapter Length Guidance
+## 章节篇幅建议
 
-Recommended balance derived from the source thesis:
+根据样本论文提炼出的推荐比例：
 
 - introduction: about 30% of core body
 - each major technical chapter: about 15% to 20%
 - final conclusion: about 4% to 6%
 
-## Figure/Table Density Guidance
+## 图表密度建议
 
 - Introduction: few figures and tables; use them for background and framework only.
 - Method chapters: highest figure density; use for workflow, topology, and statistical patterns.
@@ -138,7 +138,7 @@ Recommended balance derived from the source thesis:
   - parameters
   - result comparison
 
-## Reusable Outline Skeleton
+## 可复用提纲骨架
 
 ```text
 第1章 引言
@@ -163,16 +163,16 @@ Recommended balance derived from the source thesis:
 第x章 结论
 ```
 
-When adapting this skeleton, preserve the progression and section logic, but rename chapter titles entirely around the target thesis topic.
+套用该骨架时，要保留推进顺序和节级逻辑，但章节标题必须完全围绕目标论文主题重写。
 
-For technical chapters, the non-negotiable sequence is:
+对技术章节，不可打破的顺序是：
 
 1. `概述`
 2. `主要内容`
 3. `算例分析`
 4. `本章小结`
 
-For the thesis-level conclusion chapter, the non-negotiable rule is:
+对论文层面的结论章，不可打破的规则是：
 
 1. no section headings
 2. no subsection headings

@@ -1,10 +1,10 @@
-# Conclusion Template
+# 结论章节模板
 
-Use this for a thesis-level conclusion or a major chapter conclusion.
+用于论文层面的结论章，或某一章的章末结论。
 
-## Thesis-Level Conclusion Structure
+## 论文层面结论章结构
 
-Strong constraint:
+强约束：
 
 - do not set section headings
 - do not set subsection headings
@@ -21,15 +21,15 @@ Strong constraint:
 3. overall implication paragraph
 ```
 
-Determine `x` from the thesis level first:
+先根据学位层次确定 `x`：
 
 - master's thesis: `x` is often `5`
 - doctoral thesis: `x` is often `6`
 - if unknown, keep `x` as a placeholder until the thesis structure is confirmed
 
-## Opening Summary Paragraph
+## 开头总述段
 
-Restate:
+需要重述：
 
 1. the thesis background
 2. the overall contradiction or challenge
@@ -44,9 +44,9 @@ Template:
 本文围绕……，分别从……、……、……和……展开研究。
 ```
 
-## Numbered Contribution Template
+## 编号贡献项模板
 
-Write each contribution as:
+每一项贡献都写成：
 
 1. challenge
 2. method
@@ -63,11 +63,11 @@ Template:
 最后通过……验证了……，说明……。
 ```
 
-Repeat for 3 to 5 items.
+一般重复 3 到 5 项。
 
-## Final Paragraph
+## 收束段
 
-Close with the thesis-level finding and value:
+用论文层面的发现与价值收束：
 
 ```text
 本文研究表明，……。
@@ -75,9 +75,9 @@ Close with the thesis-level finding and value:
 从……角度看，本文可为……提供支撑。
 ```
 
-## Chapter Summary Variant
+## 章末结论变体
 
-If this is only a chapter conclusion, compress to:
+如果这里只是某一章的章末结论，可压缩成：
 
 1. chapter challenge
 2. chapter method chain
@@ -92,7 +92,7 @@ Template:
 最后，通过算例分析验证了……。
 ```
 
-## Final Check
+## 最终检查
 
 - the thesis-level conclusion has no section headings or subsection headings
 - every numbered contribution lead sentence is bold

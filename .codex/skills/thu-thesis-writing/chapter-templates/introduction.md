@@ -1,8 +1,8 @@
-# Introduction Chapter Template
+# 引言章节模板
 
-Use this for Chapter 1 or a standalone introduction section.
+用于第 1 章引言，或独立引言部分。
 
-## Recommended Structure
+## 推荐结构
 
 ```text
 第1章 引言
@@ -16,18 +16,18 @@ Use this for Chapter 1 or a standalone introduction section.
   1.3.2 主要工作
 ```
 
-## Writing Guide
+## 写作说明
 
 ### 1.1.1 研究背景
 
-Write in this order:
+按以下顺序写：
 
 1. macro policy or industry background
 2. concrete engineering contradiction
 3. why existing operation/planning methods are insufficient
 4. why the thesis topic matters now
 
-Starter template:
+起手模板：
 
 ```text
 随着……，系统面临……挑战。
@@ -38,13 +38,13 @@ Starter template:
 
 ### 1.1.2 关键问题
 
-Write:
+写法要求：
 
 1. one thesis-level core scientific problem
 2. 2 to 4 subproblems
 3. 1 to 2 technical difficulties per subproblem
 
-Template:
+模板：
 
 ```text
 基于上述背景，本文聚焦于“……”这一核心问题。
@@ -59,7 +59,7 @@ Template:
 
 ### 1.1.3 研究意义
 
-Split significance into:
+研究意义建议拆为：
 
 1. modeling or theory meaning
 2. methodological meaning
@@ -67,16 +67,16 @@ Split significance into:
 
 ### 1.2 国内外研究现状
 
-Review by topic, not by author chronology.
+文献综述按主题写，不按作者时间线平铺。
 
-Recommended pattern:
+推荐模式：
 
 1. topic A current status
 2. topic B current status
 3. topic C current status
 4. summary of remaining gaps
 
-Closing template:
+总收口模板：
 
 ```text
 总体而言，当前研究仍存在以下问题：
@@ -87,7 +87,7 @@ Closing template:
 
 ### 1.3.1 研究思路
 
-State:
+建议交代：
 
 1. problem orientation
 2. research framework
@@ -95,7 +95,7 @@ State:
 
 ### 1.3.2 主要工作
 
-Map each chapter to one sentence or one short paragraph, but determine the final chapter number from the thesis level first:
+每章可对应一句或一小段，但要先根据学位层次确定最后的结论章编号：
 
 - master's thesis: the conclusion is often Chapter 5
 - doctoral thesis: the conclusion is often Chapter 6
@@ -108,7 +108,7 @@ Map each chapter to one sentence or one short paragraph, but determine the final
 第x章 结论。
 ```
 
-## Final Check
+## 最终检查
 
 - broad-to-narrow logic is clear
 - subproblems align with later chapters

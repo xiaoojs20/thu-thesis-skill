@@ -1,17 +1,17 @@
-# Methodology Chapter Template
+# 方法章节模板
 
-Use this for a model, method, simulation, or optimization-planning chapter.
+用于模型、方法、仿真或优化规划类章节。
 
-## Recommended Structure
+## 推荐结构
 
-This chapter type has a strong required backbone:
+这类章节有一条较强的骨架约束：
 
 1. `概述`
 2. `主要内容`
 3. `算例分析`
 4. `本章小结`
 
-In practice, `主要内容` is usually expanded into multiple consecutive sections such as `x.2-x.4`.
+在实际写作中，`主要内容` 通常会展开为 `x.2-x.4` 这样的多个连续小节。
 
 ```text
 第x章 [方法/模型标题]
@@ -23,17 +23,17 @@ x.5 算例分析
 x.6 本章小结
 ```
 
-## Writing Guide
+## 写作说明
 
 ### x.1 概述
 
-State:
+建议交代：
 
 1. the chapter target
 2. the gap in existing methods
 3. what this chapter will build
 
-Template:
+模板：
 
 ```text
 针对……问题，现有方法通常难以……。
@@ -43,9 +43,9 @@ Template:
 
 ### x.2 定义、符号或问题分析
 
-This section belongs to the chapter's `主要内容` block. Use it to stabilize the notation space before equations become dense.
+这一节属于章节的 `主要内容` 区块，主要用于在公式密集出现前稳定符号空间。
 
-Include:
+可包含：
 
 - key definitions
 - symbol table or notation explanation
@@ -53,7 +53,7 @@ Include:
 
 ### x.3 核心模型或方法
 
-This section also belongs to the chapter's `主要内容` block.
+这一节同样属于章节的 `主要内容` 区块。
 
 For each subsection:
 
@@ -74,7 +74,7 @@ Template:
 
 ### x.4 扩展框架、约束或优化模型
 
-This section is the last part of the chapter's `主要内容` block. Use it to assemble the model into a full framework:
+这一节是 `主要内容` 区块的最后一部分，用来把前面内容总装成完整框架：
 
 - objective function
 - operational constraints
@@ -105,7 +105,7 @@ Template:
 最后，通过算例分析验证了……。
 ```
 
-## Final Check
+## 最终检查
 
 - the chapter explicitly follows `概述 -> 主要内容 -> 算例分析 -> 本章小结`
 - each model block solves one explicit subproblem

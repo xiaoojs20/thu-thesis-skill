@@ -1,19 +1,19 @@
-# Writing Patterns
+# 写作模式
 
-## Core Paragraph Logic
+## 核心段落逻辑
 
-This file controls rhetoric and paragraph motion, not thesis subject matter. All nouns should be rewritten around the user's topic.
+本文件控制的是论述节奏与段落推进，而不是论文主题本身。所有名词都应围绕用户自己的研究对象重写。
 
-Default paragraph progression:
+默认段落推进顺序：
 
 1. state the engineering background or phenomenon
 2. state the contradiction, gap, or challenge
 3. introduce what this chapter or thesis addresses
 4. state the method, effect, or contribution
 
-## Preferred Transition Language
+## 推荐衔接语
 
-Use these deliberately:
+这些词要有意识地使用：
 
 - `针对`
 - `首先`
@@ -24,11 +24,11 @@ Use these deliberately:
 - `由表可知`
 - `通过上述对比分析`
 
-Do not over-randomize wording if the text loses thesis discipline.
+不要为了“避免重复”而过度乱换说法，导致论文语体失去稳定性。
 
-## Sentence Templates
+## 常用句式模板
 
-### Method Introduction
+### 方法引入
 
 ```text
 针对……问题，本文提出……方法。
@@ -38,7 +38,7 @@ Do not over-randomize wording if the text loses thesis discipline.
 最后，通过……验证……。
 ```
 
-### Result Interpretation
+### 结果解读
 
 ```text
 如图 x 所示，……。
@@ -47,7 +47,7 @@ Do not over-randomize wording if the text loses thesis discipline.
 通过上述对比分析，证明了……。
 ```
 
-### Background Setup
+### 背景铺垫
 
 ```text
 随着……，研究对象/系统/场景面临……挑战。
@@ -55,9 +55,9 @@ Do not over-randomize wording if the text loses thesis discipline.
 因此，如何……成为……领域的重要问题。
 ```
 
-## Introduction Style
+## 引言写法
 
-Build the introduction in this sequence:
+引言建议按以下顺序展开：
 
 1. macro background
 2. concrete system contradiction
@@ -69,7 +69,7 @@ Build the introduction in this sequence:
 8. literature review
 9. research route and chapter arrangement
 
-Hard rules:
+硬规则：
 
 1. Start broad, then narrow to the thesis problem.
 2. Split the core problem into 2 to 4 subproblems.
@@ -77,9 +77,9 @@ Hard rules:
 4. Review literature by topic, not by author order.
 5. End with the thesis route and chapter tasks.
 
-## Abstract Style
+## 摘要写法
 
-Use six moves:
+摘要可按六步展开：
 
 1. background and overall challenge
 2. core scientific problem
@@ -95,9 +95,9 @@ Hard rules:
 3. Keep each contribution to a compressed `problem -> method -> effect` block.
 4. End with overall value, not with repetition.
 
-## Conclusion Style
+## 结论写法
 
-Use three layers:
+结论章保持三层结构：
 
 1. opening paragraph:
    - restate the thesis background and overall route
@@ -117,7 +117,7 @@ Hard rules:
 6. Write the numbered lead sentence in LaTeX as `\textbf{（n）提出了……}`.
 7. Do not copy chapter summaries directly; rewrite each item from the full-thesis perspective.
 
-Suggested numbered paragraph template:
+建议的编号段模板：
 
 ```text
 \textbf{（n）提出了……}
@@ -127,9 +127,9 @@ Suggested numbered paragraph template:
 最后通过……验证了……。
 ```
 
-## Chapter Summary Style
+## 本章小结写法
 
-Each chapter summary should include:
+每个 `本章小结` 都应包含：
 
 1. why the chapter was needed
 2. what method chain the chapter built
@@ -144,9 +144,9 @@ Use:
 最后，通过算例分析证明了……。
 ```
 
-## Tone Control
+## 语气控制
 
-Write in a formal Chinese engineering style:
+应保持正式的中文工科论文语体：
 
 - concise
 - analytical
@@ -154,7 +154,7 @@ Write in a formal Chinese engineering style:
 - result-oriented
 - technically explicit
 
-Avoid:
+避免：
 
 - rhetorical flourish
 - journalistic tone

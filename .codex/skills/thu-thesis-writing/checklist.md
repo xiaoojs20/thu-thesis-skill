@@ -1,18 +1,18 @@
-# Thesis Writing and Review Checklist
+# 论文写作与审阅检查表
 
-Use this either:
+以下两种情况使用：
 
 - before returning drafted chapter text
 - when reviewing an existing thesis chapter or section
 
-When used for review, explicitly mark each check as:
+用于审阅时，每一项都要明确标记为：
 
 - pass
 - partial
 - fail
 - not applicable
 
-## Structure
+## 结构
 
 - Does the chapter follow one main problem line?
 - Does the section order match the chapter type?
@@ -30,26 +30,26 @@ When used for review, explicitly mark each check as:
   - `本章小结`
 - If any one of the four blocks is missing, is the structure marked `fail` rather than `partial`?
 
-## Section Transitions
+## 节间衔接
 
 - Does each major section connect logically to the previous section?
 - Are there explicit transition sentences between background, model, experiment, and summary sections?
 - Are `针对 / 首先 / 其次 / 基于此 / 最后` used where the logic needs structural guidance?
 - Does the chapter avoid abrupt jumps from one topic to another without explanation?
 
-## Introduction
+## 引言
 
 - Does it move from broad background to specific thesis problem?
 - Are the subproblems explicit?
 - Are the technical difficulties explicit?
 - Is the literature review theme-based rather than author-by-author?
 
-## Paragraph Quality
+## 段落质量
 
 - Does each paragraph do one main job?
 - Are claims concrete rather than generic?
 
-## Equations
+## 公式
 
 - Is each equation introduced before appearing?
 - If there is an equation group, is each equation’s role explained?
@@ -57,7 +57,7 @@ When used for review, explicitly mark each check as:
 - Are key variables explained after the equation instead of being left implicit?
 - Is the modeling meaning stated after the formula?
 
-## Optimization-Planning Subsection
+## 优化/规划模型小节
 
 - If the section is a planning-model subsection, does it start with a short inheritance paragraph rather than repeating chapter background?
 - Is there a coupling/framework figure when multiple systems, energy forms, or planning objects are involved?
@@ -75,7 +75,7 @@ When used for review, explicitly mark each check as:
 - Does each constraint group have a follow-up sentence explaining what that group accomplishes?
 - Does the subsection end by stating that the full optimization model is obtained by jointly enforcing the objective and all constraints?
 
-## Figures and Tables
+## 图与表
 
 - Are figure captions noun-based rather than conclusion-based?
 - Are inserted figures in PDF format?

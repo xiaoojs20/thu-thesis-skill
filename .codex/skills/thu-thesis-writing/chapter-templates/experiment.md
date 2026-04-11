@@ -1,8 +1,8 @@
-# Experiment Section Template
+# 算例章节模板
 
-Use this for `算例分析`, case studies, validation sections, or result-analysis sections.
+用于 `算例分析`、案例研究、验证章节或结果分析章节。
 
-## Recommended Structure
+## 推荐结构
 
 ```text
 x.5 算例分析
@@ -16,9 +16,9 @@ x.5.4 灵敏度分析（可选）
 x.5.5 大规模系统验证（可选）
 ```
 
-## Writing Guide
+## 写作说明
 
-### Opening Paragraph
+### 开头段
 
 ```text
 本节基于……系统进行算例分析，以验证……。
@@ -28,7 +28,7 @@ x.5.5 大规模系统验证（可选）
 
 ### （1）测试系统说明
 
-State:
+建议交代：
 
 1. what system is used
 2. what components are included
@@ -36,9 +36,9 @@ State:
 
 ### （2）方案定义
 
-Use a table when there are multiple schemes.
+当方案较多时，优先用表格。
 
-Keep the differences explicit:
+差异要写明：
 
 - baseline
 - proposed method
@@ -47,14 +47,14 @@ Keep the differences explicit:
 
 ### （3）参数设置
 
-Use a table for:
+以下内容优先用表：
 
 - cost parameters
 - efficiency parameters
 - penetration assumptions
 - confidence level or risk weight if relevant
 
-### Result Comparison Paragraph
+### 结果对比段
 
 ```text
 表 x 对比了方案 A 和方案 B 的结果。
@@ -63,7 +63,7 @@ Use a table for:
 通过上述对比分析，证明了……。
 ```
 
-### Dynamic Figure Interpretation Paragraph
+### 动态图解释段
 
 ```text
 图 x 展示了……。
@@ -72,7 +72,7 @@ Use a table for:
 这说明……。
 ```
 
-### Sensitivity Analysis Paragraph
+### 灵敏度分析段
 
 ```text
 为进一步分析……对结果的影响，本节开展灵敏度分析。
@@ -80,7 +80,7 @@ Use a table for:
 这说明……对系统……具有重要影响。
 ```
 
-## Final Check
+## 最终检查
 
 - validation target is explicit
 - baseline is explicit

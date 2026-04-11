@@ -3,17 +3,17 @@ name: "thu-thesis-writing"
 description: "Use when writing, outlining, revising, reviewing, or expanding a Chinese engineering thesis, dissertation chapter, abstract, introduction, methodology chapter, experiment section, or conclusion in the structured Tsinghua-style academic pattern: problem-driven introduction, chapter-by-chapter method progression, explicit equation explanations, disciplined figure/table usage, formal experiment analysis, and chapter-level thesis review."
 ---
 
-# THU Thesis Writing
+# 清华风格工科论文写作
 
-Use this skill when the user wants thesis text that should follow the structure and tone extracted from a high-quality Tsinghua-style engineering PhD thesis.
+当用户希望论文文本遵循从高质量清华风格工科博士论文中提炼出的结构与语气时，使用本 skill。
 
-This skill is intentionally format-first and topic-agnostic:
+本 skill 明确以“写作形式优先”，而不是“样本主题优先”：
 
-- learn chapter organization, paragraph logic, equation narration, figure/table discipline, and experiment scaffolding
-- do not inherit the source thesis topic, domain assumptions, system names, datasets, variables, or conclusions
-- do not force power systems, energy systems, planning, storage, risk, or any other sample-theme vocabulary onto a different thesis
+- 学习章节组织、段落逻辑、公式叙述、图表规范和实验章节骨架
+- 不要继承样本论文的研究主题、领域假设、系统名称、数据集、变量或结论
+- 不要把电力系统、能源系统、规划、储能、风险等样本主题词强行带入其他论文
 
-## What This Skill Enforces
+## 本 Skill 强制保持的写法
 
 1. Problem-driven thesis structure rather than article stitching.
 2. Strong technical-chapter backbone: `概述 -> 主要内容 -> 算例分析 -> 本章小结`.
@@ -25,7 +25,7 @@ This skill is intentionally format-first and topic-agnostic:
 8. Chapter-review checks for structural completeness and local logic.
 9. Theme isolation: extract writing form, not subject matter.
 
-## When To Use
+## 适用场景
 
 Use this skill for:
 
@@ -41,7 +41,7 @@ Use this skill for:
 - Conclusion writing
 - Converting rough notes into thesis prose
 
-If the target thesis contains an optimization/planning model subsection, treat `optimization-model-pattern.md` as a default writing pattern rather than an optional reference.
+如果目标论文包含优化/规划模型小节，应将 `optimization-model-pattern.md` 视为默认写法，而不是可选参考。
 
 Do not use it for:
 
@@ -50,9 +50,9 @@ Do not use it for:
 - Slide decks
 - Code or implementation documentation
 
-## Workflow
+## 使用流程
 
-1. Identify the target deliverable:
+1. 先识别目标产出类型：
    - abstract
    - introduction
    - methodology/model chapter
@@ -61,50 +61,50 @@ Do not use it for:
    - full chapter outline
    - chapter review
    - section review
-2. Determine the thesis level first:
-   - master's thesis: conclusion is often Chapter 5
-   - doctoral thesis: conclusion is often Chapter 6
-   - if the thesis level is unknown, do not hard-code the conclusion chapter number
-3. Read only the relevant files:
-   - overall structure -> `thesis-structure.md`
-   - prose and rhetoric -> `writing-patterns.md`
-   - equations, figures, tables -> `equation-rules.md`
-   - experiment section -> `experiment-pattern.md`
-   - optimization-planning subsection -> `optimization-model-pattern.md`
-   - LaTeX build and cleanup commands -> `latex-build-commands.md`
-   - final self-check -> `checklist.md`
-   - ready-made scaffold -> `chapter-templates/*.md`
-4. If drafting, build the outline before drafting paragraphs.
-5. For technical chapters, enforce the four-part backbone in this order:
+2. 先判断论文层次：
+   - 硕士论文：结论章通常是第 5 章
+   - 博士论文：结论章通常是第 6 章
+   - 如果学位层次未知，不要提前写死结论章编号
+3. 只读取与当前任务相关的文件：
+   - 总体结构 -> `thesis-structure.md`
+   - 行文逻辑与语气 -> `writing-patterns.md`
+   - 公式、图、表 -> `equation-rules.md`
+   - 算例/实验章节 -> `experiment-pattern.md`
+   - 优化规划模型小节 -> `optimization-model-pattern.md`
+   - LaTeX 编译与清理命令 -> `latex-build-commands.md`
+   - 最终自查 -> `checklist.md`
+   - 现成模板骨架 -> `chapter-templates/*.md`
+4. 如果是起草任务，先列提纲，再写正文。
+5. 对技术章节，强制保持以下四段骨架顺序：
    - `概述`
    - `主要内容`
    - `算例分析`
    - `本章小结`
-6. Treat `主要内容` as the chapter body, which may expand into multiple sections such as definitions, models, constraints, frameworks, or algorithms, but it must stay between `概述` and `算例分析`.
-7. Draft in a problem-to-method-to-result sequence.
-8. If the thesis contains a subsection such as `考虑……协同的……优化规划模型`, `……优化配置模型`, or another optimization/planning model assembly section, read `optimization-model-pattern.md` and default to that format.
-9. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items, regardless of whether the conclusion is Chapter 5 or Chapter 6.
-10. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
-11. For figures/tables, make the caption noun-based and keep conclusions in the main text.
-12. Prefer inserting figures as PDF files in the LaTeX project; if a figure is not in PDF format, explicitly remind the user.
-13. End each technical chapter with a chapter summary that restates:
+6. 将 `主要内容` 视为章节主体，可展开为定义、模型、约束、框架、算法等多个连续小节，但必须位于 `概述` 与 `算例分析` 之间。
+7. 全文默认按“问题 -> 方法 -> 结果”的顺序起草。
+8. 如果论文中出现 `考虑……协同的……优化规划模型`、`……优化配置模型` 等“模型总装段”，先读 `optimization-model-pattern.md`，并默认采用该写法。
+9. 对论文层面的 `结论` 章，不要再设节或小节；无论结论是第 5 章还是第 6 章，都应写成“章节标题 + 连续段落 + 编号贡献项”。
+10. 公式默认按“先说明用途 -> 再给公式 -> 再给 `式中：` -> 再说明建模含义”的顺序解释。
+11. 图表标题默认使用名词性表述，核心结论放在正文中说明。
+12. LaTeX 工程中的图优先使用 PDF；如果图不是 PDF，要明确提醒用户。
+13. 每章技术章节结尾都要有 `本章小结`，并重述：
    - the challenge
    - the method chain
    - what the case study verified
-14. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
+14. 如果是审阅任务，使用 `checklist.md` 作为检查表，并明确指出：
    - missing chapter introduction
    - missing chapter summary
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-15. Run the checklist before finalizing.
+15. 输出前务必再跑一遍 checklist。
 
-## Theme-Isolation Rule
+## 主题隔离规则
 
-The source materials behind this skill come from one specific thesis sample, but that sample is only evidence for writing form.
+本 skill 背后的来源材料来自某一篇具体样本论文，但该样本只用于提炼写作形式。
 
-When using this skill:
+使用本 skill 时：
 
 1. Reuse structure, not the sample thesis topic.
 2. Reuse rhetoric, not the sample thesis terminology.
@@ -113,7 +113,7 @@ When using this skill:
 5. If the user's thesis topic differs, rewrite every placeholder around the user's actual research object rather than around the sample thesis object.
 6. If the user's topic is unknown, keep placeholders generic and do not invent a domain.
 
-## Reference Map
+## 文件索引
 
 - `thesis-structure.md`
   Use when deciding chapter order, section layering, and chapter length balance.
@@ -148,7 +148,7 @@ When using this skill:
 - `chapter-templates/conclusion.md`
   Use for chapter conclusions or full-thesis conclusions.
 
-## Hard Rules
+## 硬规则
 
 1. Keep one main problem line through the chapter.
 2. Do not write thesis text as a list of disconnected papers.
@@ -177,9 +177,9 @@ When using this skill:
 25. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
 26. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
 
-## Output Standard
+## 输出标准
 
-A good output from this skill should read like a formal engineering thesis chapter:
+好的输出应当读起来像规范的工科论文章节：
 
 - clear problem framing
 - stable section hierarchy
