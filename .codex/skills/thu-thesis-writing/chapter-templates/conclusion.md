@@ -11,6 +11,8 @@ Strong constraint:
 - do not write `6.1`, `6.2`, `6.3`
 - keep the whole chapter under the chapter title `第x章 结论`
 - organize the body as continuous paragraphs plus numbered contribution items only
+- each numbered contribution lead sentence must be bold and form an independent LaTeX paragraph
+- the explanation after each numbered lead sentence must start in the next paragraph
 
 ```text
 第x章 结论
@@ -48,7 +50,8 @@ Write each contribution as:
 Template:
 
 ```text
-（1）提出了……
+\textbf{（1）提出了……}
+
 针对……问题，本文……。
 基于……，建立/构建……。
 最后通过……验证了……，说明……。
@@ -86,6 +89,8 @@ Template:
 ## Final Check
 
 - the thesis-level conclusion has no section headings or subsection headings
+- every numbered contribution lead sentence is bold
+- every numbered contribution lead sentence is an independent LaTeX paragraph
 - conclusion is not a copy-paste of section summaries
 - each contribution is thesis-level, not minor detail-level
 - wording is precise and restrained

@@ -103,6 +103,7 @@ Use three layers:
    - restate the thesis background and overall route
 2. numbered contributions:
    - each item should be `challenge -> method -> result -> value`
+   - each item starts with a bold numbered lead sentence as an independent LaTeX paragraph
 3. closing paragraph:
    - overall finding and broader value
 
@@ -111,11 +112,16 @@ Hard rules:
 1. Do not create section headings or subsection headings in the thesis-level conclusion chapter.
 2. Do not write `6.1`, `6.2`, `6.3` style structure.
 3. Keep the conclusion as chapter-level prose plus numbered contribution items only.
+4. The numbered lead sentence must be bold and must occupy an independent LaTeX paragraph.
+5. Put a blank line after the numbered lead sentence; the explanatory text must start in the next paragraph.
+6. Write the numbered lead sentence in LaTeX as `\textbf{（n）提出了……}`.
+7. Do not copy chapter summaries directly; rewrite each item from the full-thesis perspective.
 
 Suggested numbered paragraph template:
 
 ```text
-（n）提出了……
+\textbf{（n）提出了……}
+
 针对……问题，本文……。
 基于……，建立/构建……。
 最后通过……验证了……。

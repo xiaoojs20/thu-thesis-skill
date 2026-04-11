@@ -160,15 +160,18 @@ When using this skill:
 12. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
 13. The thesis-level `结论` chapter must not set section or subsection headings.
 14. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
-15. Do not write the abstract as `第1章...第2章...`.
-16. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
-17. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
-18. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
-19. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
-20. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
-21. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
-22. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
-23. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
+15. Each numbered contribution item in the thesis-level conclusion must use a bold numbered lead sentence as an independent LaTeX paragraph, then continue the explanation in the next paragraph.
+16. Write the lead sentence in LaTeX as `\textbf{（n）提出了……}`.
+17. Each thesis-level conclusion contribution must follow `challenge -> method -> result/verification -> value`, and must not be a pasted chapter summary.
+18. Do not write the abstract as `第1章...第2章...`.
+19. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+20. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+21. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
+22. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
+23. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
+24. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
+25. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
+26. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
 
 ## Output Standard
 

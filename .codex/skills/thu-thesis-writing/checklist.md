@@ -111,5 +111,8 @@ When used for review, explicitly mark each check as:
 - Does it reopen the thesis-level problem?
 - Does the thesis-level conclusion avoid all section and subsection headings?
 - Are the main contributions numbered cleanly?
+- Is every numbered contribution lead sentence bold?
+- Is every numbered contribution lead sentence an independent LaTeX paragraph, with the explanation starting in the next paragraph?
 - Does each contribution follow `challenge -> method -> result -> value`?
+- Are the numbered items rewritten from the full-thesis perspective rather than copied from chapter summaries?
 - Does the ending state the overall implication of the thesis?
