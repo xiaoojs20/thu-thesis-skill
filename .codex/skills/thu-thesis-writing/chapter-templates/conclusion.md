@@ -8,7 +8,7 @@ Strong constraint:
 
 - do not set section headings
 - do not set subsection headings
-- do not write `6.1`, `6.2`, `6.3`
+- do not write `x.1`, `x.2`, `x.3`
 - keep the whole chapter under the chapter title `第x章 结论`
 - organize the body as continuous paragraphs plus numbered contribution items only
 - each numbered contribution lead sentence must be bold and form an independent LaTeX paragraph
@@ -20,6 +20,12 @@ Strong constraint:
 2. numbered main contributions
 3. overall implication paragraph
 ```
+
+Determine `x` from the thesis level first:
+
+- master's thesis: `x` is often `5`
+- doctoral thesis: `x` is often `6`
+- if unknown, keep `x` as a placeholder until the thesis structure is confirmed
 
 ## Opening Summary Paragraph
 

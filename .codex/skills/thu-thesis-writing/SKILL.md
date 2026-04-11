@@ -61,7 +61,11 @@ Do not use it for:
    - full chapter outline
    - chapter review
    - section review
-2. Read only the relevant files:
+2. Determine the thesis level first:
+   - master's thesis: conclusion is often Chapter 5
+   - doctoral thesis: conclusion is often Chapter 6
+   - if the thesis level is unknown, do not hard-code the conclusion chapter number
+3. Read only the relevant files:
    - overall structure -> `thesis-structure.md`
    - prose and rhetoric -> `writing-patterns.md`
    - equations, figures, tables -> `equation-rules.md`
@@ -70,31 +74,31 @@ Do not use it for:
    - LaTeX build and cleanup commands -> `latex-build-commands.md`
    - final self-check -> `checklist.md`
    - ready-made scaffold -> `chapter-templates/*.md`
-3. If drafting, build the outline before drafting paragraphs.
-4. For technical chapters, enforce the four-part backbone in this order:
+4. If drafting, build the outline before drafting paragraphs.
+5. For technical chapters, enforce the four-part backbone in this order:
    - `概述`
    - `主要内容`
    - `算例分析`
    - `本章小结`
-5. Treat `主要内容` as the chapter body, which may expand into multiple sections such as definitions, models, constraints, frameworks, or algorithms, but it must stay between `概述` and `算例分析`.
-6. Draft in a problem-to-method-to-result sequence.
-7. If the thesis contains a subsection such as `考虑……协同的……优化规划模型`, `……优化配置模型`, or another optimization/planning model assembly section, read `optimization-model-pattern.md` and default to that format.
-8. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items.
-9. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
-10. For figures/tables, make the caption noun-based and keep conclusions in the main text.
-11. Prefer inserting figures as PDF files in the LaTeX project; if a figure is not in PDF format, explicitly remind the user.
-12. End each technical chapter with a chapter summary that restates:
+6. Treat `主要内容` as the chapter body, which may expand into multiple sections such as definitions, models, constraints, frameworks, or algorithms, but it must stay between `概述` and `算例分析`.
+7. Draft in a problem-to-method-to-result sequence.
+8. If the thesis contains a subsection such as `考虑……协同的……优化规划模型`, `……优化配置模型`, or another optimization/planning model assembly section, read `optimization-model-pattern.md` and default to that format.
+9. For the thesis-level `结论` chapter, do not create section or subsection headings; write it as chapter title plus continuous paragraphs with numbered contribution items, regardless of whether the conclusion is Chapter 5 or Chapter 6.
+10. For equations, explain purpose first, then formula, then `式中：`, then modeling meaning.
+11. For figures/tables, make the caption noun-based and keep conclusions in the main text.
+12. Prefer inserting figures as PDF files in the LaTeX project; if a figure is not in PDF format, explicitly remind the user.
+13. End each technical chapter with a chapter summary that restates:
    - the challenge
    - the method chain
    - what the case study verified
-13. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
+14. If reviewing, use `checklist.md` as a chapter-review rubric and explicitly report:
    - missing chapter introduction
    - missing chapter summary
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-14. Run the checklist before finalizing.
+15. Run the checklist before finalizing.
 
 ## Theme-Isolation Rule
 
@@ -158,7 +162,7 @@ When using this skill:
 10. Do not end experiment sections with raw observations only; state what the comparison proves.
 11. Figures should be inserted in PDF format by default.
 12. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
-13. The thesis-level `结论` chapter must not set section or subsection headings.
+13. The thesis-level `结论` chapter must not set section or subsection headings, whether it is Chapter 5 or Chapter 6.
 14. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
 15. Each numbered contribution item in the thesis-level conclusion must use a bold numbered lead sentence as an independent LaTeX paragraph, then continue the explanation in the next paragraph.
 16. Write the lead sentence in LaTeX as `\textbf{（n）提出了……}`.

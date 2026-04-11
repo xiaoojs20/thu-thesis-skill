@@ -110,7 +110,7 @@ Use three layers:
 Hard rules:
 
 1. Do not create section headings or subsection headings in the thesis-level conclusion chapter.
-2. Do not write `6.1`, `6.2`, `6.3` style structure.
+2. Do not write `5.1`, `5.2`, `5.3` or `6.1`, `6.2`, `6.3` style structure; keep the rule generic as `x.1`, `x.2`, `x.3` are not used in the thesis-level conclusion chapter.
 3. Keep the conclusion as chapter-level prose plus numbered contribution items only.
 4. The numbered lead sentence must be bold and must occupy an independent LaTeX paragraph.
 5. Put a blank line after the numbered lead sentence; the explanatory text must start in the next paragraph.

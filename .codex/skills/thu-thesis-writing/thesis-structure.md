@@ -21,6 +21,12 @@ Use a single-problem research line:
 
 This is not a stitched-paper structure. Each chapter should solve one step of the same main problem.
 
+Before fixing the final chapter number, determine the thesis level:
+
+- master's thesis: the thesis often ends in Chapter 5, so the conclusion is often Chapter 5
+- doctoral thesis: the thesis often ends in Chapter 6, so the conclusion is often Chapter 6
+- if the thesis level is unknown, keep the conclusion chapter number as a placeholder and do not hard-code it
+
 Do not copy the sample thesis's exact chapter subjects. Replace each chapter role with the user's actual topic, for example:
 
 - `基础理论`
@@ -52,7 +58,7 @@ Inside `1.3`, keep:
 
 ### Technical Chapters
 
-For Chapters 2 to 5, enforce this pattern:
+For the technical chapters before the thesis-level conclusion, enforce this pattern:
 
 1. `x.1 概述`
 2. `x.2-x.4 主要内容`
@@ -70,18 +76,22 @@ Interpretation:
 
 `主要内容` does not have to appear as a literal section title, but it must occupy the middle block between `概述` and `算例分析`.
 
-### Chapter 6: Conclusion
+### Thesis-Level Conclusion
 
 For the thesis-level conclusion chapter, enforce this pattern:
 
-1. chapter title only: `第6章 结论`
+1. chapter title only: `第x章 结论`
 2. opening summary paragraph
 3. numbered main contributions
 4. closing paragraph
 
 This is also a strong constraint.
 
-Do not create `6.1`, `6.2`, `6.3` or any subsection headings inside the conclusion chapter.
+If the thesis is a master's thesis, `x` is often `5`.
+
+If the thesis is a doctoral thesis, `x` is often `6`.
+
+Do not create `x.1`, `x.2`, `x.3` or any subsection headings inside the conclusion chapter.
 
 ## Section Organization
 
@@ -150,7 +160,7 @@ Recommended balance derived from the source thesis:
 第3章 求解框架或运行模拟方法
 第4章 核心模型与优化规划
 第5章 风险评估或扩展分析
-第6章 结论
+第x章 结论
 ```
 
 When adapting this skeleton, preserve the progression and section logic, but rename chapter titles entirely around the target thesis topic.

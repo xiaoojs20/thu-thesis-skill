@@ -95,14 +95,17 @@ State:
 
 ### 1.3.2 主要工作
 
-Map each chapter to one sentence or one short paragraph:
+Map each chapter to one sentence or one short paragraph, but determine the final chapter number from the thesis level first:
+
+- master's thesis: the conclusion is often Chapter 5
+- doctoral thesis: the conclusion is often Chapter 6
 
 ```text
 第2章……。
 第3章……。
 第4章……。
 第5章……。
-第6章……。
+第x章 结论。
 ```
 
 ## Final Check
