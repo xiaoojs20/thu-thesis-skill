@@ -52,7 +52,8 @@
 ## 公式
 
 - Is each equation introduced before appearing?
-- Is there a blank line before `\begin{equation}` / `\begin{align}` and after `\end{equation}` / `\end{align}`?
+- Is there no extra blank line before `\begin{equation}` / `\begin{align}`?
+- Is there one blank line after `\end{equation}` / `\end{align}` before the next paragraph?
 - If there is an equation group, is each equation’s role explained?
 - Is there a `式中：` block when symbol density is high?
 - Are key variables explained after the equation instead of being left implicit?

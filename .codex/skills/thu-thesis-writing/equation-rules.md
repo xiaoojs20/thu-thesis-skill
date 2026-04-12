@@ -14,7 +14,6 @@
 
 ```text
 ……如式（x.1）-（x.4）所示。
-
 \begin{align}
   [公式内容]
 \label{eq:block}
@@ -29,7 +28,7 @@
 
 这是强约束，不是建议：
 
-1. `\begin{equation}`、`\begin{align}` 这类陈列公式环境前必须空一行。
+1. `\begin{equation}`、`\begin{align}` 这类陈列公式环境前不需要额外空行；公式环境应紧接引导句下一行。
 2. `\end{equation}`、`\end{align}` 后必须再空一行。
 3. 公式块后的解释句必须从新段落开始，不能紧贴在 `\end{...}` 下一行直接顶格续写。
 4. 单个公式和公式组都必须遵守这条规则。
@@ -38,7 +37,6 @@
 
 ```text
 ……可构建目标函数如下：
-
 \begin{equation}
   [公式内容]
 \label{eq:obj}
@@ -51,6 +49,7 @@
 
 ```text
 ……可构建目标函数如下：
+
 \begin{equation}
   [公式内容]
 \label{eq:obj}
@@ -209,7 +208,7 @@ If writing LaTeX-compatible text, assume:
 - citations preceded by explicit `文献` wording -> switch to `\thusetup{ cite-style = inline }`
 - citations used as superscript support for a statement -> switch to `\thusetup{ cite-style = super }`
 - when the local citation style needs to change, explicitly call `\thusetup{ cite-style = ... }`
-- leave one blank line before `\begin{equation}` / `\begin{align}`
+- do not insert an extra blank line before `\begin{equation}` / `\begin{align}`
 - leave one blank line after `\end{equation}` / `\end{align}`
 - figures -> `figure`
 - tables -> `table`

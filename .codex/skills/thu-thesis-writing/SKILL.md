@@ -179,8 +179,8 @@ Do not use it for:
 27. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
 28. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
 29. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
-30. When writing LaTeX displayed equations, always leave one blank line before `\begin{equation}` / `\begin{align}` and one blank line after `\end{equation}` / `\end{align}`.
-31. Never continue the post-equation explanation immediately below `\end{...}` without that blank line; the narration after the equation block must start as a new paragraph.
+30. When writing LaTeX displayed equations, do not insert an extra blank line above `\begin{equation}` / `\begin{align}`; the equation environment should follow directly after the lead-in sentence.
+31. Always leave one blank line after `\end{equation}` / `\end{align}`; the narration after the equation block must start as a new paragraph and must not begin immediately on the next line.
 32. When writing LaTeX citations, explicitly distinguish `inline` and `super` cite styles according to the local sentence pattern.
 33. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
 34. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
