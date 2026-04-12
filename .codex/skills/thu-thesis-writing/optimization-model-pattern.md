@@ -20,6 +20,7 @@ The usual writing layer is:
 3. `x.x.2`, `x.x.3`, ... major constraint categories
 4. inside each major category, use Chinese parenthetical items `（1）`, `（2）`, `（3）` to split the model by physical module
 5. inside each `（1）` / `（2）` / `（3）`, write equation group + formula meaning + variable meaning if needed
+6. every `（1）` / `（2）` / `（3）` item must use a bold standalone lead, then start the explanation in the next indented paragraph
 
 If the user's thesis contains optimization/planning model writing, this pattern should be treated as the default.
 
@@ -62,6 +63,33 @@ In other words:
 `大节标题 -> 小节标题 -> 中文括号分点 -> 公式组 -> 公式解释`
 
 This is the real writing rhythm.
+
+## Mandatory Format For Chinese-Parenthetical Sub-Items
+
+For every sub-item such as `（1）投资成本`, `（2）运行成本`, `（1）电力平衡约束`, `（2）储能运行约束`, enforce the following format:
+
+1. use Chinese-parenthetical numbering only: `（1）`, `（2）`, `（3）`
+2. write the sub-item title in bold
+3. let the bold sub-item title occupy its own line or paragraph
+4. start the explanation from the next paragraph, not on the same line
+5. keep first-line indentation for the first explanatory paragraph
+6. if there are multiple explanatory paragraphs under the same sub-item, every paragraph must keep first-line indentation
+7. do not write the explanatory text flush left immediately after the bold title
+
+Recommended local template:
+
+```text
+\textbf{（1）投资成本}
+
+　　如式（x.2）所示，……。
+　　式（x.2）-（x.4）分别表示……。
+
+\textbf{（2）运行成本}
+
+　　如式（x.5）所示，……。
+```
+
+This formatting rule is mandatory rather than optional style polishing.
 
 ## The Strong Default Skeleton
 
@@ -197,11 +225,13 @@ In practice, the writing should read like:
 x.x.1 目标函数
 如式（x.1）所示，目标函数最小化……和……。
 
-（1）投资成本
-……
+\textbf{（1）投资成本}
 
-（2）运行成本
-……
+　　……
+
+\textbf{（2）运行成本}
+
+　　……
 ```
 
 This visual structure itself is part of the thesis style.
@@ -218,12 +248,14 @@ Each item should contain four pieces in order:
 The local rhythm should be:
 
 ```text
-（1）投资成本
-如式（x.2）所示，……
-……
-式（x.2）-（x.4）分别表示……、……和……。
-式中：……。
-其中，下标……表示……，上标……表示……。
+\textbf{（1）投资成本}
+
+　　如式（x.2）所示，……
+　　……
+
+　　式（x.2）-（x.4）分别表示……、……和……。
+　　式中：……。
+　　其中，下标……表示……，上标……表示……。
 ```
 
 This should be understood as a required degree of completeness.

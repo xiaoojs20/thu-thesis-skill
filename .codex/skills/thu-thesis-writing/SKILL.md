@@ -173,9 +173,12 @@ Do not use it for:
 21. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
 22. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
 23. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
-24. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
-25. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
-26. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
+24. Every Chinese-parenthetical sub-item under optimization/planning writing must be written as a bold standalone lead, such as `\textbf{（1）投资成本}` or `\textbf{（2）电力平衡约束}`.
+25. After each bold Chinese-parenthetical lead, start the explanation in the next paragraph rather than on the same line; do not write the explanation flush against the lead sentence.
+26. The explanatory paragraph after each sub-item must keep first-line indentation, and every subsequent explanatory paragraph under the same sub-item must also keep first-line indentation rather than being flush left.
+27. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
+28. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
+29. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
 
 ## 输出标准
 

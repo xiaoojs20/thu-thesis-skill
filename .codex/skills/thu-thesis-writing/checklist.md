@@ -63,6 +63,9 @@
 - Is there a coupling/framework figure when multiple systems, energy forms, or planning objects are involved?
 - Does the subsection contain `x.x.1 目标函数`?
 - Under `目标函数`, are `（1）（2）（3）` used to split different objective blocks such as investment cost and operating cost?
+- Are Chinese-parenthetical sub-items such as `（1）投资成本` and `（2）运行成本` written in bold rather than plain text?
+- Does every Chinese-parenthetical sub-item occupy its own line or paragraph, with the explanation starting from the next paragraph rather than the same line?
+- Do the explanatory paragraphs under each Chinese-parenthetical sub-item keep first-line indentation instead of being flush left?
 - Does each objective block include:
   - formula
   - physical meaning
