@@ -14,9 +14,48 @@
 
 ```text
 ……如式（x.1）-（x.4）所示。
+
+\begin{align}
+  [公式内容]
+\label{eq:block}
+\end{align}
+
 式（x.1）描述……，式（x.2）构建……，式（x.3）计算……，式（x.4）给出……。
 式中：A 表示……；B 表示……；C 为……。
 基于式（x.1）-（x.4）构建的……，实现了……。
+```
+
+## LaTeX 公式环境空行规则
+
+这是强约束，不是建议：
+
+1. `\begin{equation}`、`\begin{align}` 这类陈列公式环境前必须空一行。
+2. `\end{equation}`、`\end{align}` 后必须再空一行。
+3. 公式块后的解释句必须从新段落开始，不能紧贴在 `\end{...}` 下一行直接顶格续写。
+4. 单个公式和公式组都必须遵守这条规则。
+
+正确示例：
+
+```text
+……可构建目标函数如下：
+
+\begin{equation}
+  [公式内容]
+\label{eq:obj}
+\end{equation}
+
+式（\ref{eq:obj}）为……
+```
+
+错误示例：
+
+```text
+……可构建目标函数如下：
+\begin{equation}
+  [公式内容]
+\label{eq:obj}
+\end{equation}
+式（\ref{eq:obj}）为……
 ```
 
 ## `式中：` 规则
@@ -139,6 +178,8 @@ If writing LaTeX-compatible text, assume:
 - single equations -> `equation`
 - multiline equations -> `align`
 - equation reference -> `\eqref{}`
+- leave one blank line before `\begin{equation}` / `\begin{align}`
+- leave one blank line after `\end{equation}` / `\end{align}`
 - figures -> `figure`
 - tables -> `table`
 - labels:

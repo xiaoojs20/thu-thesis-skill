@@ -179,6 +179,8 @@ Do not use it for:
 27. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
 28. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
 29. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
+30. When writing LaTeX displayed equations, always leave one blank line before `\begin{equation}` / `\begin{align}` and one blank line after `\end{equation}` / `\end{align}`.
+31. Never continue the post-equation explanation immediately below `\end{...}` without that blank line; the narration after the equation block must start as a new paragraph.
 
 ## 输出标准
 
