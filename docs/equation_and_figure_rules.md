@@ -62,7 +62,45 @@ PDF 中的变量解释有 4 个稳定特征：
 - 多约束块模型
 - 风险、评价或推断公式链
 
-## 1.4 公式后的解释重点
+## 1.4 公式标签与显式引用规则
+
+后续写作将以下规则作为强制约束：
+
+1. 每个可编号公式都必须写 `\label{eq:...}`。
+2. 单个 `equation` 环境至少包含一个 `\label{eq:...}`。
+3. `align` 环境中，如果每一行都是独立公式或会产生独立编号，则每一行都必须在对应行末写独立的 `\label{eq:...}`。
+4. 正文介绍、解释或再次提到公式时，必须显式写成 `式（\ref{eq:...}）`；不要只写“上式”“如下式”“该公式”，也不要只依赖自动编号。
+5. 公式组可先用 `式（\ref{eq:a}）--式（\ref{eq:c}）` 或 `式（\ref{eq:a}）至式（\ref{eq:c}）` 总体引入，再逐条说明每个公式的作用。
+6. 如果一个 `align` 只是同一公式的分行推导且不需要多编号，应使用 `\notag`/`\nonumber` 取消非独立行编号，并只给最终需要引用的公式行设置 `\label`。
+
+推荐模式：
+
+```latex
+定义输入侧共模电压与输出侧共模电压如式（\ref{eq:common_voltage}）。
+\begin{equation}
+  ...
+  \label{eq:common_voltage}
+\end{equation}
+
+式（\ref{eq:common_voltage}）为输入侧与输出侧共模电压定义式，式中：……
+```
+
+```latex
+\begin{align}
+  & P = \frac{U_s U_r}{X} \sin(\delta_s - \delta_r)
+  \label{eq:P}
+  \\
+  & P_{\max} = \frac{U^2}{X}
+  \label{eq:Pmax}
+  \\
+  & \Delta U = \frac{QX}{U}
+  \label{eq:deltaU}
+\end{align}
+
+式（\ref{eq:P}）与式（\ref{eq:Pmax}）分别给出了线路有功传输功率与静稳极限功率，式（\ref{eq:deltaU}）给出了无功传输相关的电压偏差。
+```
+
+## 1.5 公式后的解释重点
 
 该论文在公式后不会只解释符号，还会解释“公式意义”。常见落点有：
 
@@ -77,17 +115,18 @@ PDF 中的变量解释有 4 个稳定特征：
 
 `这个公式在论文主线里具体起什么作用？`
 
-## 1.5 LaTeX 公式格式约定
+## 1.6 LaTeX 公式格式约定
 
 在 `thuthesis-v7.5.0/data/chap03.tex` 和 `thuthesis-v7.5.0/thusetup.tex` 中，公式格式约定很明确：
 
 1. 单行公式用 `equation` 或 `equation*`
 2. 多行公式用 `align`
 3. 多行公式尽量在 `=` 处对齐
-4. 公式引用使用 `\eqref{...}`
-5. 微分符号通过自定义命令 `\dif`
-6. 数学字体统一由 `math-font = xits` 控制
-7. 单位推荐用 `siunitx`
+4. 论文正文中公式引用使用 `式（\ref{eq:...}）`
+5. 每个可编号公式都必须设置 `\label{eq:...}`
+6. 微分符号通过自定义命令 `\dif`
+7. 数学字体统一由 `math-font = xits` 控制
+8. 单位推荐用 `siunitx`
 
 推荐模板：
 
@@ -98,8 +137,9 @@ PDF 中的变量解释有 4 个稳定特征：
 \end{equation}
 
 \begin{align}
-  a &= b + c \\
+  a &= b + c \notag \\
     &= d + e
+  \label{eq:model-derivation}
 \end{align}
 ```
 

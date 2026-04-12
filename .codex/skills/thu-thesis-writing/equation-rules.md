@@ -10,18 +10,65 @@
 4. add `式中：` to define symbols
 5. state what the equation block accomplishes in the thesis
 
+## 公式标签与显式引用规则
+
+这是强约束，不是建议：
+
+1. 每个可编号公式都必须写 `\label{eq:...}`。
+2. 单个 `equation` 环境至少包含一个 `\label{eq:...}`。
+3. `align` 环境中，如果每一行都是独立公式或会产生独立编号，则每一行都必须在对应行末写独立的 `\label{eq:...}`。
+4. 正文介绍、解释或再次提到公式时，必须显式写成 `式（\ref{eq:...}）`；不要只写“上式”“如下式”“该公式”，也不要只依赖自动编号。
+5. 公式组可先用 `式（\ref{eq:a}）--式（\ref{eq:c}）` 或 `式（\ref{eq:a}）至式（\ref{eq:c}）` 总体引入，再逐条说明每个公式的作用。
+6. 如果一个 `align` 只是同一公式的分行推导且不需要多编号，应使用 `\notag`/`\nonumber` 取消非独立行编号，并只给最终需要引用的公式行设置 `\label`。
+
+正确示例：
+
+```tex
+定义输入侧共模电压与输出侧共模电压如式（\ref{eq:common_voltage}）。
+\begin{equation}
+    [公式内容]
+    \label{eq:common_voltage}
+\end{equation}
+
+式（\ref{eq:common_voltage}）为输入侧与输出侧共模电压定义式，式中：……
+```
+
+```tex
+\begin{align}
+    & P = \frac{U_s U_r}{X} \sin(\delta_s - \delta_r)
+    \label{eq:P}
+    \\
+    & P_{\max} = \frac{U^2}{X}
+    \label{eq:Pmax}
+    \\
+    & \Delta U = \frac{QX}{U}
+    \label{eq:deltaU}
+\end{align}
+
+式（\ref{eq:P}）与式（\ref{eq:Pmax}）分别给出了线路有功传输功率与静稳极限功率，式（\ref{eq:deltaU}）给出了无功传输相关的电压偏差。
+```
+
 ## 公式组模板
 
 ```text
-……如式（x.1）-（x.4）所示。
+……如式（\ref{eq:a}）--式（\ref{eq:d}）所示。
 \begin{align}
-  [公式内容]
-\label{eq:block}
+  [公式内容1]
+  \label{eq:a}
+  \\
+  [公式内容2]
+  \label{eq:b}
+  \\
+  [公式内容3]
+  \label{eq:c}
+  \\
+  [公式内容4]
+  \label{eq:d}
 \end{align}
 
-式（x.1）描述……，式（x.2）构建……，式（x.3）计算……，式（x.4）给出……。
+式（\ref{eq:a}）描述……，式（\ref{eq:b}）构建……，式（\ref{eq:c}）计算……，式（\ref{eq:d}）给出……。
 式中：A 表示……；B 表示……；C 为……。
-基于式（x.1）-（x.4）构建的……，实现了……。
+基于式（\ref{eq:a}）--式（\ref{eq:d}）构建的……，实现了……。
 ```
 
 ## LaTeX 公式环境空行规则
@@ -204,12 +251,14 @@ If writing LaTeX-compatible text, assume:
 
 - single equations -> `equation`
 - multiline equations -> `align`
-- equation reference -> `\eqref{}`
+- equation reference in thesis prose -> `式（\ref{eq:...}）`
 - citations preceded by explicit `文献` wording -> switch to `\thusetup{ cite-style = inline }`
 - citations used as superscript support for a statement -> switch to `\thusetup{ cite-style = super }`
 - when the local citation style needs to change, explicitly call `\thusetup{ cite-style = ... }`
 - do not insert an extra blank line before `\begin{equation}` / `\begin{align}`
 - leave one blank line after `\end{equation}` / `\end{align}`
+- every numbered equation must have a `\label{eq:...}`
+- every independently numbered line in `align` must have its own `\label{eq:...}`
 - figures -> `figure`
 - tables -> `table`
 - labels:

@@ -52,6 +52,9 @@
 ## 公式
 
 - Is each equation introduced before appearing?
+- Does every numbered displayed equation have a `\label{eq:...}`?
+- In `align`, does every independently numbered formula line have its own `\label{eq:...}`?
+- Are formula introductions and explanations written with explicit `式（\ref{eq:...}）` references rather than “上式/如下式” only?
 - Is there no extra blank line before `\begin{equation}` / `\begin{align}`?
 - Is there one blank line after `\end{equation}` / `\end{align}` before the next paragraph?
 - If there is an equation group, is each equation’s role explained?
