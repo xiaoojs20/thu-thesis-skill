@@ -76,6 +76,8 @@ Use:
 
 `主要内容` does not have to appear as a literal section title, but it must occupy the middle block between `概述` and `算例分析`.
 
+`概述` 与 `本章小结` 的篇幅都是强约束：每一节至少应约占编译后 PDF 的 2/3 页。起草时不得把 `概述` 写成一段背景说明，也不得把 `本章小结` 写成一段短总结；若尚未编译 PDF，应按多个完整段落展开，使其在编译后大致达到该版面量。
+
 ### 论文层面的结论章
 
 对论文层面的结论章，强制保持以下模式：

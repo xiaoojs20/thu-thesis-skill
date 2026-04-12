@@ -81,24 +81,26 @@ Do not use it for:
    - `算例分析`
    - `本章小结`
 6. 将 `主要内容` 视为章节主体，可展开为定义、模型、约束、框架、算法等多个连续小节，但必须位于 `概述` 与 `算例分析` 之间。
-7. 全文默认按“问题 -> 方法 -> 结果”的顺序起草。
-8. 如果论文中出现 `考虑……协同的……优化规划模型`、`……优化配置模型` 等“模型总装段”，先读 `optimization-model-pattern.md`，并默认采用该写法。
-9. 对论文层面的 `结论` 章，不要再设节或小节；无论结论是第 5 章还是第 6 章，都应写成“章节标题 + 连续段落 + 编号贡献项”。
-10. 公式默认按“先说明用途 -> 再给公式 -> 再给 `式中：` -> 再说明建模含义”的顺序解释。
-11. 图表标题默认使用名词性表述，核心结论放在正文中说明。
-12. LaTeX 工程中的图优先使用 PDF；如果图不是 PDF，要明确提醒用户。
-13. 每章技术章节结尾都要有 `本章小结`，并重述：
+7. 对每个技术章节，`概述` 与 `本章小结` 的篇幅都是强约束：各自至少应约占编译后 PDF 的 2/3 页；如果无法实际编译估算，不得写成单段短文本，应按多个完整段落展开到接近该版面量。
+8. 全文默认按“问题 -> 方法 -> 结果”的顺序起草。
+9. 如果论文中出现 `考虑……协同的……优化规划模型`、`……优化配置模型` 等“模型总装段”，先读 `optimization-model-pattern.md`，并默认采用该写法。
+10. 对论文层面的 `结论` 章，不要再设节或小节；无论结论是第 5 章还是第 6 章，都应写成“章节标题 + 连续段落 + 编号贡献项”。
+11. 公式默认按“先说明用途 -> 再给公式 -> 再给 `式中：` -> 再说明建模含义”的顺序解释。
+12. 图表标题默认使用名词性表述，核心结论放在正文中说明。
+13. LaTeX 工程中的图优先使用 PDF；如果图不是 PDF，要明确提醒用户。
+14. 每章技术章节结尾都要有 `本章小结`，并重述：
    - the challenge
    - the method chain
    - what the case study verified
-14. 如果是审阅任务，使用 `checklist.md` 作为检查表，并明确指出：
+15. 如果是审阅任务，使用 `checklist.md` 作为检查表，并明确指出：
    - missing chapter introduction
    - missing chapter summary
+   - chapter overview or chapter summary shorter than about 2/3 compiled PDF page
    - missing variable explanations after equations
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-15. 输出前务必再跑一遍 checklist。
+16. 输出前务必再跑一遍 checklist。
 
 ## 主题隔离规则
 
@@ -157,37 +159,39 @@ Do not use it for:
 5. Every technical chapter must contain `概述 + 主要内容 + 算例分析 + 本章小结` in that order.
 6. `主要内容` can be split into multiple consecutive sections, but those sections collectively serve one block: the chapter's main method/model content.
 7. If one of the four blocks is missing, do not treat the chapter as structurally complete.
-8. Do not put full conclusions into figure captions or table titles.
-9. Do not drop equations without explaining what each block does.
-10. Do not end experiment sections with raw observations only; state what the comparison proves.
-11. Figures should be inserted in PDF format by default.
-12. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
-13. The thesis-level `结论` chapter must not set section or subsection headings, whether it is Chapter 5 or Chapter 6.
-14. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
-15. Each numbered contribution item in the thesis-level conclusion must use a bold numbered lead sentence as an independent LaTeX paragraph, then continue the explanation in the next paragraph.
-16. Write the lead sentence in LaTeX as `\textbf{（n）提出了……}`.
-17. Each thesis-level conclusion contribution must follow `challenge -> method -> result/verification -> value`, and must not be a pasted chapter summary.
-18. Do not write the abstract as `第1章...第2章...`.
-19. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
-20. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
-21. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
-22. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
-23. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
-24. Every Chinese-parenthetical sub-item under optimization/planning writing must be written as a bold standalone lead, such as `\textbf{（1）投资成本}` or `\textbf{（2）电力平衡约束}`.
-25. After each bold Chinese-parenthetical lead, start the explanation in the next paragraph rather than on the same line; do not write the explanation flush against the lead sentence.
-26. The explanatory paragraph after each sub-item must keep first-line indentation, and every subsequent explanatory paragraph under the same sub-item must also keep first-line indentation rather than being flush left.
-27. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
-28. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
-29. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
-30. When writing LaTeX displayed equations, do not insert an extra blank line above `\begin{equation}` / `\begin{align}`; the equation environment should follow directly after the lead-in sentence.
-31. Always leave one blank line after `\end{equation}` / `\end{align}`; the narration after the equation block must start as a new paragraph and must not begin immediately on the next line.
-32. Every numbered LaTeX displayed equation must have a `\label{eq:...}`.
-33. In `align`, every independently numbered formula line must have its own `\label{eq:...}`; if a line is only a continuation and should not be referenced, suppress its number with `\notag`/`\nonumber`.
-34. When introducing, explaining, or later mentioning a formula, explicitly reference it with `式（\ref{eq:...}）`; do not use only “上式”“如下式” or an unreferenced formula number.
-35. When writing LaTeX citations, explicitly distinguish `inline` and `super` cite styles according to the local sentence pattern.
-36. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
-37. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
-38. Whenever the required citation style at a location differs from the current local setting, explicitly call `\thusetup{ cite-style = ... }`; do not assume the correct style is already active.
+8. In every technical chapter, both `概述` and `本章小结` must each occupy at least about 2/3 of a compiled PDF page; this is a hard length constraint, not a style preference.
+9. If the draft has not been compiled, approximate this by writing each of `概述` and `本章小结` as several complete paragraphs with enough problem framing, method-chain summary, and validation interpretation to plausibly fill about 2/3 page after compilation.
+10. Do not put full conclusions into figure captions or table titles.
+11. Do not drop equations without explaining what each block does.
+12. Do not end experiment sections with raw observations only; state what the comparison proves.
+13. Figures should be inserted in PDF format by default.
+14. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
+15. The thesis-level `结论` chapter must not set section or subsection headings, whether it is Chapter 5 or Chapter 6.
+16. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
+17. Each numbered contribution item in the thesis-level conclusion must use a bold numbered lead sentence as an independent LaTeX paragraph, then continue the explanation in the next paragraph.
+18. Write the lead sentence in LaTeX as `\textbf{（n）提出了……}`.
+19. Each thesis-level conclusion contribution must follow `challenge -> method -> result/verification -> value`, and must not be a pasted chapter summary.
+20. Do not write the abstract as `第1章...第2章...`.
+21. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+22. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+23. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
+24. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
+25. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
+26. Every Chinese-parenthetical sub-item under optimization/planning writing must be written as a bold standalone lead, such as `\textbf{（1）投资成本}` or `\textbf{（2）电力平衡约束}`.
+27. After each bold Chinese-parenthetical lead, start the explanation in the next paragraph rather than on the same line; do not write the explanation flush against the lead sentence.
+28. The explanatory paragraph after each sub-item must keep first-line indentation, and every subsequent explanatory paragraph under the same sub-item must also keep first-line indentation rather than being flush left.
+29. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
+30. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
+31. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
+32. When writing LaTeX displayed equations, do not insert an extra blank line above `\begin{equation}` / `\begin{align}`; the equation environment should follow directly after the lead-in sentence.
+33. Always leave one blank line after `\end{equation}` / `\end{align}`; the narration after the equation block must start as a new paragraph and must not begin immediately on the next line.
+34. Every numbered LaTeX displayed equation must have a `\label{eq:...}`.
+35. In `align`, every independently numbered formula line must have its own `\label{eq:...}`; if a line is only a continuation and should not be referenced, suppress its number with `\notag`/`\nonumber`.
+36. When introducing, explaining, or later mentioning a formula, explicitly reference it with `式（\ref{eq:...}）`; do not use only “上式”“如下式” or an unreferenced formula number.
+37. When writing LaTeX citations, explicitly distinguish `inline` and `super` cite styles according to the local sentence pattern.
+38. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
+39. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
+40. Whenever the required citation style at a location differs from the current local setting, explicitly call `\thusetup{ cite-style = ... }`; do not assume the correct style is already active.
 
 ## 输出标准
 

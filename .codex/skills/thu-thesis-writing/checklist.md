@@ -18,6 +18,9 @@
 - Does the section order match the chapter type?
 - Is there a chapter-level introduction or overview section near the beginning?
 - Is there a chapter-level summary or `本章小结` near the end?
+- In a technical chapter, does `概述` occupy at least about 2/3 of a compiled PDF page?
+- In a technical chapter, does `本章小结` occupy at least about 2/3 of a compiled PDF page?
+- If the PDF was not compiled, are `概述` and `本章小结` each expanded into several complete paragraphs rather than a short single paragraph?
 - If it is a technical chapter, does it contain:
   - `概述`
   - `主要内容`

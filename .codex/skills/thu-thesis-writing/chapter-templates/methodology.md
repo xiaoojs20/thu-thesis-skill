@@ -27,6 +27,8 @@ x.6 本章小结
 
 ### x.1 概述
 
+篇幅强约束：`概述` 至少应约占编译后 PDF 的 2/3 页。不要写成单段短说明；若尚未编译，应写成多个完整段落，覆盖问题承接、章节目标、方法路线、主要内容安排和验证思路。
+
 建议交代：
 
 1. the chapter target
@@ -96,6 +98,8 @@ Open `experiment.md` and follow that template.
 
 ### x.6 本章小结
 
+篇幅强约束：`本章小结` 至少应约占编译后 PDF 的 2/3 页。不要只用 3 到 5 句话收束本章；应分段回扣本章问题、归纳方法链条、说明算例验证结论，并交代其对全文主线或后续章节的支撑。
+
 Template:
 
 ```text
@@ -108,6 +112,7 @@ Template:
 ## 最终检查
 
 - the chapter explicitly follows `概述 -> 主要内容 -> 算例分析 -> 本章小结`
+- `概述` and `本章小结` each occupy at least about 2/3 of a compiled PDF page, or are expanded to several complete paragraphs when compilation is unavailable
 - each model block solves one explicit subproblem
 - equations are introduced before appearing
 - notation is controlled
