@@ -171,6 +171,34 @@ Prefer numeric references in engineering-thesis prose:
 
 Place citations directly after the technical claim they support.
 
+在 ThuThesis 模板中，引用样式需要显式区分 `inline` 和 `super`，并在需要切换时显式调用：
+
+```tex
+\thusetup{
+  cite-style = inline, % inline super[上标引用]
+}
+```
+
+强约束如下：
+
+1. 如果 `\cite{...}` 前面有显式的 `文献`、`参考文献` 等字样，使用 `inline` 样式。
+2. 如果引用只是给前面的判断、论述或事实陈述加上标参考文献，使用 `super` 样式。
+3. 每次到某一处需要和当前样式不同的引用格式时，都要显式写一次 `\thusetup{ cite-style = inline }` 或 `\thusetup{ cite-style = super }`，不要默认沿用。
+
+`inline` 示例：
+
+```tex
+\thusetup{ cite-style = inline }
+文献\cite{ref1,ref2}针对该问题开展了研究。
+```
+
+`super` 示例：
+
+```tex
+\thusetup{ cite-style = super }
+该方法能够显著降低系统运行成本。\cite{ref3}
+```
+
 ## LaTeX Conventions
 
 If writing LaTeX-compatible text, assume:
@@ -178,6 +206,9 @@ If writing LaTeX-compatible text, assume:
 - single equations -> `equation`
 - multiline equations -> `align`
 - equation reference -> `\eqref{}`
+- citations preceded by explicit `文献` wording -> switch to `\thusetup{ cite-style = inline }`
+- citations used as superscript support for a statement -> switch to `\thusetup{ cite-style = super }`
+- when the local citation style needs to change, explicitly call `\thusetup{ cite-style = ... }`
 - leave one blank line before `\begin{equation}` / `\begin{align}`
 - leave one blank line after `\end{equation}` / `\end{align}`
 - figures -> `figure`

@@ -181,6 +181,10 @@ Do not use it for:
 29. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
 30. When writing LaTeX displayed equations, always leave one blank line before `\begin{equation}` / `\begin{align}` and one blank line after `\end{equation}` / `\end{align}`.
 31. Never continue the post-equation explanation immediately below `\end{...}` without that blank line; the narration after the equation block must start as a new paragraph.
+32. When writing LaTeX citations, explicitly distinguish `inline` and `super` cite styles according to the local sentence pattern.
+33. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
+34. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
+35. Whenever the required citation style at a location differs from the current local setting, explicitly call `\thusetup{ cite-style = ... }`; do not assume the correct style is already active.
 
 ## 输出标准
 

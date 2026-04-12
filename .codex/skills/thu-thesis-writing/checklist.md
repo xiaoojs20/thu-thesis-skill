@@ -58,6 +58,12 @@
 - Are key variables explained after the equation instead of being left implicit?
 - Is the modeling meaning stated after the formula?
 
+## 引用
+
+- If a citation is preceded by explicit wording such as `文献`, is `\thusetup{ cite-style = inline }` used?
+- If a citation is used as a superscript reference for a statement, is `\thusetup{ cite-style = super }` used?
+- Whenever the local citation style needs to change, is `\thusetup{ cite-style = ... }` explicitly called rather than assumed?
+
 ## 优化/规划模型小节
 
 - If the section is a planning-model subsection, does it start with a short inheritance paragraph rather than repeating chapter background?
