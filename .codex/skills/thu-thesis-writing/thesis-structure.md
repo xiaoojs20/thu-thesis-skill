@@ -130,6 +130,13 @@ Typical subsection patterns:
 - each major technical chapter: about 15% to 20%
 - final conclusion: about 4% to 6%
 
+硕士论文的第 2 章到第 4 章还应执行更具体的编译后篇幅控制：
+
+- 每一章编译后大约控制在 25 页，最多不超过 30 页。
+- 每一章中的 `算例分析 + 本章小结` 合计控制在 10-15 页。
+- 这是较强约束；若由于图表、公式、学校模板或研究内容差异导致无法满足，应在编译后明确记录实际页数、偏离量和原因。
+- 每次完成 LaTeX 编译后，都要检查上述页数，而不是只在定稿前检查一次。
+
 ## 图表密度建议
 
 - Introduction: few figures and tables; use them for background and framework only.
