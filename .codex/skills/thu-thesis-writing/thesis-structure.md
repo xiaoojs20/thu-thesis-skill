@@ -6,26 +6,26 @@
 
 全文应保持单一主问题研究线：
 
-1. front matter
-2. Chinese abstract
-3. English abstract
-4. contents, figure list, table list
-5. notation/abbreviation list
-6. Chapter 1 introduction
-7. Chapter 2 method foundation A
-8. Chapter 3 method foundation B or solution framework
-9. Chapter 4 core planning/model chapter
-10. Chapter 5 risk/extension/evaluation chapter
-11. Chapter 6 conclusion
-12. references and back matter
+1. 前置材料
+2. 中文摘要
+3. 英文摘要
+4. 目录、插图清单、附表清单
+5. 符号/缩略语说明
+6. 第 1 章 引言
+7. 第 2 章 方法基础 A
+8. 第 3 章 方法基础 B 或求解框架
+9. 第 4 章 核心规划/模型章
+10. 第 5 章 风险/扩展/评估章
+11. 第 6 章 结论
+12. 参考文献与后置材料
 
-这不是“多篇论文拼接式”结构。每一章都应解决同一主问题链条中的一个环节。
+这不是"多篇论文拼接式"结构。每一章都应解决同一主问题链条中的一个环节。
 
 在确定最后一章编号前，先判断论文层次：
 
-- master's thesis: the thesis often ends in Chapter 5, so the conclusion is often Chapter 5
-- doctoral thesis: the thesis often ends in Chapter 6, so the conclusion is often Chapter 6
-- if the thesis level is unknown, keep the conclusion chapter number as a placeholder and do not hard-code it
+- 硕士论文：论文通常以第 5 章结尾，因此结论常为第 5 章
+- 博士论文：论文通常以第 6 章结尾，因此结论常为第 6 章
+- 若学位层次未知，将结论章编号保留为占位符，不要写死
 
 不要照抄样本论文的章节主题，应改写为用户自己的研究对象，例如：
 
@@ -39,7 +39,7 @@
 
 ### 第 1 章：引言
 
-Use:
+采用：
 
 1. `1.1 研究概述`
 2. `1.2 国内外研究现状`
@@ -47,22 +47,14 @@ Use:
 
 `1.1` 内部保持：
 
-1. research background
-2. key problem
-3. research significance
+1. 研究背景
+2. 关键问题
+3. 研究意义
 
 `1.3` 内部保持：
 
-1. research route
-2. chapter-by-chapter main work
-
-对硕士论文，第 1 章引言内部建议按编译后 PDF 页数分配：
-
-- `研究背景和意义`: 1-2 页。
-- `国内外研究现状`: 7-8 页。
-- `研究思路与主要工作`: 3-4 页。
-
-三部分合计优先落在 11-13 页；若达到 14 页或超出分项范围，应记录实际页数、偏离量和原因。
+1. 研究思路
+2. 逐章主要工作
 
 ### 技术章节
 
@@ -77,12 +69,12 @@ Use:
 
 含义如下：
 
-- `概述`: chapter target, problem, and content map
-- `主要内容`: one or more consecutive sections carrying definitions, models, methods, frameworks, constraints, algorithms, or derivations
-- `算例分析`: validation through cases, experiments, simulations, or comparative studies
-- `本章小结`: chapter-level recap of problem, method chain, and validated result
+- `概述`：章节目标、问题与内容地图
+- `主要内容`：一个或多个连续小节，承载定义、模型、方法、框架、约束、算法或推导
+- `算例分析`：通过案例、实验、仿真或对比研究进行验证
+- `本章小结`：章级回扣问题、方法链条与验证结果
 
-`主要内容` does not have to appear as a literal section title, but it must occupy the middle block between `概述` and `算例分析`.
+`主要内容` 不必以字面节标题出现，但必须占据 `概述` 与 `算例分析` 之间的中间区块。
 
 `概述` 与 `本章小结` 的篇幅都是强约束：每一节至少应约占编译后 PDF 的 2/3 页。起草时不得把 `概述` 写成一段背景说明，也不得把 `本章小结` 写成一段短总结；若尚未编译 PDF，应按多个完整段落展开，使其在编译后大致达到该版面量。
 
@@ -90,41 +82,41 @@ Use:
 
 对论文层面的结论章，强制保持以下模式：
 
-1. chapter title only: `第x章 结论`
-2. opening summary paragraph
-3. numbered main contributions
-4. closing paragraph
+1. 仅设章标题：`第x章 结论`
+2. 开篇总述段
+3. 编号主要贡献
+4. 收尾段
 
 这同样是强约束。
 
-If the thesis is a master's thesis, `x` is often `5`.
+若为硕士论文，`x` 常为 `5`。
 
-If the thesis is a doctoral thesis, `x` is often `6`.
+若为博士论文，`x` 常为 `6`。
 
-Do not create `x.1`, `x.2`, `x.3` or any subsection headings inside the conclusion chapter.
+结论章内部不要设 `x.1`、`x.2`、`x.3` 或任何小节标题。
 
 ## 节内组织顺序
 
 当某一节引入模型时，优先按以下顺序：
 
-1. problem or objective definition
-2. variable or notation clarification
-3. objective function or main mechanism
-4. constraints or submodules
-5. modeling implication
+1. 问题或目标定义
+2. 变量或符号澄清
+3. 目标函数或主要机理
+4. 约束或子模块
+5. 建模意义
 
 当某一节引入实验/算例时，优先按以下顺序：
 
-1. case setting
-2. scheme definition
-3. parameter or boundary condition
-4. result comparison
-5. interpretation
-6. conclusion
+1. 算例设置
+2. 方案定义
+3. 参数或边界条件
+4. 结果对比
+5. 解读
+6. 结论
 
 ## 常见小节类型
 
-Typical subsection patterns:
+典型小节模式：
 
 1. `定义 / 指标 / 挑战`
 2. `模型 / 目标函数 / 约束`
@@ -134,32 +126,26 @@ Typical subsection patterns:
 
 根据样本论文提炼出的推荐比例：
 
-- introduction: about 30% of core body
-- each major technical chapter: about 15% to 20%
-- final conclusion: about 4% to 6%
-
-硕士论文还应执行更具体的编译后篇幅控制：
-
-- 第 1 章引言部分编译后大约控制在 9-13 页，最多不超过 15 页；其中 `研究背景和意义` 建议 1-2 页，`国内外研究现状` 建议 7-8 页，`研究思路与主要工作` 建议 3-4 页，三部分合计优先落在 11-13 页。
-- 第 5 章结论部分编译后大约控制在 2-3 页，最多不超过 4 页。
-- 这是较强约束；若由于学校模板、图表密度、研究内容或导师要求导致无法满足，应在编译后明确记录实际页数、偏离量和原因。
+- 引言：约占正文核心篇幅的 30%
+- 每个主要技术章：约占 15% 至 20%
+- 最终结论：约占 4% 至 6%
 
 硕士论文的第 2 章到第 4 章还应执行更具体的编译后篇幅控制：
 
 - 每一章编译后大约控制在 25 页，最多不超过 30 页。
 - 每一章中的 `算例分析 + 本章小结` 合计控制在 10-15 页。
 - 这是较强约束；若由于图表、公式、学校模板或研究内容差异导致无法满足，应在编译后明确记录实际页数、偏离量和原因。
-- 每次完成 LaTeX 编译后，都要检查第 1 章、第 2-4 章、第 5 章总页数，以及第 2-4 章中的 `算例分析 + 本章小结` 页数，而不是只在定稿前检查一次。
+- 每次完成 LaTeX 编译后，都要检查上述页数，而不是只在定稿前检查一次。
 
 ## 图表密度建议
 
-- Introduction: few figures and tables; use them for background and framework only.
-- Method chapters: highest figure density; use for workflow, topology, and statistical patterns.
-- Planning and experiment chapters: more result figures than tables.
-- Tables mainly carry:
-  - scheme descriptions
-  - parameters
-  - result comparison
+- 引言：图和表较少；仅用于背景和框架。
+- 方法章：图密度最高；用于流程、拓扑和统计规律。
+- 规划与实验章：结果图多于表。
+- 表主要承载：
+  - 方案描述
+  - 参数
+  - 结果对比
 
 ## 可复用提纲骨架
 
@@ -197,6 +183,6 @@ Typical subsection patterns:
 
 对论文层面的结论章，不可打破的规则是：
 
-1. no section headings
-2. no subsection headings
-3. direct chapter-level prose with numbered contribution items
+1. 不设节标题
+2. 不设小节标题
+3. 直接在章标题下以连续段落加编号贡献项展开

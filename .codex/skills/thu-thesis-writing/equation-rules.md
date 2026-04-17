@@ -1,37 +1,29 @@
-# 公式、图与表规则
+# 公式、图与表规范
 
-## 公式解释顺序
+## 公式写作顺序（公式写作八股）
 
-公式解释优先按以下固定顺序：
+每条公式的呈现必须遵循以下强制性的"八股"顺序：
 
-1. explain why the equation is needed
-2. show the equation or equation group
-3. explain the role of each equation if there are multiple equations
-4. add `式中：` to define symbols
-5. state what the equation block accomplishes in the thesis
+1. **引入句**：说明以下公式代表什么，以冒号（`：`）结尾。
+2. **公式**：带 `\label` 的 `equation` 或 `align` 环境。
+3. **叙述（显式命名）**：新段落/句子以 `式（\ref{label}）为 [模型/约束名称]` 开头。
+   - 绝不能"空降"公式而不立即命名。
+   - 即使使用 `\ref`，也要用中文全角括号 `（ ）`。
+4. **变量说明**：用 `其中`（或长块用 `式中：`）解释符号。
+5. **用途**：陈述建模意义或物理结果。
 
-## 公式标签与显式引用规则
+### 标签与显式引用规则
 
-这是强约束，不是建议：
+这是强制性要求，不是建议：
 
-1. 每个可编号公式都必须写 `\label{eq:...}`。
+1. 每条编号显示公式必须有 `\label{eq:...}`。
 2. 单个 `equation` 环境至少包含一个 `\label{eq:...}`。
-3. `align` 环境中，如果每一行都是独立公式或会产生独立编号，则每一行都必须在对应行末写独立的 `\label{eq:...}`。
-4. 正文介绍、解释或再次提到公式时，必须显式写成 `式（\ref{eq:...}）`；不要只写“上式”“如下式”“该公式”，也不要只依赖自动编号。
-5. 公式组可先用 `式（\ref{eq:a}）--式（\ref{eq:c}）` 或 `式（\ref{eq:a}）至式（\ref{eq:c}）` 总体引入，再逐条说明每个公式的作用。
-6. 如果一个 `align` 只是同一公式的分行推导且不需要多编号，应使用 `\notag`/`\nonumber` 取消非独立行编号，并只给最终需要引用的公式行设置 `\label`。
+3. 在 `align` 中，每条独立编号的公式行必须有各自的 `\label{eq:...}`。
+4. 引入、解释或后续提及公式时，必须显式引用为 `式（\ref{eq:...}）`；不要仅依赖"上式""如下式"或"该公式"等措辞。
+5. 对于公式组，用 `式（\ref{eq:a}）--式（\ref{eq:c}）` 或 `式（\ref{eq:a}）至式（\ref{eq:c}）` 引入，再解释每条公式的作用。
+6. 若 `align` 块仅为一条公式的多行推导，则用 `\notag`/\nonumber` 抑制非独立行的编号，仅对需要引用的公式行加标签。
 
-正确示例：
-
-```tex
-定义输入侧共模电压与输出侧共模电压如式（\ref{eq:common_voltage}）。
-\begin{equation}
-    [公式内容]
-    \label{eq:common_voltage}
-\end{equation}
-
-式（\ref{eq:common_voltage}）为输入侧与输出侧共模电压定义式，式中：……
-```
+正确的 `align` 模式：
 
 ```tex
 \begin{align}
@@ -45,119 +37,64 @@
     \label{eq:deltaU}
 \end{align}
 
-式（\ref{eq:P}）与式（\ref{eq:Pmax}）分别给出了线路有功传输功率与静稳极限功率，式（\ref{eq:deltaU}）给出了无功传输相关的电压偏差。
+式（\ref{eq:P}）与式（\ref{eq:Pmax}）分别给出了……，式（\ref{eq:deltaU}）给出了……。
 ```
 
-## 公式组模板
+### 公式模式模板
 
 ```text
-……如式（\ref{eq:a}）--式（\ref{eq:d}）所示。
-\begin{align}
-  [公式内容1]
-  \label{eq:a}
-  \\
-  [公式内容2]
-  \label{eq:b}
-  \\
-  [公式内容3]
-  \label{eq:c}
-  \\
-  [公式内容4]
-  \label{eq:d}
-\end{align}
-
-式（\ref{eq:a}）描述……，式（\ref{eq:b}）构建……，式（\ref{eq:c}）计算……，式（\ref{eq:d}）给出……。
-式中：A 表示……；B 表示……；C 为……。
-基于式（\ref{eq:a}）--式（\ref{eq:d}）构建的……，实现了……。
-```
-
-## LaTeX 公式环境空行规则
-
-这是强约束，不是建议：
-
-1. `\begin{equation}`、`\begin{align}` 这类陈列公式环境前不需要额外空行；公式环境应紧接引导句下一行。
-2. `\end{equation}`、`\end{align}` 后必须再空一行。
-3. 公式块后的解释句必须从新段落开始，不能紧贴在 `\end{...}` 下一行直接顶格续写。
-4. 单个公式和公式组都必须遵守这条规则。
-
-正确示例：
-
-```text
-……可构建目标函数如下：
+……构建了[模型名称]：
 \begin{equation}
   [公式内容]
-\label{eq:obj}
+\label{eq:name}
 \end{equation}
-
-式（\ref{eq:obj}）为……
+式（\ref{eq:name}）为[具体物理含义/约束类型]，其中 [变量1] 为……；[变量2] 表示……。
 ```
 
-错误示例：
-
-```text
-……可构建目标函数如下：
-
-\begin{equation}
-  [公式内容]
-\label{eq:obj}
-\end{equation}
-式（\ref{eq:obj}）为……
-```
 
 ## `式中：` 规则
 
-1. Start with `式中：`.
-2. Follow variable appearance order.
-3. Use `；` to separate items.
-4. Explain physical meaning first, then role, range, or bound.
+1. 以 `式中：` 开头。
+2. 按变量出现顺序排列。
+3. 用 `；` 分隔各项。
+4. 先解释物理含义，再解释角色、范围或上下界。
 
-Template:
+模板：
 
 ```text
 式中：X 表示……；Y 表示……；Z 为……，其上限为……。
 ```
 
-## 公式后还需要解释什么
+## 公式后还需说明什么
 
-不要只停留在符号定义，还要说明该公式块的建模作用：
+不要停在符号定义。还要说明建模功能：
 
-- describes uncertainty
-- preserves temporal correlation
-- quantifies seasonal fluctuation
-- defines balance constraints
-- reduces computational complexity
-- supports later scenario analysis
+- 描述不确定性
+- 保持时序相关性
+- 量化季节波动
+- 定义平衡约束
+- 降低计算复杂度
+- 支撑后续场景分析
 
-## 图的规则
+## 图规范
 
-### 图的职责
+### 功能分工
 
-图更适合承载：
+图用于：
 
-- background cognition
-- research framework
-- topology
-- workflow
-- dynamic process
-- balance curve
-- sensitivity analysis
+- 背景认知
+- 研究框架
+- 拓扑结构
+- 流程
+- 动态过程
+- 平衡曲线
+- 灵敏度分析
 
-### 文件格式规则
+### 标题风格
 
-插图优先使用 PDF。
+标题保持名词性，不用结论性表述。
 
-原因：
-
-- PDF is the default expected figure format for this thesis workflow
-- vector PDF usually preserves line art, topology diagrams, and plotted curves better in LaTeX
-
-如果现有图不是 PDF，要明确提醒用户本 skill 默认按 PDF 图插入。
-
-### 图题写法
-
-Keep captions noun-based, not conclusion-based.
-
-较好的题注模式：
+良好示例：
 
 - `某系统拓扑结构`
 - `某方法框架`
@@ -165,11 +102,11 @@ Keep captions noun-based, not conclusion-based.
 - `某月平衡结果`
 - `某灵敏度分析`
 
-Do not put the final conclusion in the caption.
+不要把最终结论放进标题。
 
-### In-Text Figure Interpretation
+### 正文中的图解读
 
-Use this pattern:
+采用以下模式：
 
 ```text
 图 x 展示了……。
@@ -177,91 +114,50 @@ Use this pattern:
 相较于方案 A，方案 B ……。
 ```
 
-### Review Rule For Figures
+## 表规范
 
-When reviewing figure usage:
+表用于：
 
-1. check whether the inserted figure is PDF
-2. if it is not PDF, explicitly flag it to the user
-3. do not silently treat non-PDF insertion as fully compliant
+1. 方案描述
+2. 参数设置
+3. 结构化结果对比
+4. 文献汇总
 
-## Table Rules
-
-Use tables for:
-
-1. scheme descriptions
-2. parameter settings
-3. structured result comparison
-4. literature summary
-
-Caption style is also noun-based:
+标题同样保持名词性：
 
 - `对比方案描述`
 - `关键参数设置`
 - `不同方案的优化结果对比分析`
 
-## Figure/Table Division of Labor
+## 图与表的分工
 
-- tables carry structured numeric comparison
-- figures carry trends, topology, process, and mechanism
+- 表承载结构化的数值对比
+- 图承载趋势、拓扑、过程和机理
 
-Do not use a figure if a compact table expresses the result better.
+若紧凑的表能更好表达结果，则不要用图。
 
-## Citation Style
+## 引用风格
 
-Prefer numeric references in engineering-thesis prose:
+工科论文正文优先采用数字引用：
 
 - `[1]`
 - `[2]`
 - `[9-10]`
 
-Place citations directly after the technical claim they support.
+引用放在所支撑的技术论断之后。
 
-在 ThuThesis 模板中，引用样式需要显式区分 `inline` 和 `super`，并在需要切换时显式调用：
+## LaTeX 约定
 
-```tex
-\thusetup{
-  cite-style = inline, % inline super[上标引用]
-}
-```
+若输出 LaTeX 兼容文本，默认采用：
 
-强约束如下：
-
-1. 如果 `\cite{...}` 前面有显式的 `文献`、`参考文献` 等字样，使用 `inline` 样式。
-2. 如果引用只是给前面的判断、论述或事实陈述加上标参考文献，使用 `super` 样式。
-3. 每次到某一处需要和当前样式不同的引用格式时，都要显式写一次 `\thusetup{ cite-style = inline }` 或 `\thusetup{ cite-style = super }`，不要默认沿用。
-
-`inline` 示例：
-
-```tex
-\thusetup{ cite-style = inline }
-文献\cite{ref1,ref2}针对该问题开展了研究。
-```
-
-`super` 示例：
-
-```tex
-\thusetup{ cite-style = super }
-该方法能够显著降低系统运行成本。\cite{ref3}
-```
-
-## LaTeX Conventions
-
-If writing LaTeX-compatible text, assume:
-
-- single equations -> `equation`
-- multiline equations -> `align`
-- equation reference in thesis prose -> `式（\ref{eq:...}）`
-- citations preceded by explicit `文献` wording -> switch to `\thusetup{ cite-style = inline }`
-- citations used as superscript support for a statement -> switch to `\thusetup{ cite-style = super }`
-- when the local citation style needs to change, explicitly call `\thusetup{ cite-style = ... }`
-- do not insert an extra blank line before `\begin{equation}` / `\begin{align}`
-- leave one blank line after `\end{equation}` / `\end{align}`
-- every numbered equation must have a `\label{eq:...}`
-- every independently numbered line in `align` must have its own `\label{eq:...}`
-- figures -> `figure`
-- tables -> `table`
-- labels:
+- 单行公式 -> `equation`
+- 多行公式 -> `align`
+- 正文中的公式引用 -> `式（\ref{eq:...}）`
+- 每条编号公式必须有 `\label{eq:...}`
+- `align` 中每条独立编号行必须有各自的 `\label{eq:...}`
+- 图 -> `figure`
+- 表 -> `table`
+- 标签：
   - `eq:...`
   - `fig:...`
   - `tab:...`

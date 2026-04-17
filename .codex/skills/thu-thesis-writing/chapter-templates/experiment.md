@@ -1,6 +1,6 @@
-# 算例章节模板
+# 算例分析节模板
 
-用于 `算例分析`、案例研究、验证章节或结果分析章节。
+用于 `算例分析`、案例研究、验证节或结果分析节。
 
 ## 推荐结构
 
@@ -20,7 +20,7 @@ x.5.5 大规模系统验证（可选）
 
 ## 写作说明
 
-### 开头段
+### 开篇段
 
 ```text
 本节基于……系统进行算例分析，以验证……。
@@ -30,31 +30,31 @@ x.5.5 大规模系统验证（可选）
 
 ### （1）测试系统说明
 
-建议交代：
+说明：
 
-1. what system is used
-2. what components are included
-3. why this system is suitable for validation
+1. 使用什么系统
+2. 包含哪些组件
+3. 为何该系统适合验证
 
 ### （2）方案定义
 
-当方案较多时，优先用表格。
+多方案时用表格呈现。
 
-差异要写明：
+差异必须明确：
 
-- baseline
-- proposed method
-- ablation or variant
-- risk-aware or storage-aware extension
+- 基线方案
+- 本文方法
+- 消融或变体
+- 考虑风险或储能的扩展方案
 
 ### （3）参数设置
 
-以下内容优先用表：
+以下情况用表格：
 
-- cost parameters
-- efficiency parameters
-- penetration assumptions
-- confidence level or risk weight if relevant
+- 成本参数
+- 效率参数
+- 渗透率假设
+- 置信水平或风险权重（如相关）
 
 ### 结果对比段
 
@@ -65,7 +65,7 @@ x.5.5 大规模系统验证（可选）
 通过上述对比分析，证明了……。
 ```
 
-### 动态图解释段
+### 动态图解读段
 
 ```text
 图 x 展示了……。
@@ -84,8 +84,8 @@ x.5.5 大规模系统验证（可选）
 
 ## 最终检查
 
-- validation target is explicit
-- baseline is explicit
-- table/figure order is clean
-- result interpretation includes mechanism, not just observation
-- ending states what the experiment proves for the thesis claim
+- 验证目标明确
+- 基线方案明确
+- 图表顺序清晰
+- 结果解读包含机理，不止于观察
+- 结尾说明实验对论文论点的证明作用

@@ -1,43 +1,36 @@
-# 结论章节模板
+# 结论模板
 
-用于论文层面的结论章，或某一章的章末结论。
+用于论文层面的结论章或重要章节的章末小结。
 
-## 论文层面结论章结构
+## 论文层面结论章的结构
 
 强约束：
 
-- do not set section headings
-- do not set subsection headings
-- do not write `x.1`, `x.2`, `x.3`
-- keep the whole chapter under the chapter title `第x章 结论`
-- organize the body as continuous paragraphs plus numbered contribution items only
-- each numbered contribution lead sentence must be bold and form an independent LaTeX paragraph
-- the explanation after each numbered lead sentence must start in the next paragraph
-- for a master's thesis, Chapter 5 conclusion should compile to about 2-3 pages and no more than 4 pages unless there is a documented reason
+- 不设节标题
+- 不设小节标题
+- 不写 `6.1`、`6.2`、`6.3`
+- 全文仅在 `第x章 结论` 这一章标题下展开
+- 正文组织为连续段落加编号贡献点
+- 每个编号贡献点的 lead sentence 必须加粗并构成独立的 LaTeX 段落
+- 每个编号 lead sentence 之后的解释文字必须从下一段开始
 
 ```text
 第x章 结论
-1. opening summary paragraph
-2. numbered main contributions
-3. overall implication paragraph
+1. 开篇总述段
+2. 编号主要贡献
+3. 总体意义段
 ```
 
-先根据学位层次确定 `x`：
+## 开篇总述段
 
-- master's thesis: `x` is often `5`
-- doctoral thesis: `x` is often `6`
-- if unknown, keep `x` as a placeholder until the thesis structure is confirmed
+重述以下内容：
 
-## 开头总述段
+1. 论文背景
+2. 总体矛盾或挑战
+3. 论文路线
+4. 总体目标
 
-需要重述：
-
-1. the thesis background
-2. the overall contradiction or challenge
-3. the thesis route
-4. the overall objective
-
-Template:
+模板：
 
 ```text
 随着……，系统面临……挑战。
@@ -45,16 +38,16 @@ Template:
 本文围绕……，分别从……、……、……和……展开研究。
 ```
 
-## 编号贡献项模板
+## 编号贡献点模板
 
-每一项贡献都写成：
+每条贡献按以下四要素展开：
 
-1. challenge
-2. method
-3. result
-4. value
+1. 挑战
+2. 方法
+3. 结果
+4. 价值
 
-Template:
+模板：
 
 ```text
 \textbf{（1）提出了……}
@@ -64,11 +57,18 @@ Template:
 最后通过……验证了……，说明……。
 ```
 
-一般重复 3 到 5 项。
+## 贡献数量规则
 
-## 收束段
+贡献点的数量必须与核心技术章节数（引言与结论之间的章节数）一致，且每个贡献点须与具体章节一一对应。
 
-用论文层面的发现与价值收束：
+- **博士论文**（通常为 6 章：第 1 章引言 + 第 2–5 章核心技术章 + 第 6 章结论）：写 **恰好 4 个编号贡献点**，依次对应第 2、3、4、5 章。
+- **硕士论文**（通常为 5 章：第 1 章引言 + 第 2–4 章核心技术章 + 第 5 章结论）：写 **恰好 3 个编号贡献点**，依次对应第 2、3、4 章。
+
+不得随意增减条目；数量和顺序必须严格遵循论文章节安排。
+
+## 收尾段
+
+以论文层面的发现与价值收束：
 
 ```text
 本文研究表明，……。
@@ -76,15 +76,15 @@ Template:
 从……角度看，本文可为……提供支撑。
 ```
 
-## 章末结论变体
+## 章末小结变体
 
-如果这里只是某一章的章末结论，可压缩成：
+若仅为单章小结，压缩为：
 
-1. chapter challenge
-2. chapter method chain
-3. chapter validation result
+1. 本章挑战
+2. 本章方法链条
+3. 本章验证结果
 
-Template:
+模板：
 
 ```text
 首先，本章针对……提出了……。
@@ -95,11 +95,10 @@ Template:
 
 ## 最终检查
 
-- the thesis-level conclusion has no section headings or subsection headings
-- for a master's thesis, Chapter 5 conclusion compiles to about 2-3 pages and no more than 4 pages unless there is a documented reason
-- every numbered contribution lead sentence is bold
-- every numbered contribution lead sentence is an independent LaTeX paragraph
-- conclusion is not a copy-paste of section summaries
-- each contribution is thesis-level, not minor detail-level
-- wording is precise and restrained
-- final paragraph states real value, not generic praise
+- 论文层面结论不设节标题或小节标题
+- 每个编号贡献点的 lead sentence 加粗
+- 每个编号贡献点的 lead sentence 是独立的 LaTeX 段落
+- 结论不是各节小结的直接复制粘贴
+- 每条贡献是论文层面的，不是细枝末节层面的
+- 措辞精确、克制
+- 收尾段陈述真实价值，而非泛泛的褒扬

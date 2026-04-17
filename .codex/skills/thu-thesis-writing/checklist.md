@@ -2,142 +2,140 @@
 
 以下两种情况使用：
 
-- before returning drafted chapter text
-- when reviewing an existing thesis chapter or section
+- 返回起草的章节文本之前
+- 审阅现有论文章节或节时
 
 用于审阅时，每一项都要明确标记为：
 
-- pass
-- partial
-- fail
-- not applicable
+- pass（通过）
+- partial（部分通过）
+- fail（不通过）
+- not applicable（不适用）
 
 ## 结构
 
-- Does the chapter follow one main problem line?
-- Does the section order match the chapter type?
-- Is there a chapter-level introduction or overview section near the beginning?
-- Is there a chapter-level summary or `本章小结` near the end?
-- In a technical chapter, does `概述` occupy at least about 2/3 of a compiled PDF page?
-- In a technical chapter, does `本章小结` occupy at least about 2/3 of a compiled PDF page?
-- If the PDF was not compiled, are `概述` and `本章小结` each expanded into several complete paragraphs rather than a short single paragraph?
-- Under every `算例分析` section numbered `x.y`, are direct subsections reasonably organized within `x.y.1` through `x.y.5`?
-- For a master's thesis after compilation, is Chapter 1 introduction about 9-13 pages and no more than 15 pages unless there is a documented reason?
-- For a master's thesis after compilation, does Chapter 1 keep its internal allocation near: background/significance 1-2 pages, literature review 7-8 pages, and research route/main work 3-4 pages?
-- For a master's thesis after compilation, are Chapters 2-4 each about 25 pages and no more than 30 pages unless there is a documented reason?
-- For a master's thesis after compilation, does each Chapter 2-4 keep `算例分析 + 本章小结` within 10-15 pages?
-- For a master's thesis after compilation, is Chapter 5 conclusion about 2-3 pages and no more than 4 pages unless there is a documented reason?
-- After every compilation, were these page-budget checks repeated and any deviations recorded?
-- If it is a technical chapter, does it contain:
+- 本章是否围绕一条主问题线展开？
+- 节顺序是否与章节类型匹配？
+- 章首附近是否有章级引言或概述？
+- 章末附近是否有章级总结或 `本章小结`？
+- 技术章节的 `概述` 是否至少约占编译后 PDF 的 2/3 页？
+- 技术章节的 `本章小结` 是否至少约占编译后 PDF 的 2/3 页？
+- 若尚未编译 PDF，`概述` 与 `本章小结` 是否各自展开为多个完整段落，而非单段短文本？
+- 每个编号为 `x.y` 的 `算例分析` 节，其直接下属小节是否合理组织在 `x.y.1` 至 `x.y.5` 之内？
+- 硕士论文编译后，第 2-4 章是否各约 25 页且不超过 30 页，除非有明确记录的原因？
+- 硕士论文编译后，第 2-4 章的 `算例分析 + 本章小结` 是否各控制在 10-15 页？
+- 每次编译后，是否重复检查了上述页数预算并记录了任何偏离？
+- 若为技术章节，是否包含：
   - `概述`
   - `主要内容`
   - `算例分析`
   - `本章小结`
-- For a technical chapter, do these four blocks appear in the required order:
+- 技术章节的上述四个区块是否按要求的顺序出现：
   - `概述`
   - `主要内容`
   - `算例分析`
   - `本章小结`
-- If any one of the four blocks is missing, is the structure marked `fail` rather than `partial`?
+- 四个区块中若缺少任何一个，结构是否标记为 `fail` 而非 `partial`？
 
 ## 节间衔接
 
-- Does each major section connect logically to the previous section?
-- Are there explicit transition sentences between background, model, experiment, and summary sections?
-- Are `针对 / 首先 / 其次 / 基于此 / 最后` used where the logic needs structural guidance?
-- Does the chapter avoid abrupt jumps from one topic to another without explanation?
+- 每个主要节是否与前一节逻辑相连？
+- 背景、模型、实验、总结之间是否有显式的过渡句？
+- 逻辑需要结构引导时，是否使用了 `针对 / 首先 / 其次 / 基于此 / 最后`？
+- 本章是否避免了无解释的主题跳跃？
 
 ## 引言
 
-- Does it move from broad background to specific thesis problem?
-- Are the subproblems explicit?
-- Are the technical difficulties explicit?
-- Is the literature review theme-based rather than author-by-author?
+- 是否从宽泛背景推进到具体论文问题？
+- 子问题是否明确？
+- 技术难点是否明确？
+- 文献综述是否按主题而非按作者罗列？
 
 ## 段落质量
 
-- Does each paragraph do one main job?
-- Are claims concrete rather than generic?
-- Does the text avoid double quotation marks unless they are necessary for direct quotation, bibliographic/source fidelity, software/interface strings, code/LaTeX literals, or an explicit user request?
+- 每段是否只承担一项主要任务？
+- 论断是否具体而非泛泛？
 
 ## 公式
 
-- Is each equation introduced before appearing?
-- Does every numbered displayed equation have a `\label{eq:...}`?
-- In `align`, does every independently numbered formula line have its own `\label{eq:...}`?
-- Are formula introductions and explanations written with explicit `式（\ref{eq:...}）` references rather than “上式/如下式” only?
-- Is there no extra blank line before `\begin{equation}` / `\begin{align}`?
-- Is there one blank line after `\end{equation}` / `\end{align}` before the next paragraph?
-- If there is an equation group, is each equation’s role explained?
-- Is there a `式中：` block when symbol density is high?
-- Are key variables explained after the equation instead of being left implicit?
-- Is the modeling meaning stated after the formula?
+- 每条公式是否在出现前被引入？
+- 每条编号显示公式是否有 `\label{eq:...}`？
+- `align` 中每条独立编号的公式行是否有各自的 `\label{eq:...}`？
+- 公式引入与解释是否使用显式的 `式（\ref{eq:...}）` 引用，而非仅"上式/如下式"？
+- `\begin{equation}` / `\begin{align}` 前是否没有额外空行？
+- `\end{equation}` / `\end{align}` 与下一段之间是否有一空行？
+- 若为公式组，是否解释了每条公式的作用？
+- 符号密度高时是否有 `式中：` 块？
+- 关键变量是否在公式后得到解释，而非隐含不表？
+- 建模意义是否在公式后陈述？
 
 ## 引用
 
-- If a citation is preceded by explicit wording such as `文献`, is `\thusetup{ cite-style = inline }` used?
-- If a citation is used as a superscript reference for a statement, is `\thusetup{ cite-style = super }` used?
-- Whenever the local citation style needs to change, is `\thusetup{ cite-style = ... }` explicitly called rather than assumed?
+- 若引用前有 `文献` 等显式措辞，是否使用了 `\thusetup{ cite-style = inline }`？
+- 若引用作为某论断的上标参考文献，是否使用了 `\thusetup{ cite-style = super }`？
+- 每当局部引用风格需要切换时，是否显式调用 `\thusetup{ cite-style = ... }`，而非假设当前风格已正确？
 
 ## 优化/规划模型小节
 
-- If the section is a planning-model subsection, does it start with a short inheritance paragraph rather than repeating chapter background?
-- Is there a coupling/framework figure when multiple systems, energy forms, or planning objects are involved?
-- Does the subsection contain `x.x.1 目标函数`?
-- Under `目标函数`, are `（1）（2）（3）` used to split different objective blocks such as investment cost and operating cost?
-- Are Chinese-parenthetical sub-items such as `（1）投资成本` and `（2）运行成本` written in bold rather than plain text?
-- Does every Chinese-parenthetical sub-item occupy its own line or paragraph, with the explanation starting from the next paragraph rather than the same line?
-- Do the explanatory paragraphs under each Chinese-parenthetical sub-item keep first-line indentation instead of being flush left?
-- Does each objective block include:
-  - formula
-  - physical meaning
-  - key variable explanation
-  - index explanation when notation is dense
-- Does the subsection contain `x.x.2`, `x.x.3` style major constraint categories?
-- Inside each major constraint category, are `（1）（2）（3）` used to split different physical modules?
-- Are previously derived subsystem constraints imported by equation-range reference where appropriate instead of being fully rewritten?
-- Are new constraints grouped first by big system category, then by physical module, rather than by arbitrary formula order?
-- Does each constraint group have a follow-up sentence explaining what that group accomplishes?
-- Does the subsection end by stating that the full optimization model is obtained by jointly enforcing the objective and all constraints?
+- 若为规划模型小节，是否以简短的承继段开头，而非重复章背景？
+- 涉及多系统、多能源形式或多规划对象时，是否有一幅耦合/框架图？
+- 该小节是否包含 `x.x.1 目标函数`？
+- `目标函数` 下是否用 `（1）（2）（3）` 拆分不同目标块，如投资成本和运行成本？
+- 中文圆括号子项如 `（1）投资成本`、`（2）运行成本` 是否加粗，而非普通文本？
+- 每个中文圆括号子项是否独占一行或一段，解释从下一段开始，而非同一行？
+- 每个中文圆括号子项下的解释段落是否保持首行缩进，而非顶格？
+- 每个目标块是否包含：
+  - 公式
+  - 物理含义
+  - 关键变量解释
+  - 符号密集时的下标/上标解释
+- 该小节是否包含 `x.x.2`、`x.x.3` 风格的主要约束类别？
+- 每个主要约束类别内部，是否用 `（1）（2）（3）` 拆分物理模块？
+- 先前已推导的子系统约束，是否在合适时通过公式范围引用引入，而非全文重写？
+- 新约束是否先按大系统类别、再按物理模块分组，而非按任意公式顺序排列？
+- 每个约束组是否有后续句子说明该组实现了什么？
+- 该小节是否以"联立目标函数与全部约束即得完整优化模型"结尾？
 
 ## 图与表
 
-- Are figure captions noun-based rather than conclusion-based?
-- Are inserted figures in PDF format?
-- If a figure is not PDF, is that explicitly called out to the user?
-- Are tables used for parameters and structured comparisons?
-- Are figure/table conclusions explained in the main text instead of the caption?
-- Does the text explicitly say `由图可知` or `由表可知` when interpreting results?
-- Does every important figure or table have an explicit textual reference and interpretation?
+- 图标题是否为名词性，而非结论性？
+- 插入的图是否为 PDF 格式？
+- 若图不是 PDF，是否已明确向用户指出？
+- 表是否用于参数和结构化对比？
+- 图/表的结论是否在正文中解释，而非标题中？
+- 解读结果时，正文是否明确说了 `由图可知` 或 `由表可知`？
+- 每个重要图或表是否有显式的正文引用和解读？
 
-## Experiment Section
+## 实验节
 
-- Is the validation goal explicit?
-- Are schemes and baselines defined?
-- Are boundary conditions or parameters stated?
-- Is the experiment section structurally complete:
-  - case setting
-  - scheme definition
-  - parameter or boundary description
-  - result comparison
-  - interpretation
-  - statement of what the experiment proves
-- Does the result analysis explain why the difference appears?
-- Does the section end with what the comparison proves?
+- 验证目标是否明确？
+- 方案与基线是否已定义？
+- 边界条件或参数是否已陈述？
+- 实验节的结构是否完整：
+  - 算例设置
+  - 方案定义
+  - 参数或边界说明
+  - 结果对比
+  - 解读
+  - 实验证明什么的陈述
+- 结果分析是否解释了差异出现的原因？
+- 该节是否以对比证明了什么结尾？
 
-## Abstract
+## 摘要
 
-- Does it avoid `第1章……第2章……` narration?
-- Does each contribution follow `problem -> method -> effect`?
-- Is the ending a true summary rather than repetition?
+- 是否避免了 `第1章……第2章……` 的叙述方式？
+- 每条贡献是否遵循 `问题 -> 方法 -> 效果`？
+- 结尾是真正的总结，而非重复？
 
-## Conclusion
+## 结论
 
-- Does it reopen the thesis-level problem?
-- Does the thesis-level conclusion avoid all section and subsection headings?
-- Are the main contributions numbered cleanly?
-- Is every numbered contribution lead sentence bold?
-- Is every numbered contribution lead sentence an independent LaTeX paragraph, with the explanation starting in the next paragraph?
-- Does each contribution follow `challenge -> method -> result -> value`?
-- Are the numbered items rewritten from the full-thesis perspective rather than copied from chapter summaries?
-- Does the ending state the overall implication of the thesis?
+- 是否重新打开了论文层面的问题？
+- 论文层面结论是否避免了所有节和小节标题？
+- 主要贡献是否清晰编号？
+- 贡献点数量是否与技术章节数匹配（6 章博士论文对应第 2–5 章的 4 项；5 章硕士论文对应第 2–4 章的 3 项）？
+- 每个贡献是否与对应技术章节一一对应且顺序正确？
+- 每个编号贡献点的 lead sentence 是否加粗？
+- 每个编号贡献点的 lead sentence 是否为独立的 LaTeX 段落，解释从下一段开始？
+- 每条贡献是否遵循 `挑战 -> 方法 -> 结果 -> 价值`？
+- 编号项是否从全文视角重写，而非复制各章小结？
+- 结尾是否陈述了论文的总体意义？

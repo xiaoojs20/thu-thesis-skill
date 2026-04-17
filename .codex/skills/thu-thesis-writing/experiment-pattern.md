@@ -1,52 +1,52 @@
-# 算例与实验章节模式
+# 算例与案例研究模式
 
 ## 默认实验逻辑
 
-建议按以下顺序：
+按以下顺序展开：
 
-1. state the validation goal
-2. describe the case system or dataset
-3. define comparison schemes
-4. give parameter or boundary settings
-5. present results
-6. interpret the mechanism behind the result
-7. state what the comparison proves
+1. 说明验证目标
+2. 描述案例系统或数据集
+3. 定义对比方案
+4. 给出参数或边界条件
+5. 呈现结果
+6. 解读结果背后的机理
+7. 说明对比证明了什么
 
 ## 常见结构
 
 ### 模式 A：方法验证
 
-适用于新模型或新分解方法：
+用于新模型或分解方法：
 
-1. experiment goal
-2. data source and computing environment
-3. module-by-module result
-4. overall reconstruction or final comparison
-5. conclusion
+1. 实验目标
+2. 数据来源与计算环境
+3. 逐模块结果
+4. 整体重构或最终对比
+5. 结论
 
 ### 模式 B：方案对比
 
-适用于优化或仿真框架：
+用于优化或仿真框架：
 
-1. scheme setting
-2. test system description
-3. parameter setting
-4. result comparison
-5. interpretation
-6. conclusion
+1. 方案设置
+2. 测试系统说明
+3. 参数设置
+4. 结果对比
+5. 解读
+6. 结论
 
 ### 模式 C：风险或鲁棒性分析
 
-适用于不确定性、CVaR 或鲁棒规划问题：
+用于不确定性、CVaR 或鲁棒规划：
 
-1. scheme setting
-2. scenario or uncertainty configuration
-3. base results
-4. sensitivity analysis
-5. larger system verification
-6. conclusion
+1. 方案设置
+2. 场景或不确定性配置
+3. 基础结果
+4. 灵敏度分析
+5. 大规模系统验证
+6. 结论
 
-## 可复用章节骨架
+## 可复用节骨架
 
 强约束：每个 `算例分析` 节下面最多设置五个直接三级小节。若 `算例分析` 编号为 `x.y`，应将内容合理安排在 `x.y.1` 至 `x.y.5` 之内；例如 `2.5 算例分析` 最多安排到 `2.5.5`，`3.4 算例分析` 最多安排到 `3.4.5`。更多内容应按验证目标合并到现有小节，或使用段落、图表说明、`（1）（2）（3）` 层级承载。
 
@@ -62,7 +62,7 @@ x.5.4 灵敏度分析（可选）
 x.5.5 大规模系统验证（可选）
 ```
 
-## 结果分析段模板
+## 结果段模板
 
 ```text
 表 x 对比了方案 A 和方案 B 的结果。
@@ -71,7 +71,27 @@ x.5.5 大规模系统验证（可选）
 通过上述对比分析，证明了……。
 ```
 
-## 图结果解读模板
+## 更具体的结果分析节奏
+
+对于优化、规划或可靠性导向的实验，若材料适合，优先采用以下顺序：
+
+1. 介绍结果表或图，并重述验证目的
+2. 若可行性、可靠性或充裕度是核心论点，则优先分析
+3. 若相关，其次分析经济性、效率或成本
+4. 给出具体的增减数值
+5. 以对比证明了什么结尾
+
+可用措辞：
+
+```text
+表 x 基于……对比分析了不同方案的优化结果，以验证……。
+由对比结果可知，……
+在……方面，……
+在……方面，……
+通过上述对比分析，证明了……。
+```
+
+## 图解读模板
 
 ```text
 图 x 展示了……。
@@ -80,23 +100,23 @@ x.5.5 大规模系统验证（可选）
 这说明……。
 ```
 
-## 图表组织顺序
+## 图/表排序模式
 
-算例小节内部优先按以下顺序组织：
+案例研究小节内部的首选顺序：
 
-1. scheme table
-2. topology figure
-3. parameter table
-4. result table
-5. dynamic result figures
+1. 方案表
+2. 拓扑图
+3. 参数表
+4. 结果表
+5. 动态结果图
 
-## 什么算是强实验章节
+## 什么才算扎实的实验节
 
-一个强实验章节应回答：
+实验节应回答：
 
-1. what is being validated
-2. against what baseline
-3. under what conditions
-4. what changed
-5. why it changed
-6. what this means for the thesis claim
+1. 验证什么
+2. 与什么基线对比
+3. 在什么条件下
+4. 发生了什么变化
+5. 为何变化
+6. 这对论文论点意味着什么

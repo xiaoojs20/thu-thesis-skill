@@ -1,16 +1,8 @@
-# 引言章节模板
+# 引言章模板
 
-用于第 1 章引言，或独立引言部分。
+用于第 1 章或独立的引言节。
 
 ## 推荐结构
-
-硕士论文第 1 章引言部分在编译后 PDF 中大约控制在 9-13 页，最多不超过 15 页。起草和审阅时，应按以下分配控制篇幅：
-
-- `研究背景和意义`: 1-2 页。
-- `国内外研究现状`: 7-8 页。
-- `研究思路与主要工作`: 3-4 页。
-
-三部分合计优先落在 11-13 页；若达到 14 页、超过总页数建议或超出分项范围，应记录实际页数、偏离量和原因。
 
 ```text
 第1章 引言
@@ -28,14 +20,14 @@
 
 ### 1.1.1 研究背景
 
-按以下顺序写：
+按以下顺序写作：
 
-1. macro policy or industry background
-2. concrete engineering contradiction
-3. why existing operation/planning methods are insufficient
-4. why the thesis topic matters now
+1. 宏观政策或行业背景
+2. 具体工程矛盾
+3. 现有运行/规划方法为何不足
+4. 为何本文选题此时重要
 
-起手模板：
+起始模板：
 
 ```text
 随着……，系统面临……挑战。
@@ -46,16 +38,16 @@
 
 ### 1.1.2 关键问题
 
-写法要求：
+写明：
 
-1. one thesis-level core scientific problem
-2. 2 to 4 subproblems
-3. 1 to 2 technical difficulties per subproblem
+1. 一个论文层面的核心科学问题
+2. 2 至 4 个子问题
+3. 每个子问题 1 至 2 个技术难点
 
 模板：
 
 ```text
-基于上述背景，本文聚焦于“……”这一核心问题。
+基于上述背景，本文聚焦于"……"这一核心问题。
 本文将该问题拆分为以下子问题：
 1）……；
 2）……；
@@ -67,24 +59,27 @@
 
 ### 1.1.3 研究意义
 
-研究意义建议拆为：
+将意义拆分为：
 
-1. modeling or theory meaning
-2. methodological meaning
-3. application or planning meaning
+1. 建模或理论意义
+2. 方法论意义
+3. 应用或规划意义
 
 ### 1.2 国内外研究现状
 
-文献综述按主题写，不按作者时间线平铺。
+按主题综述，不按作者年代罗列。
 
 推荐模式：
 
-1. topic A current status
-2. topic B current status
-3. topic C current status
-4. summary of remaining gaps
+1. 主题 A 研究现状
+2. 主题 A 的小结
+3. 主题 B 研究现状
+4. 主题 B 的小结
+5. 主题 C 研究现状
+6. 主题 C 的小结
+7. 尚存不足总结
 
-总收口模板：
+小结模板：
 
 ```text
 总体而言，当前研究仍存在以下问题：
@@ -93,34 +88,44 @@
 3）……。
 ```
 
+局部小结模板：
+
+```text
+总体而言，当前针对……的研究通常已经关注……，但在……、……和……方面仍存在不足。
+```
+
 ### 1.3.1 研究思路
 
-建议交代：
+优先采用：
 
-1. problem orientation
-2. research framework
-3. final decision-support or optimization objective
+1. 先给出总体框架图
+2. 问题导向
+3. 研究框架
+4. 最终决策支持或优化目标
 
 ### 1.3.2 主要工作
 
-每章可对应一句或一小段，但要先根据学位层次确定最后的结论章编号：
+若论文路线简单，可将每章映射为一句话或一小段。
 
-- master's thesis: the conclusion is often Chapter 5
-- doctoral thesis: the conclusion is often Chapter 6
+若路线较复杂，优先采用：
+
+1. 先给出研究内容框架图
+2. 按章节角色或研究阶段分组说明
+3. 在分组说明中嵌入章节映射
+
+简单模板：
 
 ```text
 第2章……。
 第3章……。
 第4章……。
 第5章……。
-第x章 结论。
+第6章……。
 ```
 
 ## 最终检查
 
-- broad-to-narrow logic is clear
-- for a master's thesis, Chapter 1 compiles to about 9-13 pages and no more than 15 pages unless there is a documented reason
-- for a master's thesis, Chapter 1 internal allocation is near: background/significance 1-2 pages, literature review 7-8 pages, and research route/main work 3-4 pages
-- subproblems align with later chapters
-- literature review has a gap summary
-- chapter arrangement matches the thesis route
+- 由宽到窄的逻辑清晰
+- 子问题与后续章节对齐
+- 文献综述有缺口总结
+- 章节安排与论文路线匹配

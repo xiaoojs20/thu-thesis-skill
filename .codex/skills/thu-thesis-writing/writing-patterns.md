@@ -6,10 +6,10 @@
 
 默认段落推进顺序：
 
-1. state the engineering background or phenomenon
-2. state the contradiction, gap, or challenge
-3. introduce what this chapter or thesis addresses
-4. state the method, effect, or contribution
+1. 陈述工程背景或现象
+2. 陈述矛盾、缺口或挑战
+3. 引出本章或本文所处理的内容
+4. 陈述方法、效果或贡献
 
 ## 推荐衔接语
 
@@ -24,7 +24,7 @@
 - `由表可知`
 - `通过上述对比分析`
 
-不要为了“避免重复”而过度乱换说法，导致论文语体失去稳定性。
+不要为了"避免重复"而过度乱换说法，导致论文语体失去稳定性。
 
 ## 常用句式模板
 
@@ -59,63 +59,64 @@
 
 引言建议按以下顺序展开：
 
-1. macro background
-2. concrete system contradiction
-3. enabling technology or possible response resource
-4. core scientific problem
-5. subproblem decomposition
-6. technical difficulties
-7. significance
-8. literature review
-9. research route and chapter arrangement
+1. 宏观背景
+2. 具体系统矛盾
+3. 使能技术或可能的响应资源
+4. 核心科学问题
+5. 子问题分解
+6. 技术难点
+7. 研究意义
+8. 文献综述
+9. 研究路线与章节安排
 
 硬规则：
 
-1. Start broad, then narrow to the thesis problem.
-2. Split the core problem into 2 to 4 subproblems.
-3. For each subproblem, name 1 to 2 technical difficulties.
-4. Review literature by topic, not by author order.
-5. End with the thesis route and chapter tasks.
+1. 先宽后窄，聚焦到论文问题。
+2. 将核心问题拆分为 2 至 4 个子问题。
+3. 每个子问题列出 1 至 2 个技术难点。
+4. 按主题综述文献，不按作者顺序罗列。
+5. 以论文路线和章节任务结尾。
 
 ## 摘要写法
 
 摘要可按六步展开：
 
-1. background and overall challenge
-2. core scientific problem
-3. contribution 1
-4. contribution 2
-5. contribution 3 or 4
-6. overall summary and keywords
+1. 背景与总体挑战
+2. 核心科学问题
+3. 贡献 1
+4. 贡献 2
+5. 贡献 3 或 4
+6. 总体总结与关键词
 
-Hard rules:
+硬规则：
 
-1. Do not write `第1章……第2章……`.
-2. Do not insert literature review.
-3. Keep each contribution to a compressed `problem -> method -> effect` block.
-4. End with overall value, not with repetition.
+1. 不要写 `第1章……第2章……`。
+2. 不要插入文献综述。
+3. 每条贡献压缩为 `问题 -> 方法 -> 效果` 块。
+4. 以总体价值结尾，而非重复。
 
 ## 结论写法
 
 结论章保持三层结构：
 
-1. opening paragraph:
-   - restate the thesis background and overall route
-2. numbered contributions:
-   - each item should be `challenge -> method -> result -> value`
-   - each item starts with a bold numbered lead sentence as an independent LaTeX paragraph
-3. closing paragraph:
-   - overall finding and broader value
+1. 开篇段：
+   - 重述论文背景与总体路线
+2. 编号贡献点：
+   - 每条按 `挑战 -> 方法 -> 结果 -> 价值` 展开
+   - 每条以加粗编号 lead sentence 作为独立 LaTeX 段落开头
+3. 收尾段：
+   - 总体发现与更广价值
 
-Hard rules:
+硬规则：
 
-1. Do not create section headings or subsection headings in the thesis-level conclusion chapter.
-2. Do not write `5.1`, `5.2`, `5.3` or `6.1`, `6.2`, `6.3` style structure; keep the rule generic as `x.1`, `x.2`, `x.3` are not used in the thesis-level conclusion chapter.
-3. Keep the conclusion as chapter-level prose plus numbered contribution items only.
-4. The numbered lead sentence must be bold and must occupy an independent LaTeX paragraph.
-5. Put a blank line after the numbered lead sentence; the explanatory text must start in the next paragraph.
-6. Write the numbered lead sentence in LaTeX as `\textbf{（n）提出了……}`.
-7. Do not copy chapter summaries directly; rewrite each item from the full-thesis perspective.
+1. 论文层面结论章不设节标题或小节标题。
+2. 不写 `5.1`、`5.2`、`5.3` 或 `6.1`、`6.2`、`6.3` 风格结构；规则通用化，即论文层面结论章不使用 `x.1`、`x.2`、`x.3`。
+3. 结论仅由章级散文加编号贡献项构成。
+4. 编号 lead sentence 必须加粗，且必须构成独立的 LaTeX 段落。
+5. 编号 lead sentence 后空一行；解释文字必须从下一段开始。
+6. LaTeX 中编号 lead sentence 写作 `\textbf{（n）提出了……}`。
+7. 不要直接复制各章小结；从全文视角重写每条贡献。
+8. **贡献数量必须与技术章节数匹配**：6 章博士论文须恰好 **4 项**，对应第 2–5 章；5 章硕士论文须恰好 **3 项**，对应第 2–4 章。数量和顺序不得错配。
 
 建议的编号段模板：
 
@@ -133,11 +134,11 @@ Hard rules:
 
 每个 `本章小结` 都应包含：
 
-1. why the chapter was needed
-2. what method chain the chapter built
-3. what the case study verified
+1. 为何需要本章
+2. 本章构建了怎样的方法链条
+3. 算例验证了什么
 
-Use:
+采用：
 
 ```text
 首先，……。
@@ -152,27 +153,16 @@ Use:
 
 应保持正式的中文工科论文语体：
 
-- concise
-- analytical
-- non-emotional
-- result-oriented
-- technically explicit
-
-## 标点与引号
-
-非必要情况下不要在论文正文、摘要、结论、图表说明或审阅修改建议中使用双引号写法。优先将被引内容改写为直接陈述、术语名词、书名号或单引号；只有在以下情况才保留双引号：
-
-- direct quotation from a source that must be preserved verbatim
-- bibliographic title, software/interface text, or dataset field name that must keep its original punctuation
-- code, command, LaTeX literal, JSON/YAML string, or another technical literal where double quotation marks are syntactically meaningful
-- the user explicitly asks to preserve the original quoted wording
-
-如果双引号只是为了强调某个概念，应删除双引号并改为自然的学术表述。
+- 简洁
+- 分析性
+- 非情绪化
+- 结果导向
+- 技术上明确
 
 避免：
 
-- rhetorical flourish
-- journalistic tone
-- exaggerated novelty claims without evidence
-- vague praise words like `效果显著` without saying on what metric
-- borrowing domain nouns from the source thesis when the user is writing about another topic
+- 修辞堆砌
+- 新闻体
+- 无证据的夸大创新声明
+- 无具体指标的模糊褒词，如 `效果显著`
+- 用户写其他主题时，从样例论文借用领域名词

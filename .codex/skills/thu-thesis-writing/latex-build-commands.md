@@ -1,75 +1,75 @@
-# LaTeX Build Commands
+# LaTeX 编译命令
 
-Use this file when the task is about compiling, cleaning, or regenerating a ThuThesis LaTeX project rather than writing thesis prose.
+当任务涉及编译、清理或重新生成 ThuThesis LaTeX 项目，而非写作论文正文时，使用本文件。
 
-## Scope
+## 适用范围
 
-These commands are summarized from the bundled ThuThesis project materials:
+以下命令从捆绑的 ThuThesis 项目材料中汇总：
 
 - `thuthesis-v7.5.0/Makefile`
 - `thuthesis-v7.5.0/latexmkrc`
 - `thuthesis-v7.5.0/README.md`
 - `thuthesis-v7.5.0/thuthesis.dtx`
 
-Prefer project-native commands before inventing a custom compile flow.
+优先使用项目原生命令，再考虑自定义编译流程。
 
-## Default Choice
+## 默认选择
 
-For normal thesis compilation, prefer `make thesis` or `latexmk <main>.tex`.
+正常论文编译优先使用 `make thesis` 或 `latexmk <主文件>.tex`。
 
-Reason:
+原因：
 
-- `latexmk` automatically reruns the toolchain until cross-references settle
-- the repo `latexmkrc` already configures `xelatex`, `xdvipdfmx`, `bibtex`, `makeindex`, and cleanup suffixes
-- this is simpler and less error-prone than manual multi-pass compilation
+- `latexmk` 自动重复运行工具链，直到交叉引用稳定
+- 仓库中的 `latexmkrc` 已配置 `xelatex`、`xdvipdfmx`、`bibtex`、`makeindex` 及清理后缀
+- 这比手动多遍编译更简单、更少出错
 
-## Primary Commands
+## 主要命令
 
-### Build Thesis PDF
+### 编译论文 PDF
 
 ```bash
 make thesis
 ```
 
-Builds `thuthesis-example.pdf` through the Makefile target.
+通过 Makefile 目标构建 `thuthesis-example.pdf`。
 
-If the main thesis file has been renamed, update the `THESIS` variable in `Makefile`, or call `latexmk` on the actual main file directly.
+若主论文文件已重命名，更新 `Makefile` 中的 `THESIS` 变量，或直接对实际主文件调用 `latexmk`。
 
-### Build Template Documentation
+### 编译模板文档
 
 ```bash
 make doc
 ```
 
-Builds `thuthesis.pdf`.
+构建 `thuthesis.pdf`。
 
-### Clean Auxiliary Files
+### 清理辅助文件
 
 ```bash
 make clean
 ```
 
-Removes intermediate files while keeping the thesis PDF.
+删除中间文件，保留论文 PDF。
 
-### Remove Thesis PDF Too
+### 同时删除论文 PDF
 
 ```bash
 make cleanall
 ```
 
-Removes intermediate files and `thuthesis-example.pdf`.
+删除中间文件及 `thuthesis-example.pdf`。
 
-### Full Dist Clean
+### 完整清理
 
 ```bash
 make distclean
 ```
 
-Removes generated PDFs, intermediate files, generated class/style files, and `dist/`.
+删除生成的 PDF、中间文件、生成的类/样式文件及 `dist/`。
 
-## Direct latexmk Commands
+## 直接 latexmk 命令
 
-Use these when you do not want to rely on the Makefile or when the main file name changed.
+不想依赖 Makefile 或主文件名已更改时使用。
 
 ```bash
 latexmk thuthesis-example.tex
@@ -78,38 +78,38 @@ latexmk thuthesis.dtx
 latexmk -c
 ```
 
-Interpretation:
+说明：
 
-- `latexmk thuthesis-example.tex`: build the thesis PDF
-- `latexmk spine.tex`: build the spine PDF
-- `latexmk thuthesis.dtx`: build the template manual
-- `latexmk -c`: clean auxiliary files
+- `latexmk thuthesis-example.tex`：编译论文 PDF
+- `latexmk spine.tex`：编译书脊 PDF
+- `latexmk thuthesis.dtx`：编译模板手册
+- `latexmk -c`：清理辅助文件
 
-## Toolchain Configured By latexmkrc
+## latexmkrc 配置的工具链
 
-The bundled `latexmkrc` configures:
+捆绑的 `latexmkrc` 配置如下：
 
 - `xelatex -shell-escape -file-line-error -halt-on-error -interaction=nonstopmode -no-pdf -synctex=1`
 - `lualatex -shell-escape -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1`
 - `xdvipdfmx -q -E`
-- `bibtex` auto-usage
-- `makeindex` for index generation
+- `bibtex` 自动使用
+- `makeindex` 用于索引生成
 
-This means a normal `latexmk` run is already aligned with the template's expected engine chain.
+这意味着正常的 `latexmk` 运行已与模板预期的引擎链对齐。
 
-## Manual Build Flow
+## 手动编译流程
 
-Only use this when `make` or `latexmk` is unavailable, or when you need to debug the compile sequence explicitly.
+仅在 `make` 或 `latexmk` 不可用，或需要显式调试编译序列时使用。
 
-### Regenerate Class File
+### 重新生成类文件
 
 ```bash
 xetex thuthesis.ins
 ```
 
-This regenerates `thuthesis.cls` and related files from the source.
+从源文件重新生成 `thuthesis.cls` 及相关文件。
 
-### Manually Build Thesis
+### 手动编译论文
 
 ```bash
 xelatex thuthesis-example.tex
@@ -118,7 +118,7 @@ xelatex thuthesis-example.tex
 xelatex thuthesis-example.tex
 ```
 
-For projects with appendix bibliographies or special indexes, manual BibTeX passes may also include:
+对于有附录参考文献或特殊索引的项目，手动 BibTeX 遍次可能还包括：
 
 ```bash
 bibtex thuthesis-example-appendix-a.aux
@@ -126,13 +126,13 @@ bibtex thuthesis-example-appendix-b.aux
 bibtex thuthesis-example-index.aux
 ```
 
-### Manually Build Spine
+### 手动编译书脊
 
 ```bash
 xelatex spine.tex
 ```
 
-### Manually Build Manual
+### 手动编译手册
 
 ```bash
 xelatex -shell-escape thuthesis.dtx
@@ -141,23 +141,20 @@ xelatex -shell-escape thuthesis.dtx
 xelatex -shell-escape thuthesis.dtx
 ```
 
-## Practical Guidance
+## 实用建议
 
-1. If the user just says 'compile the thesis', prefer `make thesis`.
-2. If the project renamed the main `.tex`, prefer `latexmk <actual-main>.tex`.
-3. If references or contents are stale, rerun `latexmk` or use the manual multi-pass flow.
-4. If the user asks to clean build artifacts but keep the PDF, use `make clean`.
-5. If the user asks for a full rebuild from generated sources, run `make distclean` first, then regenerate and rebuild.
-6. After every successful thesis compilation, check the compiled page budget when the project is a master's thesis:
-   - Chapter 1 introduction should be about 9-13 pages and no more than 15 pages unless unavoidable.
-   - Inside Chapter 1, background/significance should be about 1-2 pages, literature review about 7-8 pages, and research route/main work about 3-4 pages.
-   - Chapters 2-4 should each be about 25 pages and no more than 30 pages unless unavoidable.
-   - In each of Chapters 2-4, `算例分析 + 本章小结` should total 10-15 pages.
-   - Chapter 5 conclusion should be about 2-3 pages and no more than 4 pages unless unavoidable.
-   - If the range cannot be met, report the actual page count, deviation, and reason.
+1. 若用户只说"编译论文"，优先使用 `make thesis`。
+2. 若项目重命名了主 `.tex` 文件，优先使用 `latexmk <实际主文件>.tex`。
+3. 若引用或目录陈旧，重新运行 `latexmk` 或使用手动多遍流程。
+4. 若用户要求清理构建产物但保留 PDF，使用 `make clean`。
+5. 若用户要求从生成源完整重建，先运行 `make distclean`，再重新生成并重建。
+6. 每次成功编译论文后，若项目为硕士论文，检查编译后的页数预算：
+   - 第 2-4 章应各约 25 页，除非不可避免，否则不超过 30 页。
+   - 第 2-4 章每章的 `算例分析 + 本章小结` 应合计 10-15 页。
+   - 若无法达到范围，报告实际页数、偏离量及原因。
 
-## Cautions
+## 注意事项
 
-1. The template documentation explicitly recommends reading the bundled manual and example before modifying the project structure.
-2. The template may depend on Windows Chinese fonts for final-form submission checking; if font output matters, verify on the target platform.
-3. If `THESIS` in `Makefile` still points to `thuthesis-example`, `make thesis` will not automatically follow a renamed main file.
+1. 模板文档明确建议在修改项目结构前阅读捆绑的手册和示例。
+2. 最终格式提交检查时，模板可能依赖 Windows 中文字体；若字体输出有影响，请在目标平台验证。
+3. 若 `Makefile` 中的 `THESIS` 仍指向 `thuthesis-example`，`make thesis` 不会自动跟随已重命名的主文件。
