@@ -13,6 +13,7 @@
 - organize the body as continuous paragraphs plus numbered contribution items only
 - each numbered contribution lead sentence must be bold and form an independent LaTeX paragraph
 - the explanation after each numbered lead sentence must start in the next paragraph
+- for a master's thesis, Chapter 5 conclusion should compile to about 2-3 pages and no more than 4 pages unless there is a documented reason
 
 ```text
 第x章 结论
@@ -95,6 +96,7 @@ Template:
 ## 最终检查
 
 - the thesis-level conclusion has no section headings or subsection headings
+- for a master's thesis, Chapter 5 conclusion compiles to about 2-3 pages and no more than 4 pages unless there is a documented reason
 - every numbered contribution lead sentence is bold
 - every numbered contribution lead sentence is an independent LaTeX paragraph
 - conclusion is not a copy-paste of section summaries

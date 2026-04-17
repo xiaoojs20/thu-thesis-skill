@@ -4,6 +4,8 @@
 
 ## 推荐结构
 
+硕士论文第 1 章引言部分在编译后 PDF 中大约控制在 9-13 页，最多不超过 15 页。起草和审阅时，应在 `研究概述`、`国内外研究现状`、`研究思路与主要工作` 之间分配篇幅，避免背景铺陈过长或研究现状过短；若编译后超出范围，应记录实际页数、偏离量和原因。
+
 ```text
 第1章 引言
 1.1 研究概述
@@ -111,6 +113,7 @@
 ## 最终检查
 
 - broad-to-narrow logic is clear
+- for a master's thesis, Chapter 1 compiles to about 9-13 pages and no more than 15 pages unless there is a documented reason
 - subproblems align with later chapters
 - literature review has a gap summary
 - chapter arrangement matches the thesis route
