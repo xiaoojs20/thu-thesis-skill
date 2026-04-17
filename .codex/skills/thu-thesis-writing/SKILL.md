@@ -82,7 +82,7 @@ Do not use it for:
    - `本章小结`
 6. 将 `主要内容` 视为章节主体，可展开为定义、模型、约束、框架、算法等多个连续小节，但必须位于 `概述` 与 `算例分析` 之间。
 7. 对每个技术章节，`概述` 与 `本章小结` 的篇幅都是强约束：各自至少应约占编译后 PDF 的 2/3 页；如果无法实际编译估算，不得写成单段短文本，应按多个完整段落展开到接近该版面量。
-8. 对硕士论文，第 1 章引言部分在编译后 PDF 中大约控制在 9-13 页，最多不超过 15 页；若客观上无法满足，应明确说明原因和偏离量。
+8. 对硕士论文，第 1 章引言部分在编译后 PDF 中大约控制在 9-13 页，最多不超过 15 页；其中 `研究背景和意义` 建议控制在 1-2 页，`国内外研究现状` 建议控制在 7-8 页，`研究思路与主要工作` 建议控制在 3-4 页。三部分合计优先落在 11-13 页；若由于内容安排达到 14 页或超出上述分项范围，应明确说明原因和偏离量。
 9. 对硕士论文，第 2 章到第 4 章的技术章篇幅是较强约束：每章编译后大约控制在 25 页，最多不超过 30 页；其中 `算例分析 + 本章小结` 合计控制在 10-15 页。若客观上无法满足，应明确说明原因和偏离量。
 10. 对硕士论文，第 5 章结论部分在编译后 PDF 中大约控制在 2-3 页，最多不超过 4 页；若客观上无法满足，应明确说明原因和偏离量。
 11. 每次完成 LaTeX 编译后，都要检查第 1 章、第 2-4 章、第 5 章总页数及第 2-4 章的 `算例分析 + 本章小结` 页数是否落在上述范围内。
@@ -101,6 +101,7 @@ Do not use it for:
    - missing chapter summary
    - chapter overview or chapter summary shorter than about 2/3 compiled PDF page
    - master's thesis Chapter 1 introduction outside 9-13 pages or above 15 pages after compilation
+   - master's thesis Chapter 1 internal allocation outside: background/significance 1-2 pages, literature review 7-8 pages, research route/main work 3-4 pages
    - master's thesis Chapter 2-4 page count outside about 25 pages or above 30 pages after compilation
    - `算例分析 + 本章小结` outside 10-15 pages after compilation
    - master's thesis Chapter 5 conclusion outside 2-3 pages or above 4 pages after compilation
@@ -169,7 +170,7 @@ Do not use it for:
 7. If one of the four blocks is missing, do not treat the chapter as structurally complete.
 8. In every technical chapter, both `概述` and `本章小结` must each occupy at least about 2/3 of a compiled PDF page; this is a hard length constraint, not a style preference.
 9. If the draft has not been compiled, approximate this by writing each of `概述` and `本章小结` as several complete paragraphs with enough problem framing, method-chain summary, and validation interpretation to plausibly fill about 2/3 page after compilation.
-10. For a master's thesis, Chapter 1 introduction should compile to about 9-13 pages and must not exceed 15 pages unless unavoidable; this is a strong page-budget constraint.
+10. For a master's thesis, Chapter 1 introduction should compile to about 9-13 pages and must not exceed 15 pages unless unavoidable; within Chapter 1, background/significance should be about 1-2 pages, literature review about 7-8 pages, and research route/main work about 3-4 pages. The internal allocation should preferably total 11-13 pages; if it reaches 14 pages or departs from these section ranges, document the reason and deviation.
 11. For a master's thesis, Chapters 2-4 should each compile to about 25 pages and must not exceed 30 pages unless unavoidable; this is a strong page-budget constraint.
 12. For a master's thesis, in each of Chapters 2-4, `算例分析 + 本章小结` should compile to 10-15 pages in total.
 13. For a master's thesis, Chapter 5 conclusion should compile to about 2-3 pages and must not exceed 4 pages unless unavoidable; this is a strong page-budget constraint.

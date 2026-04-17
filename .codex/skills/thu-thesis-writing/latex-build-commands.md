@@ -150,6 +150,7 @@ xelatex -shell-escape thuthesis.dtx
 5. If the user asks for a full rebuild from generated sources, run `make distclean` first, then regenerate and rebuild.
 6. After every successful thesis compilation, check the compiled page budget when the project is a master's thesis:
    - Chapter 1 introduction should be about 9-13 pages and no more than 15 pages unless unavoidable.
+   - Inside Chapter 1, background/significance should be about 1-2 pages, literature review about 7-8 pages, and research route/main work about 3-4 pages.
    - Chapters 2-4 should each be about 25 pages and no more than 30 pages unless unavoidable.
    - In each of Chapters 2-4, `算例分析 + 本章小结` should total 10-15 pages.
    - Chapter 5 conclusion should be about 2-3 pages and no more than 4 pages unless unavoidable.
