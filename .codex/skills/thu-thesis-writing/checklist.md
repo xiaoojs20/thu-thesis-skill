@@ -21,6 +21,7 @@
 - In a technical chapter, does `概述` occupy at least about 2/3 of a compiled PDF page?
 - In a technical chapter, does `本章小结` occupy at least about 2/3 of a compiled PDF page?
 - If the PDF was not compiled, are `概述` and `本章小结` each expanded into several complete paragraphs rather than a short single paragraph?
+- Under every `算例分析` section numbered `x.y`, are direct subsections reasonably organized within `x.y.1` through `x.y.5`?
 - For a master's thesis after compilation, is Chapter 1 introduction about 9-13 pages and no more than 15 pages unless there is a documented reason?
 - For a master's thesis after compilation, does Chapter 1 keep its internal allocation near: background/significance 1-2 pages, literature review 7-8 pages, and research route/main work 3-4 pages?
 - For a master's thesis after compilation, are Chapters 2-4 each about 25 pages and no more than 30 pages unless there is a documented reason?

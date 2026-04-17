@@ -82,25 +82,27 @@ Do not use it for:
    - `算例分析`
    - `本章小结`
 6. 将 `主要内容` 视为章节主体，可展开为定义、模型、约束、框架、算法等多个连续小节，但必须位于 `概述` 与 `算例分析` 之间。
-7. 对每个技术章节，`概述` 与 `本章小结` 的篇幅都是强约束：各自至少应约占编译后 PDF 的 2/3 页；如果无法实际编译估算，不得写成单段短文本，应按多个完整段落展开到接近该版面量。
-8. 对硕士论文，第 1 章引言部分在编译后 PDF 中大约控制在 9-13 页，最多不超过 15 页；其中 `研究背景和意义` 建议控制在 1-2 页，`国内外研究现状` 建议控制在 7-8 页，`研究思路与主要工作` 建议控制在 3-4 页。三部分合计优先落在 11-13 页；若由于内容安排达到 14 页或超出上述分项范围，应明确说明原因和偏离量。
-9. 对硕士论文，第 2 章到第 4 章的技术章篇幅是较强约束：每章编译后大约控制在 25 页，最多不超过 30 页；其中 `算例分析 + 本章小结` 合计控制在 10-15 页。若客观上无法满足，应明确说明原因和偏离量。
-10. 对硕士论文，第 5 章结论部分在编译后 PDF 中大约控制在 2-3 页，最多不超过 4 页；若客观上无法满足，应明确说明原因和偏离量。
-11. 每次完成 LaTeX 编译后，都要检查第 1 章、第 2-4 章、第 5 章总页数及第 2-4 章的 `算例分析 + 本章小结` 页数是否落在上述范围内。
-12. 全文默认按“问题 -> 方法 -> 结果”的顺序起草。
-13. 如果论文中出现 `考虑……协同的……优化规划模型`、`……优化配置模型` 等“模型总装段”，先读 `optimization-model-pattern.md`，并默认采用该写法。
-14. 对论文层面的 `结论` 章，不要再设节或小节；无论结论是第 5 章还是第 6 章，都应写成“章节标题 + 连续段落 + 编号贡献项”。
-15. 公式默认按“先说明用途 -> 再给公式 -> 再给 `式中：` -> 再说明建模含义”的顺序解释。
-16. 图表标题默认使用名词性表述，核心结论放在正文中说明。
-17. LaTeX 工程中的图优先使用 PDF；如果图不是 PDF，要明确提醒用户。
-18. 每章技术章节结尾都要有 `本章小结`，并重述：
+7. 对任何 `算例分析` 节，其下属三级小节数量是强约束：若 `算例分析` 编号为 `x.y`，应合理组织在 `x.y.1` 至 `x.y.5` 之内。例如 `2.5 算例分析` 最多安排到 `2.5.5`，`3.4 算例分析` 最多安排到 `3.4.5`。内容较多时，应按验证目标合并相近分析、下沉为段落或使用 `（1）（2）（3）` 层级承载，使算例结构保持在五个直接三级小节以内。
+8. 对每个技术章节，`概述` 与 `本章小结` 的篇幅都是强约束：各自至少应约占编译后 PDF 的 2/3 页；如果无法实际编译估算，不得写成单段短文本，应按多个完整段落展开到接近该版面量。
+9. 对硕士论文，第 1 章引言部分在编译后 PDF 中大约控制在 9-13 页，最多不超过 15 页；其中 `研究背景和意义` 建议控制在 1-2 页，`国内外研究现状` 建议控制在 7-8 页，`研究思路与主要工作` 建议控制在 3-4 页。三部分合计优先落在 11-13 页；若由于内容安排达到 14 页或超出上述分项范围，应明确说明原因和偏离量。
+10. 对硕士论文，第 2 章到第 4 章的技术章篇幅是较强约束：每章编译后大约控制在 25 页，最多不超过 30 页；其中 `算例分析 + 本章小结` 合计控制在 10-15 页。若客观上无法满足，应明确说明原因和偏离量。
+11. 对硕士论文，第 5 章结论部分在编译后 PDF 中大约控制在 2-3 页，最多不超过 4 页；若客观上无法满足，应明确说明原因和偏离量。
+12. 每次完成 LaTeX 编译后，都要检查第 1 章、第 2-4 章、第 5 章总页数及第 2-4 章的 `算例分析 + 本章小结` 页数是否落在上述范围内。
+13. 全文默认按“问题 -> 方法 -> 结果”的顺序起草。
+14. 如果论文中出现 `考虑……协同的……优化规划模型`、`……优化配置模型` 等“模型总装段”，先读 `optimization-model-pattern.md`，并默认采用该写法。
+15. 对论文层面的 `结论` 章，不要再设节或小节；无论结论是第 5 章还是第 6 章，都应写成“章节标题 + 连续段落 + 编号贡献项”。
+16. 公式默认按“先说明用途 -> 再给公式 -> 再给 `式中：` -> 再说明建模含义”的顺序解释。
+17. 图表标题默认使用名词性表述，核心结论放在正文中说明。
+18. LaTeX 工程中的图优先使用 PDF；如果图不是 PDF，要明确提醒用户。
+19. 每章技术章节结尾都要有 `本章小结`，并重述：
    - the challenge
    - the method chain
    - what the case study verified
-19. 如果是审阅任务，使用 `checklist.md` 作为检查表，并明确指出：
+20. 如果是审阅任务，使用 `checklist.md` 作为检查表，并明确指出：
    - missing chapter introduction
    - missing chapter summary
    - chapter overview or chapter summary shorter than about 2/3 compiled PDF page
+   - `算例分析` direct subsections are not reasonably organized within `x.y.1` through `x.y.5`
    - master's thesis Chapter 1 introduction outside 9-13 pages or above 15 pages after compilation
    - master's thesis Chapter 1 internal allocation outside: background/significance 1-2 pages, literature review 7-8 pages, research route/main work 3-4 pages
    - master's thesis Chapter 2-4 page count outside about 25 pages or above 30 pages after compilation
@@ -110,8 +112,8 @@ Do not use it for:
    - missing or weak figure/table references
    - incomplete experiment structure
    - weak transitions between sections
-20. 输出前务必再跑一遍 checklist。
-21. 输出论文正文、摘要、结论、图表说明或审阅修改建议时，非必要情况下不要使用双引号写法；优先改写为直接陈述、术语名词、书名号、单引号或 LaTeX 命令中的必要字符。只有在直接引用原文、保留文献题名/软件界面原文、解释代码或 LaTeX 字符串、或用户明确要求逐字保留时，才允许出现双引号。
+21. 输出前务必再跑一遍 checklist。
+22. 输出论文正文、摘要、结论、图表说明或审阅修改建议时，非必要情况下不要使用双引号写法；优先改写为直接陈述、术语名词、书名号、单引号或 LaTeX 命令中的必要字符。只有在直接引用原文、保留文献题名/软件界面原文、解释代码或 LaTeX 字符串、或用户明确要求逐字保留时，才允许出现双引号。
 
 ## 主题隔离规则
 
@@ -175,40 +177,41 @@ Do not use it for:
 10. For a master's thesis, Chapter 1 introduction should compile to about 9-13 pages and must not exceed 15 pages unless unavoidable; within Chapter 1, background/significance should be about 1-2 pages, literature review about 7-8 pages, and research route/main work about 3-4 pages. The internal allocation should preferably total 11-13 pages; if it reaches 14 pages or departs from these section ranges, document the reason and deviation.
 11. For a master's thesis, Chapters 2-4 should each compile to about 25 pages and must not exceed 30 pages unless unavoidable; this is a strong page-budget constraint.
 12. For a master's thesis, in each of Chapters 2-4, `算例分析 + 本章小结` should compile to 10-15 pages in total.
-13. For a master's thesis, Chapter 5 conclusion should compile to about 2-3 pages and must not exceed 4 pages unless unavoidable; this is a strong page-budget constraint.
-14. After every LaTeX compilation, check and report the page budget for Chapter 1, Chapters 2-4, Chapter 5, and each Chapter 2-4 `算例分析 + 本章小结`; if a range cannot be met, state the reason rather than silently ignoring it.
-15. Do not put full conclusions into figure captions or table titles.
-16. Do not drop equations without explaining what each block does.
-17. Do not end experiment sections with raw observations only; state what the comparison proves.
-18. Figures should be inserted in PDF format by default.
-19. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
-20. The thesis-level `结论` chapter must not set section or subsection headings, whether it is Chapter 5 or Chapter 6.
-21. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
-22. Each numbered contribution item in the thesis-level conclusion must use a bold numbered lead sentence as an independent LaTeX paragraph, then continue the explanation in the next paragraph.
-23. Write the lead sentence in LaTeX as `\textbf{（n）提出了……}`.
-24. Each thesis-level conclusion contribution must follow `challenge -> method -> result/verification -> value`, and must not be a pasted chapter summary.
-25. Do not write the abstract as `第1章...第2章...`.
-26. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
-27. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
-28. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
-29. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
-30. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
-31. Every Chinese-parenthetical sub-item under optimization/planning writing must be written as a bold standalone lead, such as `\textbf{（1）投资成本}` or `\textbf{（2）电力平衡约束}`.
-32. After each bold Chinese-parenthetical lead, start the explanation in the next paragraph rather than on the same line; do not write the explanation flush against the lead sentence.
-33. The explanatory paragraph after each sub-item must keep first-line indentation, and every subsequent explanatory paragraph under the same sub-item must also keep first-line indentation rather than being flush left.
-34. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
-35. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
-36. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
-37. When writing LaTeX displayed equations, do not insert an extra blank line above `\begin{equation}` / `\begin{align}`; the equation environment should follow directly after the lead-in sentence.
-38. Always leave one blank line after `\end{equation}` / `\end{align}`; the narration after the equation block must start as a new paragraph and must not begin immediately on the next line.
-39. Every numbered LaTeX displayed equation must have a `\label{eq:...}`.
-40. In `align`, every independently numbered formula line must have its own `\label{eq:...}`; if a line is only a continuation and should not be referenced, suppress its number with `\notag`/`\nonumber`.
-41. When introducing, explaining, or later mentioning a formula, explicitly reference it with `式（\ref{eq:...}）`; do not use only “上式”“如下式” or an unreferenced formula number.
-42. When writing LaTeX citations, explicitly distinguish `inline` and `super` cite styles according to the local sentence pattern.
-43. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
-44. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
-45. Whenever the required citation style at a location differs from the current local setting, explicitly call `\thusetup{ cite-style = ... }`; do not assume the correct style is already active.
-46. In thesis-facing output, avoid double quotation marks unless necessary for direct quotation, bibliographic/source fidelity, software/interface strings, code/LaTeX literals, or an explicit user request; otherwise rewrite the sentence so the quoted wording becomes normal prose or an appropriate Chinese academic term.
+13. Under any `算例分析` section numbered `x.y`, arrange the direct subsections within `x.y.1` through `x.y.5`. If more material is needed, merge related analyses or move detail into paragraphs / Chinese-parenthetical items under the existing five subsections.
+14. For a master's thesis, Chapter 5 conclusion should compile to about 2-3 pages and must not exceed 4 pages unless unavoidable; this is a strong page-budget constraint.
+15. After every LaTeX compilation, check and report the page budget for Chapter 1, Chapters 2-4, Chapter 5, and each Chapter 2-4 `算例分析 + 本章小结`; if a range cannot be met, state the reason rather than silently ignoring it.
+16. Do not put full conclusions into figure captions or table titles.
+17. Do not drop equations without explaining what each block does.
+18. Do not end experiment sections with raw observations only; state what the comparison proves.
+19. Figures should be inserted in PDF format by default.
+20. If a proposed or existing figure is not in PDF format, explicitly remind the user rather than silently accepting it.
+21. The thesis-level `结论` chapter must not set section or subsection headings, whether it is Chapter 5 or Chapter 6.
+22. The thesis-level `结论` chapter should be organized as opening summary paragraph -> numbered contributions -> closing paragraph.
+23. Each numbered contribution item in the thesis-level conclusion must use a bold numbered lead sentence as an independent LaTeX paragraph, then continue the explanation in the next paragraph.
+24. Write the lead sentence in LaTeX as `\textbf{（n）提出了……}`.
+25. Each thesis-level conclusion contribution must follow `challenge -> method -> result/verification -> value`, and must not be a pasted chapter summary.
+26. Do not write the abstract as `第1章...第2章...`.
+27. When reviewing, judge the chapter against thesis structure and local transitions, not against generic prose preferences.
+28. Never import domain-specific nouns from the source thesis unless the user explicitly asks for that exact topic.
+29. For optimization-planning subsections, enforce the layer `x.x -> x.x.1/x.x.2/x.x.3 -> （1）（2）（3） -> equation group -> explanation`.
+30. Under `目标函数`, use Chinese-parenthetical items such as `（1）投资成本`, `（2）运行成本` to split objective blocks.
+31. Under each major constraint subsection, use Chinese-parenthetical items such as `（1）火电机组……约束`, `（2）可再生能源……约束` to split physical modules.
+32. Every Chinese-parenthetical sub-item under optimization/planning writing must be written as a bold standalone lead, such as `\textbf{（1）投资成本}` or `\textbf{（2）电力平衡约束}`.
+33. After each bold Chinese-parenthetical lead, start the explanation in the next paragraph rather than on the same line; do not write the explanation flush against the lead sentence.
+34. The explanatory paragraph after each sub-item must keep first-line indentation, and every subsequent explanatory paragraph under the same sub-item must also keep first-line indentation rather than being flush left.
+35. For optimization-planning objectives, explain not only the formula but also the physical meaning of each block and the meaning of key variables, superscripts, and subscripts when needed.
+36. For optimization-planning constraints, regroup by big system category at the `x.x.2/x.x.3` layer and by physical module at the `（1）（2）（3）` layer.
+37. If the user's thesis includes optimization/planning model writing, default to this pattern unless the user explicitly asks for a different structure.
+38. When writing LaTeX displayed equations, do not insert an extra blank line above `\begin{equation}` / `\begin{align}`; the equation environment should follow directly after the lead-in sentence.
+39. Always leave one blank line after `\end{equation}` / `\end{align}`; the narration after the equation block must start as a new paragraph and must not begin immediately on the next line.
+40. Every numbered LaTeX displayed equation must have a `\label{eq:...}`.
+41. In `align`, every independently numbered formula line must have its own `\label{eq:...}`; if a line is only a continuation and should not be referenced, suppress its number with `\notag`/`\nonumber`.
+42. When introducing, explaining, or later mentioning a formula, explicitly reference it with `式（\ref{eq:...}）`; do not use only “上式”“如下式” or an unreferenced formula number.
+43. When writing LaTeX citations, explicitly distinguish `inline` and `super` cite styles according to the local sentence pattern.
+44. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
+45. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
+46. Whenever the required citation style at a location differs from the current local setting, explicitly call `\thusetup{ cite-style = ... }`; do not assume the correct style is already active.
+47. In thesis-facing output, avoid double quotation marks unless necessary for direct quotation, bibliographic/source fidelity, software/interface strings, code/LaTeX literals, or an explicit user request; otherwise rewrite the sentence so the quoted wording becomes normal prose or an appropriate Chinese academic term.
 
 ## 输出标准
 

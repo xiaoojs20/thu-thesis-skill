@@ -67,6 +67,7 @@ When writing or revising `算例分析` or experimental sections:
 - use `.codex/skills/thu-thesis-writing/experiment-pattern.md`
 - define validation goal, scheme settings, parameters, comparison results, interpretation, and what the experiment proves
 - separate tables for schemes/parameters from figures for trends, topology, and dynamic behavior
+- organize each `算例分析` section into at most five direct subsections: if the section is `x.y 算例分析`, arrange the content within `x.y.1` through `x.y.5` by merging related analyses or moving detail into lower paragraph levels
 
 ## Default Rule
 
