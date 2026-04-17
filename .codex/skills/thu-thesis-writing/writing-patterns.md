@@ -158,6 +158,17 @@ Use:
 - result-oriented
 - technically explicit
 
+## 标点与引号
+
+非必要情况下不要在论文正文、摘要、结论、图表说明或审阅修改建议中使用双引号写法。优先将被引内容改写为直接陈述、术语名词、书名号或单引号；只有在以下情况才保留双引号：
+
+- direct quotation from a source that must be preserved verbatim
+- bibliographic title, software/interface text, or dataset field name that must keep its original punctuation
+- code, command, LaTeX literal, JSON/YAML string, or another technical literal where double quotation marks are syntactically meaningful
+- the user explicitly asks to preserve the original quoted wording
+
+如果双引号只是为了强调某个概念，应删除双引号并改为自然的学术表述。
+
 避免：
 
 - rhetorical flourish

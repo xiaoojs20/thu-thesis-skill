@@ -57,6 +57,7 @@
 
 - Does each paragraph do one main job?
 - Are claims concrete rather than generic?
+- Does the text avoid double quotation marks unless they are necessary for direct quotation, bibliographic/source fidelity, software/interface strings, code/LaTeX literals, or an explicit user request?
 
 ## 公式
 

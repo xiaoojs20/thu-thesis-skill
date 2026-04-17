@@ -1,6 +1,6 @@
 ---
-name: "thu-thesis-writing"
-description: "Use when writing, outlining, revising, reviewing, or expanding a Chinese engineering thesis, dissertation chapter, abstract, introduction, methodology chapter, experiment section, or conclusion in the structured Tsinghua-style academic pattern: problem-driven introduction, chapter-by-chapter method progression, explicit equation explanations, disciplined figure/table usage, formal experiment analysis, and chapter-level thesis review."
+name: thu-thesis-writing
+description: 'Use when writing, outlining, revising, reviewing, or expanding a Chinese engineering thesis, dissertation chapter, abstract, introduction, methodology chapter, experiment section, or conclusion in the structured Tsinghua-style academic pattern: problem-driven introduction, chapter-by-chapter method progression, explicit equation explanations, disciplined figure/table usage, formal experiment analysis, and chapter-level thesis review.'
 ---
 
 # 清华风格工科论文写作
@@ -24,6 +24,7 @@ description: "Use when writing, outlining, revising, reviewing, or expanding a C
 7. Strong introduction and conclusion scaffolding.
 8. Chapter-review checks for structural completeness and local logic.
 9. Theme isolation: extract writing form, not subject matter.
+10. Avoid double quotation marks unless they are technically or bibliographically necessary.
 
 ## 适用场景
 
@@ -110,6 +111,7 @@ Do not use it for:
    - incomplete experiment structure
    - weak transitions between sections
 20. 输出前务必再跑一遍 checklist。
+21. 输出论文正文、摘要、结论、图表说明或审阅修改建议时，非必要情况下不要使用双引号写法；优先改写为直接陈述、术语名词、书名号、单引号或 LaTeX 命令中的必要字符。只有在直接引用原文、保留文献题名/软件界面原文、解释代码或 LaTeX 字符串、或用户明确要求逐字保留时，才允许出现双引号。
 
 ## 主题隔离规则
 
@@ -206,6 +208,7 @@ Do not use it for:
 43. If the citation is preceded by explicit wording such as `文献` or `参考文献`, switch to inline citation style before that citation with `\thusetup{ cite-style = inline }`.
 44. If the citation serves as a superscript reference for a statement or clause rather than following explicit wording such as `文献`, switch to superscript citation style before that citation with `\thusetup{ cite-style = super }`.
 45. Whenever the required citation style at a location differs from the current local setting, explicitly call `\thusetup{ cite-style = ... }`; do not assume the correct style is already active.
+46. In thesis-facing output, avoid double quotation marks unless necessary for direct quotation, bibliographic/source fidelity, software/interface strings, code/LaTeX literals, or an explicit user request; otherwise rewrite the sentence so the quoted wording becomes normal prose or an appropriate Chinese academic term.
 
 ## 输出标准
 

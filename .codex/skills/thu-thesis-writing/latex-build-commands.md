@@ -143,7 +143,7 @@ xelatex -shell-escape thuthesis.dtx
 
 ## Practical Guidance
 
-1. If the user just says "compile the thesis", prefer `make thesis`.
+1. If the user just says 'compile the thesis', prefer `make thesis`.
 2. If the project renamed the main `.tex`, prefer `latexmk <actual-main>.tex`.
 3. If references or contents are stale, rerun `latexmk` or use the manual multi-pass flow.
 4. If the user asks to clean build artifacts but keep the PDF, use `make clean`.
